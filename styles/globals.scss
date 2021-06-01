@@ -2,6 +2,7 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 @import "./dashboard.scss";
+@import "./doctordashboard.scss";
 
 html,
 body {
@@ -23,10 +24,30 @@ pre {
   margin-top: 0px !important;
 }
 
-$primary: #df5631;
-$font-weight-bold: 500;
-$font-weight-bolder: 700;
+.bg-primary-light {
+  background: #e5f1ff !important;
+}
 
+.bg-orange-light {
+  background: rgba(255, 151, 74, 0.1) !important;
+}
+
+.orange {
+  color: #ff974a !important;
+}
+
+.bg-green-light {
+  background: rgba(130, 196, 60, 0.1) !important;
+}
+
+.green {
+  color: #82c43c !important;
+}
+
+.icon-height {
+  height: 16px !important;
+}
+$primary: #0073ff;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Required
