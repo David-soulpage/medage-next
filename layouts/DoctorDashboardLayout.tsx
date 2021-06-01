@@ -13,7 +13,7 @@ const DoctorDashboardLayout: FC<IProps> = ({ children }) => {
           <Header />
         </div>
         <div className="doctor-dashboard-left-sidebar">
-          <PatientSidebar />
+          <Sidebar />
         </div>
         <div className="doctor-dashboard-grid-main">{children}</div>
       </div>
