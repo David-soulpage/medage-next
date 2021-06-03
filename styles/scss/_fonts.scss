@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'poppinsSemiBold';
+  src: local('PoppinsSemiBold'), url(../../fonts/Poppins-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'poppinsRegular';
+  src: local('poppinsRegular'), url(../../fonts/Poppins-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'latoRegular';
+  src: local('latoRegular'), url(../../fonts/Lato-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'robotoRegular';
+  src: local('robotoRegular'), url(../../fonts/Roboto-Regular.ttf) format('truetype');
+  font-weight: 400;
+}

@@ -5,7 +5,8 @@ import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 // app css
-import "../styles/globals.scss";
+import "styles/App.scss";
+
 // axios config
 import "config/axios";
 // components
