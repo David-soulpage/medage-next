@@ -5,4 +5,7 @@ export { default as BarChart } from "./BarChart";
 export { default as LineChart } from "./LineChart";
 export { default as Appointments } from "./Appointments";
 export { default as PatientDetails } from "./PatientDetails";
+export { default as PatientDetailsSmall } from "./PatientDetailsSmall";
+export { default as PatientSummary } from "./PatientSummary";
 export { default as Tasks } from "./Tasks";
+export { default as Pharmacies } from "./Pharmacies";

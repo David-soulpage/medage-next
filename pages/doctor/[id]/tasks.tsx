@@ -14,8 +14,8 @@ import { FilterAlt } from "@styled-icons/boxicons-regular";
 const Tasks = () => {
   return (
     <DoctorDashboardLayout>
-      <div className="container py-5">
-        <h3 className="text-dark mb-3">Tasks</h3>
+      <div className="container pt-2">
+        <h6 className="text-dark mb-3">Tasks</h6>
         <CommonCard>
           {/* Header */}
           <div className="d-flex flex-column flex-md-row align-items-center">

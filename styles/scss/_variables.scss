@@ -1,4 +1,25 @@
-$grey: #f5f5fa;
+// First override some or all individual color variables
 $primary: #0073ff;
 $secondary: #f5f5fa;
-$primary-light: rgba(0, 115, 255, 0.1);
+$success: #82c43c;
+$info: #a461d8;
+$warning: #ff974a;
+$danger: #d62518;
+$light: #f8f9fa;
+$dark: #343a40;
+$grey: #f5f5fa;
+// Then add them to your custom theme-colors map, together with any additional colors you might need
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+  light-primary: rgba(0, 115, 255, 0.1),
+  light-warning: rgba(255, 151, 74, 0.1),
+  light-success: rgba(130, 196, 60, 0.1),
+  light-info: rgba(164, 97, 216, 0.1),
+);

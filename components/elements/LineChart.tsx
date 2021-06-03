@@ -20,7 +20,7 @@ const LineChart: FC = () => {
   return (
     <div>
       <div className="d-flex justify-content-between">
-        <h6 className="title m-0">Total Reports Processed</h6>
+        <h6 className="m-0">Total Reports Processed</h6>
         <div className="d-flex">
           <ul className="nav">
             <li className="nav-item">
@@ -35,11 +35,14 @@ const LineChart: FC = () => {
               <p className="nav-link px-3 m-0">Month</p>
             </li>
           </ul>
-          <button className="btn btn-outline-secondary">2021</button>
+          <button className="btn btn-outline-dark text-muted">2021</button>
         </div>
       </div>
       <div className="d-flex justify-content-end mt-3">
-        <h6 className="text-green title">+9.28 (12.80 %)</h6>
+        <h6 className="text-success fw-bold">+9.28 (12.80 %)</h6>
+      </div>
+      <div className="d-flex justify-content-end mt-2">
+        <p className="text-muted">weekly raise from 0 to 5%</p>
       </div>
       {/* Line Chart */}
       <Line type="line" data={data} height={50} />
