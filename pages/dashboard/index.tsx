@@ -12,7 +12,7 @@ const AdminDashboardView = () => {
 
   return (
     <>
-      <>Hello</>
+      <>Dashboard</>
     </>
   );
 };

@@ -1,0 +1,18 @@
+.input-height {
+  height: 50px !important;
+}
+
+.input-border-bottom {
+  border: none !important;
+  border-bottom: 1px solid #eeeeee !important;
+}
+
+.input-border-bottom:focus {
+  border: none !important;
+  border-bottom: 1px solid #eeeeee !important;
+  box-shadow: none !important;
+}
+
+.input-textarea {
+  height: 200px !important;
+}
