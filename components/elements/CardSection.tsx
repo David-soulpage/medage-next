@@ -1,10 +1,12 @@
+// react
 import React, { FC } from "react";
-// local componentsimport
+// local components
 import { CommonCard } from "@components/card";
 //styled icons
 import { User } from "@styled-icons/fa-regular";
 import { Clock } from "@styled-icons/bootstrap";
 import { MessageCircleOutline } from "@styled-icons/evaicons-outline";
+import { LineGraph } from "@styled-icons/entypo";
 
 interface IProps {
   list: Array<any>;
@@ -24,11 +26,13 @@ const CardSection: FC<IProps> = ({ list }) => {
               <div className="ms-auto">
                 <div className={`border-0 p-3 rounded ${card.background}`}>
                   {card.icon === "user" ? (
-                    <User className="text-primary icon-height" />
+                    <User className="text-primary" size="20" />
                   ) : card.icon === "clock" ? (
-                    <Clock className="icon-height orange" />
+                    <Clock className=" text-warning" size="20" />
                   ) : card.icon === "message" ? (
-                    <MessageCircleOutline className="icon-height green" />
+                    <MessageCircleOutline className=" text-success" size="20" />
+                  ) : card.icon === "graph" ? (
+                    <LineGraph className=" text-info" size="20" />
                   ) : null}
                 </div>
               </div>

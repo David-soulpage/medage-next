@@ -1,8 +1,7 @@
-// components
-import DashboardLeftNav from "components/dashboard/DashboardLeftNav";
-import SignOutView from "@components/signOut";
+// next
 import Link from "next/link";
-import { Navbar, Nav, Container } from "react-bootstrap";
+// react-boostrap
+import { Navbar, Nav, Container, Image } from "react-bootstrap";
 
 const AuthPageLayout = (props: any) => {
   return (
@@ -12,15 +11,22 @@ const AuthPageLayout = (props: any) => {
           <Container className="py-2 px-5" fluid>
             <Navbar.Brand className="fw-bold">
               <Link href="/">
-                <a className="text-decoration-none">Medage</a>
+                <Image src="/logo.svg" className="img-fluid" width="100" />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="justify-content-end">
-                <li className="nav-item fw-light ms-3 px-2">
+            <Navbar.Collapse id="basic-navbar-nav ">
+              <Nav className="justify-content-end ms-auto">
+                <li className="nav-item fw-bold ms-3 px-2">
                   <Link href="">
-                    <a className="text-decoration-none text-dark">Sign In</a>
+                    <a className="text-decoration-none text-base-black">
+                      <small>Login</small>
+                    </a>
+                  </Link>
+                </li>
+                <li className="nav-item fw-bold ms-3 px-2">
+                  <Link href="">
+                    <a className="text-decoration-none text-base-black">Contact Us</a>
                   </Link>
                 </li>
               </Nav>

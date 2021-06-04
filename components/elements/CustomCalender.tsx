@@ -114,8 +114,15 @@ const CustomCalender: FC = () => {
   const CalenderButtons = () => {
     return (
       <div className="d-flex  align-items-center">
-        {buttonsList.map((ele) => {
-          return <CalenderButton title={ele} onPress={onPress} selected={activeButton === ele} />;
+        {buttonsList.map((ele, key) => {
+          return (
+            <CalenderButton
+              title={ele}
+              onPress={onPress}
+              selected={activeButton === ele}
+              key={key}
+            />
+          );
         })}
       </div>
     );

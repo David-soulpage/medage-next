@@ -3,7 +3,7 @@ import React, { FC } from "react";
 // react-boostrap
 import { Image } from "react-bootstrap";
 // forms
-import Signin from "@components/forms/signin";
+import SignIn from "@components/forms/SignIn";
 // layouts
 import { AuthPageLayout } from "layouts";
 
@@ -16,9 +16,8 @@ const Home: FC = () => {
             <div className="col-md-6 text-center align-self-center">
               <Image className="img-fluid" src="/home.png" width="500" />
             </div>
-
             <div className="col-md-6 h-100 bg-light border align-self-center align-items-center mx-auto">
-              <Signin />
+              <SignIn />
             </div>
           </div>
         </div>

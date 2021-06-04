@@ -7,7 +7,7 @@ import { Form, FormControl, FormGroup, FormLabel, InputGroup } from "react-boots
 // styled icons
 import { EyeFill, EyeSlashFill } from "@styled-icons/bootstrap/";
 
-const Signin: FC = () => {
+const SignIn: FC = () => {
   const [showPassword, setPassword] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -63,9 +63,9 @@ const Signin: FC = () => {
           size="sm"
         />
       </Form.Group>
-      <FormGroup className="mb-2">
+      <FormGroup className="mb-2 ">
         <Form.Label className="text-base-black fw-normal">Password</Form.Label>
-        <InputGroup>
+        <InputGroup className="py-2 br-10 border bg-white">
           <FormControl
             name="password"
             type={showPassword ? "text" : "password"}
@@ -73,9 +73,10 @@ const Signin: FC = () => {
             size="sm"
             onChange={formik.handleChange}
             value={formik.values.password}
+            className="border-0"
           />
-          <InputGroup.Append>
-            <div className=" bg-white px-3 py-2 border" onClick={onPressEye}>
+          <InputGroup.Append className="border-0">
+            <div className=" bg-white px-3 py-2" onClick={onPressEye}>
               {showPassword ? (
                 <EyeFill size="20" className="text-light-grey" />
               ) : (
@@ -112,7 +113,7 @@ const Signin: FC = () => {
         </button>
       </div>
       <div className="my-3">
-        <button type="button" className="btn btn-secondary text-orange fw-bold w-100 rounded py-2">
+        <button type="button" className="btn btn-white text-orange fw-bold w-100 rounded py-2">
           Sign Up With Google
         </button>
       </div>
@@ -124,4 +125,4 @@ const Signin: FC = () => {
     </Form>
   );
 };
-export default Signin;
+export default SignIn;
