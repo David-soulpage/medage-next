@@ -1,5 +1,5 @@
-module.exports = {
-  env: {
-    APP_ENV: "local",
-  },
-};
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
+
+module.exports = withBundleAnalyzer({})

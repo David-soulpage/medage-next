@@ -5,3 +5,7 @@ body {
 .form-group {
   font-size: 14px;
 }
+
+#dropdown-basic::after {
+  display: none;
+}

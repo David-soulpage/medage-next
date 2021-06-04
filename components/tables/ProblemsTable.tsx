@@ -1,12 +1,14 @@
+// react
 import React, { FC, useState } from "react";
-//local component
-import DataTable from "react-data-table-component";
-import { CommonModal } from "@components/modal";
-//icons
-import { Edit } from "@styled-icons/material";
-import { Delete } from "@styled-icons/fluentui-system-regular";
 //react bootstrap
 import { Modal, Form } from "react-bootstrap";
+// react-data-table-component
+import DataTable from "react-data-table-component";
+// components
+import { CommonModal } from "@components/modal";
+// icons
+import { Edit } from "@styled-icons/material";
+import { Delete } from "@styled-icons/fluentui-system-regular";
 
 const ProblemsTable: FC = () => {
   const [show, setShow] = useState(false);
@@ -117,7 +119,7 @@ const ProblemsTable: FC = () => {
     },
   };
   return (
-    <div className="card p-3 mt-4 rounded border-0">
+    <>
       <div className="d-flex justify-content-between align-items-center">
         <div className="d-flex">
           <h6 className="title m-0">Active Problems</h6>
@@ -171,7 +173,7 @@ const ProblemsTable: FC = () => {
           <button className="btn btn-primary text-white">Save</button>
         </Modal.Footer>
       </CommonModal>
-    </div>
+    </>
   );
 };
 

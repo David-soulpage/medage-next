@@ -1,3 +1,4 @@
+// react
 import React from "react";
 //icons
 import { Warning } from "@styled-icons/ionicons-outline";
@@ -18,44 +19,44 @@ const PatientSidebar = () => {
         Summary Visits
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <Warning className="icon-height text-dark me-2" />{" "}
-        <span className="d-none d-lg-block mx-2">Active Problems</span>
+        <Warning className="text-dark me-2" size="20" />{" "}
+        <small className="d-none d-lg-block mx-2">Active Problems</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <Stethoscope className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Diagnosis</span>
+        <Stethoscope className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Diagnosis</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <CalendarAlt className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Visits</span>
+        <CalendarAlt className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Visits</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <TextBulletListSquare className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Tests</span>
+        <TextBulletListSquare className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Tests</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <XRay className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Imaging Orders</span>
+        <XRay className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Imaging Orders</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <Microgenetics className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Allergies</span>
+        <Microgenetics className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Allergies</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <Doctor className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Medications</span>
+        <Doctor className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Medications</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <Capsule className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Pharmacy</span>
+        <Capsule className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Pharmacy</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <UserGroup className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Family History</span>
+        <UserGroup className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Family History</small>
       </li>
       <li className="list-group-item border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-        <Contacts className="icon-height text-dark me-2" />
-        <span className="d-none d-lg-block mx-2">Emergency Contacts</span>
+        <Contacts className="text-dark me-2" size="20" />
+        <small className="d-none d-lg-block mx-2">Emergency Contacts</small>
       </li>
     </ul>
   );

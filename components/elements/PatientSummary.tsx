@@ -1,3 +1,4 @@
+// react
 import React, { FC } from "react";
 //lodash
 import _ from "lodash";
@@ -5,6 +6,7 @@ import _ from "lodash";
 import DataTable from "react-data-table-component";
 //icons
 import { ThreeDotsVertical } from "@styled-icons/bootstrap";
+import { CommonCard } from "@components/card";
 
 const PatientSummary: FC = () => {
   const problems = ["Head Ache", "Fever", "Abdominal Pain", "Joint Pain"];
@@ -190,7 +192,6 @@ const PatientSummary: FC = () => {
     const columns = _.map(headers, (item) => {
       return { name: item, selector: item };
     });
-    console.log(columns);
 
     const customStyles = {
       headCells: {
@@ -217,9 +218,9 @@ const PatientSummary: FC = () => {
       },
     };
     return (
-      <div className="card p-3 border-0 border-radius-10 h-100">
+      <CommonCard>
         <div className="d-flex justify-content-between">
-          <h6 className="title m-0">{cardData.cardTitle}</h6>
+          <h6 className="fw-bold m-0">{cardData.cardTitle}</h6>
           <ThreeDotsVertical className="text-dark" size="20" />
         </div>
         <div className="border-top mt-3" />
@@ -229,33 +230,33 @@ const PatientSummary: FC = () => {
           data={cardData.tableData}
           customStyles={customStyles}
         />
-      </div>
+      </CommonCard>
     );
   };
   return (
     <div className="row g-3 mt-4">
       <div className="col-lg-4 col-md-6 col-12">
-        <div className="card p-3 border-0 border-radius-10 h-100">
+        <CommonCard>
           <div className="d-flex justify-content-between">
-            <h6 className="title m-0">Active Problems</h6>
+            <h6 className="fw-bold m-0">Active Problems</h6>
             <ThreeDotsVertical className="text-dark" size="20" />
           </div>
           <div className="border-top my-3" />
           <div>
             {_.map(problems, (problem, id) => (
-              <button key={id} className="btn btn-reply text-dark sub-title m-2">
+              <button key={id} className="btn btn-sm bg-light-primary text-primary fw-bold m-2">
                 {problem}
               </button>
             ))}
-            <button className="btn btn-reply title m-2">+</button>
+            <button className="btn btn-sm bg-light-primary text-primary fw-bold m-2">+</button>
           </div>
-          <p className="title my-3">Additional Information</p>
+          <p className="fw-bold my-3">Additional Information</p>
           <div className="bg-secondary text-dark p-2 border-0 border-radius-10">
-            <p className="m-0 sub-title">
+            <p className="m-0">
               Fever from last 4 days and mild headache with regular joint pains.
             </p>
           </div>
-        </div>
+        </CommonCard>
       </div>
 
       {_.map(data, (item, id) => (

@@ -1,7 +1,7 @@
 // react
 import React, { FC } from "react";
 // react-boostrap
-import { Image, Form } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 // forms
 import Signin from "@components/forms/signin";
 // layouts
@@ -12,7 +12,6 @@ const Home: FC = () => {
     <AuthPageLayout>
       <div className="border" style={{ height: "95vh" }}>
         <div className="h-100">
-          <p>gowthami</p>
           <div className="row justify-content-center h-100">
             <div className="col-md-6 text-center align-self-center">
               <Image className="img-fluid" src="/home.png" width="500" />
