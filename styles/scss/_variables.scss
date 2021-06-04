@@ -4,6 +4,9 @@ $secondary: #f5f5fa;
 $success: #3e8d63;
 $info: #13101c;
 $warning: #945707;
+$success: #82c43c;
+$info: #a461d8;
+$warning: #ff974a;
 $danger: #d62518;
 $light: #f8f9fa;
 $dark: #343a40;
@@ -28,4 +31,7 @@ $theme-colors: (
   light-purple-two: #f5f5fa,
   light-grey: #808191,
   orange: #ff974a,
+  light-warning: rgba(255, 151, 74, 0.1),
+  light-success: rgba(130, 196, 60, 0.1),
+  light-info: rgba(164, 97, 216, 0.1),
 );

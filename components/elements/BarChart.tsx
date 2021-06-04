@@ -25,6 +25,7 @@ const BarChart: FC = () => {
     cornerRadius: 20,
     barThickness: 8,
     borderRadius: 12,
+    responsive: true,
   };
   return (
     <div>

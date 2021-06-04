@@ -10,6 +10,7 @@ import _ from "lodash";
 import { Attachment, Cross } from "@styled-icons/entypo";
 // componentsr
 import RadiologyMessage from "@components/elements/RadiologyMessage";
+import RadiologyHeader from "@components/elements/RadiologyHeader";
 
 const Messages: FC = () => {
   const [show, setShow] = useState(false);
@@ -83,6 +84,8 @@ const Messages: FC = () => {
   ];
   return (
     <>
+      <RadiologyHeader />
+      <div className="p-2 bg-light"></div>
       <div className="p-5">
         <div className="card p-3 w-100">
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">

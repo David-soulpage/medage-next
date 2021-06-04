@@ -6,6 +6,8 @@ import { CheckDouble, DotsVerticalRounded } from "@styled-icons/boxicons-regular
 import { Exclamation } from "styled-icons/bootstrap";
 //lodash
 import _ from "lodash";
+// next router
+import Router from "next/router";
 
 const RadiologyTasks: FC = () => {
   const [show, setShow] = useState(false);
@@ -69,6 +71,12 @@ const RadiologyTasks: FC = () => {
           </div>
         );
       })}
+      <div
+        className=" d-flex flex-row-reverse mt-3"
+        onClick={() => Router.push("/radiology/messages")}
+      >
+        <small className="text-primary">View All</small>
+      </div>
       <AddTaskModal show={show} handleClose={handleClose} />
     </div>
   );

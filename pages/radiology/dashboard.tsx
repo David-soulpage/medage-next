@@ -13,6 +13,8 @@ import { DotsVerticalRounded } from "@styled-icons/boxicons-regular";
 import { AccountCircle } from "@styled-icons/material-outlined";
 import { Exclamation } from "styled-icons/bootstrap";
 import { Forward } from "@styled-icons/entypo";
+// next router
+import Router from "next/router";
 
 const Dashboard = () => {
   const cards = [
@@ -124,7 +126,10 @@ const Dashboard = () => {
                         </button>
                       </div>
                     </div>
-                    <div className=" d-flex flex-row-reverse mt-3">
+                    <div
+                      className=" d-flex flex-row-reverse mt-3"
+                      onClick={() => Router.push("/radiology/messages")}
+                    >
                       <small className="text-primary">View All</small>
                     </div>
                   </div>

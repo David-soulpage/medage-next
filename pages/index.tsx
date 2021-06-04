@@ -10,7 +10,7 @@ const Home: FC = () => {
     <>
       <div className="d-flex justify-content-between align-items-center p-3 bg-white">
         <div>
-          <Image src="/logo.svg" />
+          <Image src="/logo.svg" width="100" />
         </div>
         <div className="d-flex align-items-center">
           <h6 className="text-base-black fw-bold me-3">Login </h6>

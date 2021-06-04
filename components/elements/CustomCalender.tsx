@@ -78,7 +78,7 @@ const CustomCalender: FC = () => {
             </div>
           </div>
           <div className="  table-responsive  mt-4 d-flex align-items-center">
-            <table className="table   " width="100%">
+            <table className="table table-bordered" width="100%">
               <thead className="rounded">
                 <tr className="border-0 bg-light-purple-two">
                   {calculatedArray?.map((date: any, index) => {
