@@ -1,6 +1,9 @@
 import React, { FC } from "react";
+//router
+import { useRouter } from "next/router";
 
 const PatientDetails: FC = () => {
+  const router = useRouter();
   return (
     <div>
       <h6 className="title m-0">Patient Details</h6>
@@ -84,7 +87,12 @@ const PatientDetails: FC = () => {
           <button className="btn btn-sm btn-outline-dark text-muted mx-4">Fax Demographics</button>
           <button className="btn btn-sm btn-outline-dark text-muted">Print Demographics</button>
         </div>
-        <button className="btn btn-sm btn-primary text-white">Schedule a New Appointment</button>
+        <button
+          className="btn btn-sm btn-primary text-white"
+          onClick={() => router.push("/doctor/1/create-appointment")}
+        >
+          Schedule a New Appointment
+        </button>
       </div>
     </div>
   );

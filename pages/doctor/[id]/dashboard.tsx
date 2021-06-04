@@ -108,7 +108,7 @@ const Dashboard = () => {
             <div className="col-lg-6 col-12">
               <div className="row gy-3">
                 <div className="col-12">
-                  <div className="card p-4 border-0 shadow-sm">
+                  <CommonCard>
                     <div className="d-flex align-items-center">
                       <div>
                         <h6 className="fw-bold m-0">Tasks</h6>
@@ -135,10 +135,10 @@ const Dashboard = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </CommonCard>
                 </div>
                 <div className="col-12 h-100">
-                  <div className="card p-4 border-0 shadow-sm h-100">
+                  <CommonCard>
                     <div className="d-flex align-items-center">
                       <div>
                         <h6 className="fw-bold m-0">Messages (2 unread)</h6>
@@ -180,7 +180,7 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </CommonCard>
                 </div>
               </div>
             </div>
