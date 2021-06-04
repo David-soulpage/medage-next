@@ -26,7 +26,7 @@ const Signin: FC = () => {
     setPassword(!showPassword);
   };
   return (
-    <Form onSubmit={formik.handleSubmit}>
+    <Form className="p-3 pt-4" onSubmit={formik.handleSubmit}>
       <Form.Group controlId="formBasicEmail" className="mb-2">
         <Form.Label className="text-base-black fw-normal">Full Name</Form.Label>
         <Form.Control
