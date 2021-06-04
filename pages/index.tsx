@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import { Image, Form } from "react-bootstrap";
 // forms
 import Signin from "@components/forms/signin";
+<<<<<<< HEAD
 
 const Home: FC = () => {
   return (
@@ -31,6 +32,28 @@ const Home: FC = () => {
         </div>
       </div>
     </>
+=======
+// layouts
+import { AuthPageLayout } from "layouts";
+
+const Home: FC = () => {
+  return (
+    <AuthPageLayout>
+      <div className="border" style={{ height: "95vh" }}>
+        <div className="h-100">
+          <div className="row justify-content-center h-100">
+            <div className="col-md-6 text-center align-self-center">
+              <Image className="img-fluid" src="/home.png" width="500" />
+            </div>
+
+            <div className="col-md-6 h-100 bg-light border align-self-center align-items-center mx-auto">
+              <Signin />
+            </div>
+          </div>
+        </div>
+      </div>
+    </AuthPageLayout>
+>>>>>>> d787a14d7de9a77705bd620e44a4bc667fefea36
   );
 };
 export default Home;
