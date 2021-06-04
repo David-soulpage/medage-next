@@ -7,7 +7,7 @@ import React from "react";
 const Allergies = () => {
   return (
     <DoctorDashboardLayout>
-      <div className="container mt-5">
+      <div className="container pt-2">
         {/* Patient Details */}
         <div className="row g-3">
           <div className="col-12">

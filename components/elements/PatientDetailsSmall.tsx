@@ -18,46 +18,46 @@ const PatientDetailsSmall: FC = () => {
         </div>
         {/* Profile Details */}
         <div className="mx-3 w-100">
-          <div className="row gy-3">
+          <div className="row gy-1">
             <div className="col-3">
-              <h6 className="fw-bold m-0">David Nirmal</h6>
+              <small className="fw-bold m-0">David Nirmal</small>
             </div>
             <div className="col-9">
-              <h6 className="m-0">Something</h6>
+              <small className="m-0">Something</small>
             </div>
             <div className="col-3">
-              <h6 className="fw-bold m-0">Phone:</h6>
+              <small className="fw-bold m-0">Phone:</small>
             </div>
             <div className="col-9">
-              <h6 className="m-0">040-978102718</h6>
+              <small className="m-0">040-978102718</small>
             </div>
             <div className="col-3">
-              <h6 className="fw-bold m-0">Address:</h6>
+              <small className="fw-bold m-0">Address:</small>
             </div>
             <div className="col-9">
-              <h6 className="m-0">10000 W Maude Ave Sunny vale ,CA 99897</h6>
+              <small className="m-0">10000 W Maude Ave Sunny vale ,CA 99897</small>
             </div>
           </div>
         </div>
         {/* Appointment Details */}
         <div className="w-100 mt-4 mt-lg-0">
           <div className="row gy-3">
-            <div className="col-2">
-              <h6 className="fw-bold m-0">CDS:</h6>
+            <div className="col-3">
+              <small className="fw-bold m-0">CDS:</small>
             </div>
-            <div className="col-10">
-              <button className="btn text-primary bg-light-primary fw-bold m-1">
-                Diabetic Eye Exam
+            <div className="col-9">
+              <button className="btn btn-sm text-primary bg-light-primary fw-bold m-1">
+                <small>Diabetic Eye Exam</small>
               </button>
-              <button className="btn text-primary bg-light-primary fw-bold m-1">
-                Diabetic Foot Exam
+              <button className="btn btn-sm text-primary bg-light-primary fw-bold m-1">
+                <small>Diabetic Eye Exam</small>
               </button>
-              <button className="btn text-primary bg-light-primary fw-bold m-1">
-                Adult Immunization Schedule Age: 28-49
+              <button className="btn btn-sm text-primary bg-light-primary fw-bold m-1">
+                <small>Diabetic Eye Exam</small>
               </button>
             </div>
-            <div className="col-2">
-              <h6 className="fw-bold m-0">Care Team:</h6>
+            <div className="col-3">
+              <small className="fw-bold m-0">Care Team:</small>
             </div>
           </div>
         </div>

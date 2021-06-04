@@ -34,14 +34,13 @@
   grid-area: dashboard-left-sidebar;
   box-sizing: border-box;
   background: white;
-  padding: 0px 20px;
 }
 .doctor-dashboard-grid-main {
   grid-area: dashboard-main;
   box-sizing: border-box;
   background: #f5f5fa;
   overflow-y: scroll;
-  padding: 0px 20px;
+  padding: 20px 0;
 }
 
 .list-group {

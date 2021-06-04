@@ -81,18 +81,18 @@ const Tasks: FC = () => {
             </div>
             <div className="col-md-4 col-12 d-flex align-items-center justify-content-md-end justify-content-start">
               <span>
-                <Attach className="text-dark icon-height" /> {item.attachment}
+                <Attach className="text-dark" size="20" /> {item.attachment}
               </span>
               <span className="mx-3">
-                <Messages className="text-dark icon-height" /> {item.messages}
+                <Messages className="text-dark" size="20" /> {item.messages}
               </span>
               <button
                 className={
                   item.status === "done"
-                    ? `btn w-25 mr-3 bg-green-light green me-3 fw-bold`
+                    ? `btn btn-sm  mr-3 bg-light-success text-success me-3 fw-bold`
                     : item.status === "pending"
-                    ? `btn w-25 mr-3 bg-orange-light orange me-3 fw-bold`
-                    : `btn w-25 mr-3 btn-light text-secondary me-3 fw-bold`
+                    ? `btn btn-sm  mr-3 bg-light-warning text-warning me-3 fw-bold`
+                    : `btn btn-sm  mr-3 btn bg-light text-muted me-3 fw-bold`
                 }
               >
                 {item.status === "done"
@@ -132,7 +132,7 @@ const Tasks: FC = () => {
           <span className="mx-3 title">
             <input type="checkbox" /> <small>Mark as Completed</small>
           </span>
-          <button className="btn btn-primary text-white">Submit</button>
+          <button className="btn btn-primary btn-sm text-white">Submit</button>
         </Modal.Footer>
       </CommonModal>
     </>

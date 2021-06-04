@@ -1,26 +1,42 @@
+import React from "react";
+import Head from "next/head";
+// local components
 import { CommonCard } from "@components/card";
 import { PatientDetailsSmall } from "@components/elements";
 import { TestsTable } from "@components/tables";
 import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
-import React from "react";
 
 const Tests = () => {
   return (
-    <DoctorDashboardLayout>
-      <div className="container mt-5">
-        {/* Patient Details */}
-        <div className="row g-3">
-          <div className="col-12">
-            <CommonCard>
-              <PatientDetailsSmall />
-            </CommonCard>
-          </div>
-          <div className="col-12">
-            <TestsTable />
+    <>
+      <Head>
+        <title>Tests</title>
+      </Head>
+      <DoctorDashboardLayout>
+        <div className="container pt-2">
+          {/* Patient Details */}
+          <div className="row g-3">
+            <div className="col-12">
+              <CommonCard>
+                <PatientDetailsSmall />
+              </CommonCard>
+            </div>
+            <div className="col-12">
+              <CommonCard>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="d-flex my-2">
+                    <h6 className="title m-0">Tests</h6>
+                    <h6 className="sub-title m-0 mx-4">Past Tests</h6>
+                  </div>
+                </div>
+                <div className="border-top my-3"></div>
+                <TestsTable />
+              </CommonCard>
+            </div>
           </div>
         </div>
-      </div>
-    </DoctorDashboardLayout>
+      </DoctorDashboardLayout>
+    </>
   );
 };
 

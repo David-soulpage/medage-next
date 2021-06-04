@@ -1,10 +1,9 @@
 import React from "react";
+import Head from "next/head";
 //local components
 import { CommonCard } from "@components/card";
 import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
 import { Tasks as TasksList } from "@components/elements";
-// react bootstrap
-import { Form, InputGroup } from "react-bootstrap";
 //icons
 import { Tasks as TaskIcon } from "@styled-icons/fa-solid";
 import { CheckCircle } from "@styled-icons/feather";
@@ -13,32 +12,37 @@ import { FilterAlt } from "@styled-icons/boxicons-regular";
 
 const Tasks = () => {
   return (
-    <DoctorDashboardLayout>
-      <div className="container pt-2">
-        <h6 className="text-dark mb-3">Tasks</h6>
-        <CommonCard>
-          {/* Header */}
-          <div className="d-flex flex-column flex-md-row align-items-center">
-            <div>
-              <button className="btn bg-primary-light fw-bold text-primary border-0">
-                <TaskIcon className="text-primary icon-height" /> All
-              </button>
-              <button className="btn bg-primary-light fw-bold text-primary border-0 mx-3">
-                <CheckCircle className="text-primary icon-height" /> Done
-              </button>
-              <button className="btn bg-primary-light fw-bold text-primary border-0">
-                <ArrowCounterclockwise className="text-primary icon-height" /> Pending
+    <>
+      <Head>
+        <title>Doctor Tasks</title>
+      </Head>
+      <DoctorDashboardLayout>
+        <div className="container pt-2">
+          <h6 className="text-dark mb-3">Tasks</h6>
+          <CommonCard>
+            {/* Header */}
+            <div className="d-flex flex-column flex-md-row align-items-center">
+              <div>
+                <button className="btn bg-light-primary fw-bold text-primary border-0">
+                  <TaskIcon className="text-primary" size="20" /> All
+                </button>
+                <button className="btn bg-light-primary fw-bold text-primary border-0 mx-3">
+                  <CheckCircle className="text-primary" size="20" /> Done
+                </button>
+                <button className="btn bg-light-primary fw-bold text-primary border-0">
+                  <ArrowCounterclockwise className="text-primary" size="20" /> Pending
+                </button>
+              </div>
+              <button className="btn btn-outline-dark ms-auto">
+                <FilterAlt className="text-muted" size="20" /> SORT : A-Z
               </button>
             </div>
-            <button className="btn btn-outline-secondary ms-auto">
-              <FilterAlt className="icon-height text-muted" /> SORT : A-Z
-            </button>
-          </div>
-          {/* Task List */}
-          <TasksList />
-        </CommonCard>
-      </div>
-    </DoctorDashboardLayout>
+            {/* Task List */}
+            <TasksList />
+          </CommonCard>
+        </div>
+      </DoctorDashboardLayout>
+    </>
   );
 };
 

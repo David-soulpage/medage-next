@@ -75,7 +75,7 @@ const Dashboard = () => {
             {_.map(cards, (card, id) => (
               <div key={id} className="col-lg-3 col-md-6 col-12">
                 <CommonCard>
-                  <div className="d-flex align-items-center">
+                  <div className="d-flex align-items-start">
                     <div>
                       <small className="m-0 text-muted mb-2">{card.title}</small>
                       <h3 className="text-dark m-0">{card.number}</h3>

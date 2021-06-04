@@ -10,9 +10,9 @@ const DoctorProfileCard = () => {
         width="100px"
         className="rounded-circle"
       />
-      <h6 className="title m-0 my-4">Dr. Willkins Axe</h6>
-      <h6 className="sub-title m-0">Demotologist</h6>
-      <h6 className="sub-title m-0 mt-4">will.axe@gmail.com</h6>
+      <small className="mt-3">Dr. Willkins Axe</small>
+      <small className="my-1">Demotologist</small>
+      <small className="m-0">will.axe@gmail.com</small>
     </div>
   );
 };

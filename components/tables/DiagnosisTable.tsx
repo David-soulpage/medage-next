@@ -62,7 +62,7 @@ const DiagnosisTable: FC = () => {
       name: "Doctor Comments",
       cell: (row) => (
         <div>
-          <button className="btn btn-outline-dark text-muted">View</button>
+          <button className="btn btn-sm btn-outline-dark text-muted">View</button>
         </div>
       ),
     },
@@ -70,7 +70,7 @@ const DiagnosisTable: FC = () => {
       name: "Attachments",
       cell: (row) => (
         <div>
-          <button className="btn btn-outline-dark text-muted">View</button>
+          <button className="btn btn-sm btn-outline-dark text-muted">View</button>
         </div>
       ),
     },
@@ -96,17 +96,7 @@ const DiagnosisTable: FC = () => {
       },
     },
   };
-  return (
-    <div className="card p-3 mt-4 rounded border-0">
-      <div className="d-flex justify-content-between align-items-center">
-        <div className="d-flex">
-          <h6 className="title m-0">Diagnosis</h6>
-        </div>
-      </div>
-      <div className="border-top my-3"></div>
-      <DataTable columns={columns} data={tableData} customStyles={customStyles} />
-    </div>
-  );
+  return <DataTable columns={columns} data={tableData} customStyles={customStyles} />;
 };
 
 export default DiagnosisTable;

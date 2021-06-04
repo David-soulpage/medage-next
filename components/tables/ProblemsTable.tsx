@@ -117,7 +117,7 @@ const ProblemsTable: FC = () => {
     },
   };
   return (
-    <div className="card p-3 mt-4 rounded border-0">
+    <>
       <div className="d-flex justify-content-between align-items-center">
         <div className="d-flex">
           <h6 className="title m-0">Active Problems</h6>
@@ -171,7 +171,7 @@ const ProblemsTable: FC = () => {
           <button className="btn btn-primary text-white">Save</button>
         </Modal.Footer>
       </CommonModal>
-    </div>
+    </>
   );
 };
 
