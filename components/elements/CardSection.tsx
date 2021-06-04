@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-// local components
-
+// local componentsimport
 import { CommonCard } from "@components/card";
 //styled icons
 import { User } from "@styled-icons/fa-regular";
@@ -19,8 +18,8 @@ const CardSection: FC<IProps> = ({ list }) => {
           <CommonCard>
             <div className="d-flex align-items-center">
               <div>
-                <small className="m-0 text-muted mb-2">{card.title}</small>
-                <h3 className="text-muted m-0">{card.number}</h3>
+                <small className="m-0 text-base-light-black mb-2">{card.title}</small>
+                <h3 className="text-base-black m-0">{card.number}</h3>
               </div>
               <div className="ms-auto">
                 <div className={`border-0 p-3 rounded ${card.background}`}>

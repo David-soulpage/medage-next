@@ -1,18 +1,20 @@
+// react
 import React from "react";
 // local components
-
 import { AppointmentCard } from "@components/card";
+import RadiologyHeader from "@components/elements/RadiologyHeader";
+import CustomCalender from "@components/elements/CustomCalender";
+import RadiologyTasks from "@components/elements/RadiologyTasks";
+import CardSection from "@components/elements/CardSection";
 //lodash
 import _ from "lodash";
 //styled icons
-
-import { CheckDouble, DotsVerticalRounded } from "@styled-icons/boxicons-regular";
-import CardSection from "@components/elements/CardSection";
-import RadiologyHeader from "@components/elements/RadiologyHeader";
+import { DotsVerticalRounded } from "@styled-icons/boxicons-regular";
 import { AccountCircle } from "@styled-icons/material-outlined";
-
 import { Exclamation } from "styled-icons/bootstrap";
 import { Forward } from "@styled-icons/entypo";
+// next router
+import Router from "next/router";
 
 const Dashboard = () => {
   const cards = [
@@ -78,40 +80,16 @@ const Dashboard = () => {
           <div className="col-md-6 ">
             <div className="row  h-100">
               <div className="col-12">
-                <div className="card p-4 border-0 shadown-sm">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <h6 className="fw-bold m-0">Tasks</h6>
-                    </div>
-                    <div className="ms-auto">
-                      <button className="btn btn-sm btn-outline-secondary">New Task +</button>
-                    </div>
-                  </div>
-                  {_.map(tasks, (task, id) => (
-                    <div key={id} className="mt-4">
-                      <div className="d-flex align-items-center">
-                        <div className="p-3 border-0 bg-primary-light rounded">
-                          <CheckDouble size="20" />
-                        </div>
-                        <div className="ms-3">
-                          <small className="m-0 d-block text-dark fw-bold">{task.title}</small>
-                          <small className="text-muted">{task.status}</small>
-                        </div>
-                        <div className="ms-auto d-flex align-items-center  ">
-                          <small className="fw-bold me-3 text-muted">{task.date}</small>
-
-                          <DotsVerticalRounded size="20" />
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <RadiologyTasks />
               </div>
               <div className="col-12 align-self-end">
                 <div className="card p-4 border-0 shadown-sm">
                   <div className="d-flex align-items-center">
                     <div>
-                      <h6 className="fw-bold m-0">Messages (2 unread)</h6>
+                      <h6 className="fw-bolder m-0 text-base-black">
+                        Messages
+                        <span className="text-base-black fw-normal ms-2">(2 unread)</span>{" "}
+                      </h6>
                     </div>
                     <div className="ms-auto">
                       <button className="btn btn-sm btn-outline-secondary">Sort by</button>
@@ -124,28 +102,34 @@ const Dashboard = () => {
                         <AccountCircle size="30" />
                         <div className="ms-3">
                           <div className="d-flex align-items-center ">
-                            <small className="m-0 d-block text-dark fw-bold me-3">
+                            <small className="m-0 d-block text-base-black fw-bold me-3">
                               Helena Chavez
                             </small>
                             <Exclamation size="20" />
                           </div>
-                          <small className="text-muted">
+                          <small className="text-light-purple">
                             How To Write Better Advertising Copy Examples
                           </small>
                         </div>
                         <div className="ms-auto d-flex align-items-center">
-                          <small className="fw-bold text-muted me-3">15th Apr 2021, 11:52 AM</small>
+                          <small className=" fw-light me-3  text-light-purple font-smaller">
+                            15th Apr 2021, 11:52 AM
+                          </small>
+
                           <DotsVerticalRounded size="20" />
                         </div>
                       </div>
                       <div className="d-flex flex-row-reverse">
-                        <button className="btn-sm border-0 ">
-                          <Forward size="20" />
+                        <button className="btn-sm border-0 bg-light-primary ">
+                          <Forward size="20" className=" text-primary" />
                           <small className="ms-3 text-primary">Reply</small>
                         </button>
                       </div>
                     </div>
-                    <div className=" d-flex flex-row-reverse mt-3">
+                    <div
+                      className=" d-flex flex-row-reverse mt-3"
+                      onClick={() => Router.push("/radiology/messages")}
+                    >
                       <small className="text-primary">View All</small>
                     </div>
                   </div>
@@ -154,6 +138,9 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container">
+        <CustomCalender />
       </div>
     </div>
   );

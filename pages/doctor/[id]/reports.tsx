@@ -12,8 +12,8 @@ import { Search } from "@styled-icons/bootstrap";
 const analytics = () => {
   return (
     <DoctorDashboardLayout>
-      <div className="container py-5">
-        <h3 className="text-dark mb-3">Reports</h3>
+      <div className="container pt-2">
+        <h6 className="text-dark mb-3">Reports</h6>
         <CommonCard>
           <div className="d-flex flex-column flex-md-row align-items-center">
             <h6 className="title m-0">Reports List</h6>
@@ -27,7 +27,7 @@ const analytics = () => {
                   <Search className="text-dark icon-height" />
                 </InputGroup.Append>
               </InputGroup>
-              <button className="btn btn-outline-secondary btn-sm">Sort By A-Z</button>
+              <button className="btn btn-outline-dark text-muted btn-sm">Sort By A-Z</button>
             </div>
           </div>
           <ReportsTable />

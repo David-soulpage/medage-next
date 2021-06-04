@@ -1,6 +1,4 @@
-import React, {FC} from 'react';
-// Assets and Images
-import Profile from 'src/assets/images/profile.jpg';
+import React, { FC } from "react";
 
 const PatientDetails: FC = () => {
   return (
@@ -22,32 +20,30 @@ const PatientDetails: FC = () => {
         <div className="mx-3 w-100">
           <div className="row gy-3">
             <div className="col-4">
-              <h6 className="title m-0">David Nirmal</h6>
+              <h6 className="fw-bold m-0">David Nirmal</h6>
             </div>
             <div className="col-8">
-              <h6 className="sub-title m-0">Something</h6>
+              <h6 className=" m-0">Something</h6>
             </div>
             <div className="col-4">
-              <h6 className="title m-0">Phone:</h6>
+              <h6 className="fw-bold m-0">Phone:</h6>
             </div>
             <div className="col-8">
-              <h6 className="sub-title m-0">040-978102718</h6>
+              <h6 className=" m-0">040-978102718</h6>
             </div>
             <div className="col-4">
-              <h6 className="title m-0">Address:</h6>
+              <h6 className="fw-bold m-0">Address:</h6>
             </div>
             <div className="col-8">
-              <h6 className="sub-title m-0">10000 W Maude Ave Sunny vale ,CA 99897</h6>
+              <h6 className=" m-0">10000 W Maude Ave Sunny vale ,CA 99897</h6>
             </div>
             <div className="col-4">
-              <h6 className="title m-0">CDS:</h6>
+              <h6 className="fw-bold m-0">CDS:</h6>
             </div>
             <div className="col-8">
-              <button className="btn btn-reply sub-title m-1">Diabetic Eye Exam</button>
-              <button className="btn btn-reply sub-title m-1">Diabetic Foot Exam</button>
-              <button className="btn btn-reply sub-title m-1">
-                Adult Immunization Schedule Age: 28-49
-              </button>
+              <button className="btn btn-reply  m-1">Diabetic Eye Exam</button>
+              <button className="btn btn-reply  m-1">Diabetic Foot Exam</button>
+              <button className="btn btn-reply  m-1">Adult Immunization Schedule Age: 28-49</button>
             </div>
           </div>
         </div>
@@ -55,22 +51,22 @@ const PatientDetails: FC = () => {
         <div className="w-100 mt-4 mt-lg-0">
           <div className="row gy-3">
             <div className="col-6">
-              <h6 className="title m-0">Date Added:</h6>
+              <h6 className="fw-bold m-0">Date Added:</h6>
             </div>
             <div className="col-6">
-              <h6 className="sub-title m-0">April 6, 2021</h6>
+              <h6 className=" m-0">April 6, 2021</h6>
             </div>
             <div className="col-6">
-              <h6 className="title m-0">Last Shcedule Appointment:</h6>
+              <h6 className="fw-bold m-0">Last Shcedule Appointment:</h6>
             </div>
             <div className="col-6">
-              <h6 className="sub-title m-0">Mon Aug 6, 2020</h6>
+              <h6 className=" m-0">Mon Aug 6, 2020</h6>
             </div>
             <div className="col-6">
-              <h6 className="title m-0">Next Shcedule Appointment</h6>
+              <h6 className="fw-bold m-0">Next Shcedule Appointment</h6>
             </div>
             <div className="col-6">
-              <h6 className="sub-title m-0">_ _ _ _</h6>
+              <h6 className=" m-0">_ _ _ _</h6>
             </div>
           </div>
         </div>
