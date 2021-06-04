@@ -8,7 +8,7 @@ import { Modal, Form, Dropdown } from "react-bootstrap";
 import _ from "lodash";
 // styled icons
 import { Attachment, Cross } from "@styled-icons/entypo";
-// components
+// componentsr
 import RadiologyMessage from "@components/elements/RadiologyMessage";
 
 const Messages: FC = () => {
