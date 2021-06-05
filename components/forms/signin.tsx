@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import { Form, FormControl, FormGroup, FormLabel, InputGroup } from "react-bootstrap";
 // styled icons
 import { EyeFill, EyeSlashFill } from "@styled-icons/bootstrap/";
+import { Google } from "@styled-icons/boxicons-logos/";
 
 const SignIn: FC = () => {
   const [showPassword, setPassword] = useState(false);
@@ -26,7 +27,7 @@ const SignIn: FC = () => {
     setPassword(!showPassword);
   };
   return (
-    <Form className="p-3 pt-4" onSubmit={formik.handleSubmit}>
+    <Form onSubmit={formik.handleSubmit}>
       <Form.Group controlId="formBasicEmail" className="mb-2">
         <Form.Label className="text-base-black fw-normal">Full Name</Form.Label>
         <Form.Control
@@ -113,11 +114,12 @@ const SignIn: FC = () => {
         </button>
       </div>
       <div className="my-3">
-        <button type="button" className="btn btn-white text-orange fw-bold w-100 rounded py-2">
+        <button type="button" className="btn bg-white text-orange fw-bold w-100 rounded py-2">
+          <Google size="20" className="text-orange me-3" />
           Sign Up With Google
         </button>
       </div>
-      <div className="my-2">
+      <div className="my-2 d-flex align-self-center">
         <small className="text-light-grey text-center">
           Already have an account? <small className="text-primary">Log in</small>
         </small>

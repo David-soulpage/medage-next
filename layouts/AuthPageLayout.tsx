@@ -1,3 +1,4 @@
+import React from "react";
 // next
 import Link from "next/link";
 // react-boostrap
@@ -5,8 +6,8 @@ import { Navbar, Nav, Container, Image } from "react-bootstrap";
 
 const AuthPageLayout = (props: any) => {
   return (
-    <>
-      <div>
+    <div className="container-fluid min-vh-100 d-flex flex-column">
+      <div className="row">
         <Navbar className="shadow-sm" expand="lg">
           <Container className="py-2 px-5" fluid>
             <Navbar.Brand className="fw-bold">
@@ -26,7 +27,9 @@ const AuthPageLayout = (props: any) => {
                 </li>
                 <li className="nav-item fw-bold ms-3 px-2">
                   <Link href="">
-                    <a className="text-decoration-none text-base-black">Contact Us</a>
+                    <a className="text-decoration-none text-base-black">
+                      <small>Contact Us</small>
+                    </a>
                   </Link>
                 </li>
               </Nav>
@@ -34,8 +37,8 @@ const AuthPageLayout = (props: any) => {
           </Container>
         </Navbar>
       </div>
-      <div>{props.children}</div>
-    </>
+      <div className="row flex-grow-1">{props.children}</div>
+    </div>
   );
 };
 

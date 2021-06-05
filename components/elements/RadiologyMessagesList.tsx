@@ -1,11 +1,12 @@
 // react
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 // next
 import Link from "next/link";
 // components
 import MessagesCard from "@components/card/MessagesCard";
 // react boostrap
 import { Dropdown } from "react-bootstrap";
+import RadiologyMessagesModal from "@components/modal/RadiologyMessagesModal";
 
 const messagesList = [
   {
@@ -22,6 +23,7 @@ const messagesList = [
 ];
 
 const RadiologyMessagesList: FC = () => {
+  const [showModal, setModalStatus] = useState(false);
   const Header = () => {
     return (
       <div className="d-flex align-items-center justify-content-between">
@@ -32,9 +34,12 @@ const RadiologyMessagesList: FC = () => {
           </h6>
         </div>
         <div className="d-flex align-items-center">
-          <div className="btn btn-sm bg-white btn-outline-primary text-base-black fw-light">
-            New Message
-          </div>
+          <button
+            className="btn btn-outline-secondary text-dark"
+            onClick={() => setModalStatus(true)}
+          >
+            + New Message
+          </button>
 
           <Dropdown>
             <Dropdown.Toggle
@@ -56,6 +61,9 @@ const RadiologyMessagesList: FC = () => {
     );
   };
 
+  const handleClose = () => {
+    setModalStatus(false);
+  };
   const Footer = () => {
     return (
       <div className="ms-auto mt-3">
@@ -81,6 +89,7 @@ const RadiologyMessagesList: FC = () => {
       <Header />
       {renderMessagesList()}
       <Footer />
+      {showModal && <RadiologyMessagesModal show={showModal} handleClose={handleClose} />}
     </div>
   );
 };

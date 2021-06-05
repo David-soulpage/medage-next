@@ -10,16 +10,13 @@ import { AuthPageLayout } from "layouts";
 const Home: FC = () => {
   return (
     <AuthPageLayout>
-      <div className="border" style={{ height: "95vh" }}>
-        <div className="h-100">
-          <div className="row justify-content-center h-100">
-            <div className="col-md-6 text-center align-self-center">
-              <Image className="img-fluid" src="/home.png" width="500" />
-            </div>
-            <div className="col-md-6 h-100 bg-light border align-self-center align-items-center mx-auto">
-              <SignIn />
-            </div>
-          </div>
+      <div className="col-md-6 text-center align-self-center ">
+        <Image className="img-fluid" src="/home.png" width="500" />
+      </div>
+      <div className="col-md-6 bg-light-primary border align-items-center d-flex ">
+        <div className="w-md-75 mx-auto">
+          <h4 className="text-base-black fw-bold mb-3 me-auto">Register to Iatros</h4>
+          <SignIn />
         </div>
       </div>
     </AuthPageLayout>

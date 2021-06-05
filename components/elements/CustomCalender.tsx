@@ -129,8 +129,8 @@ const CustomCalender: FC = () => {
   };
 
   return (
-    <div className=" row card p-3  my-3">
-      <h6 className="fw-bold text-base-black">Calender</h6>
+    <div className="w-100 row card p-3 g-0  my-3">
+      <h6 className="fw-bold text-base-black mt-3">Calender</h6>
       <CalenderButtons />
       <RenderContent />
     </div>

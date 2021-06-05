@@ -62,7 +62,6 @@ const Dashboard = () => {
   return (
     <RadiologyLayout>
       <CardSection list={cards} />
-
       <div className="mt-4">
         <div className="row">
           <div className="col-md-6">
@@ -80,9 +79,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="container">
-        <CustomCalender />
-      </div>
+      <CustomCalender />
     </RadiologyLayout>
   );
 };
