@@ -14,7 +14,7 @@ const analytics = () => {
       </Head>
       <DoctorDashboardLayout>
         <div className="container pt-2">
-          <h6 className="text-dark mb-3">Analytics</h6>
+          <h6 className="text-dark mb-3">Testing</h6>
           <div className="row g-3">
             <div className="col-md-12">
               <CommonCard>
