@@ -1,5 +1,8 @@
+// react
 import React from "react";
+// components
 import { CommonCard } from "@components/card";
+// lodash
 import _ from "lodash";
 
 const Pharmacies = () => {
@@ -46,9 +49,9 @@ const Pharmacies = () => {
       <div className="row g-4 mt-4">
         {_.map(data, (item, id) => (
           <div key={id} className="col-md-4 col-12">
-            <CommonCard>
-              <div className="d-flex align-items-center justify-content-between">
-                <div className="d-flex">
+            <div className="card border shadow-sm p-3 rounded">
+              <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center">
                   <img
                     src={item.image}
                     alt="image"
@@ -57,14 +60,14 @@ const Pharmacies = () => {
                     className="rounded"
                   />
                   <div className="mx-3">
-                    <h6 className="title">{item.title}</h6>
-                    <p className="sub-title m-0">{item.address}</p>
+                    <small className="fw-bold">{item.title}</small>
+                    <small className="fw-bold m-0">{item.address}</small>
                   </div>
                 </div>
 
-                <small className="sub-title">{item.time}</small>
+                <small className="ms-auto">{item.time}</small>
               </div>
-            </CommonCard>
+            </div>
           </div>
         ))}
       </div>
@@ -81,28 +84,28 @@ const Pharmacies = () => {
       </div>
       <div className="d-flex justify-content-between my-4">
         <div className="d-flex flex-column">
-          <h6 className="sub-title m-0">
+          <small className="m-0">
             <b>Patient Name:</b> <span>Shane Warne</span>
-          </h6>
-          <h6 className="sub-title m-0 my-3">
+          </small>
+          <small className="m-0 my-3">
             <b>Scanning Center:</b> <span>Vijaya Diagnostic Center</span>
-          </h6>
-          <h6 className="sub-title m-0">
+          </small>
+          <small className="m-0">
             <b>Reffering Doctor:</b> <span>Allen Willkins</span>
-          </h6>
+          </small>
         </div>
         <div className="d-flex flex-column">
           <div className="d-flex">
-            <h6 className="sub-title m-0 me-4">
+            <small className="m-0 me-4">
               <b>DOB:</b> <span>16/12/2020</span>
-            </h6>{" "}
-            <h6 className="sub-title m-0">
+            </small>{" "}
+            <small className="m-0">
               <b>Gender:</b> <span>Male</span>
-            </h6>
+            </small>
           </div>
-          <h6 className="sub-title m-0 my-4">
+          <small className="m-0 my-4">
             <b>Date of Scan:</b> <span> 04/04/2021</span>
-          </h6>
+          </small>
         </div>
       </div>
     </CommonCard>

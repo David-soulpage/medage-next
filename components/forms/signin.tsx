@@ -6,8 +6,9 @@ import { useFormik } from "formik";
 import { Form, FormControl, FormGroup, FormLabel, InputGroup } from "react-bootstrap";
 // styled icons
 import { EyeFill, EyeSlashFill } from "@styled-icons/bootstrap/";
+import { Google } from "@styled-icons/boxicons-logos/";
 
-const Signin: FC = () => {
+const SignIn: FC = () => {
   const [showPassword, setPassword] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -26,7 +27,7 @@ const Signin: FC = () => {
     setPassword(!showPassword);
   };
   return (
-    <Form className="p-3 pt-4" onSubmit={formik.handleSubmit}>
+    <Form onSubmit={formik.handleSubmit}>
       <Form.Group controlId="formBasicEmail" className="mb-2">
         <Form.Label className="text-base-black fw-normal">Full Name</Form.Label>
         <Form.Control
@@ -63,9 +64,9 @@ const Signin: FC = () => {
           size="sm"
         />
       </Form.Group>
-      <FormGroup className="mb-2">
+      <FormGroup className="mb-2 ">
         <Form.Label className="text-base-black fw-normal">Password</Form.Label>
-        <InputGroup>
+        <InputGroup className="py-2 br-10 border bg-white">
           <FormControl
             name="password"
             type={showPassword ? "text" : "password"}
@@ -73,9 +74,10 @@ const Signin: FC = () => {
             size="sm"
             onChange={formik.handleChange}
             value={formik.values.password}
+            className="border-0"
           />
-          <InputGroup.Append>
-            <div className=" bg-white px-3 py-2 border" onClick={onPressEye}>
+          <InputGroup.Append className="border-0">
+            <div className=" bg-white px-3 py-2" onClick={onPressEye}>
               {showPassword ? (
                 <EyeFill size="20" className="text-light-grey" />
               ) : (
@@ -112,11 +114,12 @@ const Signin: FC = () => {
         </button>
       </div>
       <div className="my-3">
-        <button type="button" className="btn btn-secondary text-orange fw-bold w-100 rounded py-2">
+        <button type="button" className="btn bg-white text-orange fw-bold w-100 rounded py-2">
+          <Google size="20" className="text-orange me-3" />
           Sign Up With Google
         </button>
       </div>
-      <div className="my-2">
+      <div className="my-2 d-flex align-self-center">
         <small className="text-light-grey text-center">
           Already have an account? <small className="text-primary">Log in</small>
         </small>
@@ -124,4 +127,4 @@ const Signin: FC = () => {
     </Form>
   );
 };
-export default Signin;
+export default SignIn;

@@ -9,3 +9,4 @@ export { default as PatientDetailsSmall } from "./PatientDetailsSmall";
 export { default as PatientSummary } from "./PatientSummary";
 export { default as Tasks } from "./Tasks";
 export { default as Pharmacies } from "./Pharmacies";
+export { default as RadiologyMessagesList } from "./RadiologyMessagesList";

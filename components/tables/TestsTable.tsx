@@ -1,7 +1,8 @@
+// react
 import React, { FC } from "react";
-//local component
+// react-data-table-component
 import DataTable from "react-data-table-component";
-//icons
+//styled-icons
 import { Edit } from "@styled-icons/material";
 import { Delete } from "@styled-icons/fluentui-system-regular";
 
@@ -120,18 +121,7 @@ const TestsTable: FC = () => {
       },
     },
   };
-  return (
-    <div className="card p-3 mt-4 rounded border-0">
-      <div className="d-flex justify-content-between align-items-center">
-        <div className="d-flex my-2">
-          <h6 className="title m-0">Tests</h6>
-          <h6 className="sub-title m-0 mx-4">Past Tests</h6>
-        </div>
-      </div>
-      <div className="border-top my-3"></div>
-      <DataTable columns={columns} data={tableData} customStyles={customStyles} />
-    </div>
-  );
+  return <DataTable columns={columns} data={tableData} customStyles={customStyles} />;
 };
 
 export default TestsTable;

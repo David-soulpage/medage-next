@@ -71,12 +71,6 @@ const RadiologyTasks: FC = () => {
           </div>
         );
       })}
-      <div
-        className=" d-flex flex-row-reverse mt-3"
-        onClick={() => Router.push("/radiology/messages")}
-      >
-        <small className="text-primary">View All</small>
-      </div>
       <AddTaskModal show={show} handleClose={handleClose} />
     </div>
   );

@@ -1,7 +1,10 @@
+// react
 import React from "react";
+// next
 import Head from "next/head";
-// local components
+// layouts
 import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+// components
 import { AppointmentCard, CommonCard } from "@components/card";
 //lodash
 import _ from "lodash";
@@ -75,7 +78,7 @@ const Dashboard = () => {
             {_.map(cards, (card, id) => (
               <div key={id} className="col-lg-3 col-md-6 col-12">
                 <CommonCard>
-                  <div className="d-flex align-items-center">
+                  <div className="d-flex align-items-start">
                     <div>
                       <small className="m-0 text-muted mb-2">{card.title}</small>
                       <h3 className="text-dark m-0">{card.number}</h3>
@@ -108,7 +111,7 @@ const Dashboard = () => {
             <div className="col-lg-6 col-12">
               <div className="row gy-3">
                 <div className="col-12">
-                  <div className="card p-4 border-0 shadow-sm">
+                  <CommonCard>
                     <div className="d-flex align-items-center">
                       <div>
                         <h6 className="fw-bold m-0">Tasks</h6>
@@ -135,10 +138,10 @@ const Dashboard = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </CommonCard>
                 </div>
                 <div className="col-12 h-100">
-                  <div className="card p-4 border-0 shadow-sm h-100">
+                  <CommonCard>
                     <div className="d-flex align-items-center">
                       <div>
                         <h6 className="fw-bold m-0">Messages (2 unread)</h6>
@@ -180,7 +183,7 @@ const Dashboard = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </CommonCard>
                 </div>
               </div>
             </div>

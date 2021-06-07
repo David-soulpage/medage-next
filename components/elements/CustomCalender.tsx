@@ -114,16 +114,23 @@ const CustomCalender: FC = () => {
   const CalenderButtons = () => {
     return (
       <div className="d-flex  align-items-center">
-        {buttonsList.map((ele) => {
-          return <CalenderButton title={ele} onPress={onPress} selected={activeButton === ele} />;
+        {buttonsList.map((ele, key) => {
+          return (
+            <CalenderButton
+              title={ele}
+              onPress={onPress}
+              selected={activeButton === ele}
+              key={key}
+            />
+          );
         })}
       </div>
     );
   };
 
   return (
-    <div className=" row card p-3  my-3">
-      <h6 className="fw-bold text-base-black">Calender</h6>
+    <div className="w-100 row card p-3 g-0  my-3">
+      <h6 className="fw-bold text-base-black mt-3">Calender</h6>
       <CalenderButtons />
       <RenderContent />
     </div>
