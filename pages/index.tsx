@@ -13,7 +13,7 @@ const Home: FC = () => {
       <div className="col-md-6 text-center align-self-center ">
         <Image className="img-fluid" src="/home.png" width="500" />
       </div>
-      <div className="col-md-6 bg-light-primary border align-items-center d-flex ">
+      <div className="col-md-6 bg-light-primary border align-items-center d-flex">
         <div className="w-md-75 mx-auto">
           <h4 className="text-base-black fw-bold mb-3 me-auto">Register to Iatros</h4>
           <SignIn />
