@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { Header } from "../components/elements";
+//local components
+import { Header, PatientDashboardSidebar } from "../components/elements";
 
 interface IProps {
   children: any;
@@ -13,7 +14,7 @@ const PatientDashboardLayout: FC<IProps> = ({ children }) => {
           <Header />
         </div>
         <div className="doctor-dashboard-left-sidebar">
-          <h5>SideBar</h5>
+          <PatientDashboardSidebar />
         </div>
         <div className="doctor-dashboard-grid-main">{children}</div>
       </div>

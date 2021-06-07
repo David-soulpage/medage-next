@@ -10,3 +10,4 @@ export { default as PatientSummary } from "./PatientSummary";
 export { default as Tasks } from "./Tasks";
 export { default as Pharmacies } from "./Pharmacies";
 export { default as RadiologyMessagesList } from "./RadiologyMessagesList";
+export { default as PatientDashboardSidebar } from "./PatientDashboardSidebar";
