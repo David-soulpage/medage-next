@@ -128,8 +128,9 @@ const PatientFamily: FC<IProps> = (props) => {
               onChange={formik.handleChange}
               value={formik.values.description}
               className="font-smaller py-2 br-10 "
-              style={{ height: 100 }}
               size="sm"
+              as="textarea"
+              rows={3}
             />
           </Form.Group>
         </div>

@@ -9,3 +9,10 @@ body {
 #dropdown-basic::after {
   display: none;
 }
+
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #808191;
+  opacity: 1; /* Firefox */
+  font-size: small;
+}

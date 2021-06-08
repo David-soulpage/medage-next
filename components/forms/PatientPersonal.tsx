@@ -140,9 +140,15 @@ const PatientPersonal: FC<IProps> = (props) => {
             <Dropdown onSelect={handleSelect}>
               <Dropdown.Toggle className="w-100 bg-white border br-10" id="dropdown-basic">
                 <div className="w-100 d-flex justify-content-between align-items-center">
-                  <div>{formik.values.gender === "" ? "choose gender" : formik.values.gender}</div>
+                  <div>
+                    {formik.values.gender === "" ? (
+                      <small className="text-light-grey fw-normal">Choose gender</small>
+                    ) : (
+                      <small className="text-dark-grey fw-normal">{formik.values.gender}</small>
+                    )}
+                  </div>
 
-                  <ArrowDropDown size="25"></ArrowDropDown>
+                  <ArrowDropDown size="25" className="text-light-grey"></ArrowDropDown>
                 </div>
               </Dropdown.Toggle>
 
@@ -178,8 +184,9 @@ const PatientPersonal: FC<IProps> = (props) => {
               onChange={formik.handleChange}
               value={formik.values.description}
               className="font-smaller py-2 br-10 "
-              style={{ height: 100 }}
               size="sm"
+              as="textarea"
+              rows={3}
             />
           </Form.Group>
         </div>
