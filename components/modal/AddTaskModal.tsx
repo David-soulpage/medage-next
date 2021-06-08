@@ -25,7 +25,6 @@ const AddTaskModal: FC<ImodalProps> = ({ show, handleClose }) => {
       console.log(values);
     },
   });
-  console.log(formik);
 
   return (
     <Modal show={show} onHide={handleClose} centered>
