@@ -61,7 +61,7 @@ const DoctorCard = () => {
     <>
       {_.map(doctors, (doctor, id) => (
         <div key={id} className="mt-4">
-          <CommonCard>
+          <div className="card border-1 shadow-sm p-4 h-100 ">
             <div className="row">
               <div className="col-md-3 d-flex flex-column align-items-center justify-content-between">
                 <img
@@ -225,7 +225,7 @@ const DoctorCard = () => {
                 </div>
               </div>
             ) : null}
-          </CommonCard>
+          </div>
         </div>
       ))}
 
