@@ -11,3 +11,8 @@ export { default as Tasks } from "./Tasks";
 export { default as Pharmacies } from "./Pharmacies";
 export { default as RadiologyMessagesList } from "./RadiologyMessagesList";
 export { default as PatientDashboardSidebar } from "./PatientDashboardSidebar";
+export { default as PaymentStep1 } from "./PaymentStep1";
+export { default as PaymentStep2 } from "./PaymentStep2";
+export { default as Medication } from "./Medication";
+export { default as Questions } from "./Questions";
+export { default as SignDocuments } from "./SignDocuments";

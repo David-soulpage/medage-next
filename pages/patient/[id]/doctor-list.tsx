@@ -7,6 +7,7 @@ import { Form, InputGroup, Dropdown } from "react-bootstrap";
 //icons
 import { Filter, Search, Calendar } from "@styled-icons/bootstrap";
 import { Location } from "@styled-icons/zondicons";
+import { DotFill } from "@styled-icons/octicons";
 //lodash
 import _ from "lodash";
 
@@ -65,7 +66,9 @@ const ProblemList = () => {
               </div>
             ))}
           </div>
-          <h6 className="mt-3 fw-bold">Total 23 Doctors are Available</h6>
+          <h6 className="my-5 fw-bold">
+            Total 23 Doctors are Available <DotFill size="20" className="text-success" />
+          </h6>
           <div>
             <DoctorCard />
           </div>

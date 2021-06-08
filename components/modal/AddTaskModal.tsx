@@ -21,9 +21,7 @@ const AddTaskModal: FC<ImodalProps> = ({ show, handleClose }) => {
       patient_case_study: "",
       description: "",
     },
-    onSubmit: (values) => {
-      console.log(values);
-    },
+    onSubmit: (values) => {},
   });
 
   return (
