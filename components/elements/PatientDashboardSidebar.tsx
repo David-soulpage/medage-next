@@ -30,7 +30,7 @@ const PatientDashboardSidebar = () => {
     {
       name: "Doctors",
       icon: Group,
-      route: "doctors",
+      route: "doctor-list",
     },
     {
       name: "Reports",
