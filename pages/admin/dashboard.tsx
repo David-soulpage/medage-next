@@ -46,7 +46,7 @@ const Dashboard = () => {
       <div className="container-fluid mt-3 py-3 px-5">
         <CardSection list={list} />
         <div className="row mt-4 g-3">
-          <div className="col-md-6">
+          <div className="col-md-6 ">
             <BillingSummary />
           </div>
           <div className="col-md-3">
