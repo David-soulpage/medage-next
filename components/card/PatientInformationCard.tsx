@@ -33,7 +33,7 @@ const PatientInformationCard: FC<IProps> = (props) => {
   };
 
   return (
-    <div className="card border-0 shadow-sm p-4 mx-4 d-flex flex-column bg-white ">
+    <div className="card border-0 shadow-sm p-4  d-flex flex-column bg-white ">
       <div className="d-flex flex-row align-items-center w-50">
         <div className="me-5" onClick={() => handleClick("personal")}>
           <small className="fw-bold text-base-black">Personal Information</small>

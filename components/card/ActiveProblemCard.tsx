@@ -2,6 +2,7 @@
 import React, { FC, useEffect, useState } from "react";
 // components
 import CommonForm from "@components/forms/CommonForm";
+import { ProblemListStepOne } from "@components/elements";
 
 interface IProps {
   onPressNext: () => void;
@@ -278,14 +279,18 @@ const ActiveProblemCard: FC<IProps> = (props) => {
   };
   return (
     <div className="d-flex mt-2 flex-column bg-white">
-      <CommonForm
-        initialValues={step === 0 ? initialValues2 : step == 1 ? initialValues1 : initialValues}
-        styles={step === 0 ? styles2 : step == 1 ? styles1 : styles}
-        buttonsList={step === 0 ? buttonsList1 : buttonsList}
-        list={step === 0 ? list2 : step == 1 ? list1 : list}
-        underline={step === 0 || step === 1 ? "true" : ""}
-        onPressForm={onPressForm}
-      />
+      {step === 0 ? (
+        <ProblemListStepOne onPressForm={onPressForm} />
+      ) : (
+        <CommonForm
+          initialValues={step === 1 ? initialValues2 : step === 2 ? initialValues1 : initialValues}
+          styles={step === 1 ? styles2 : step === 2 ? styles1 : styles}
+          buttonsList={step === 1 ? buttonsList1 : buttonsList}
+          list={step === 1 ? list2 : step === 2 ? list1 : list}
+          underline={step === 1 || step === 2 ? "true" : ""}
+          onPressForm={onPressForm}
+        />
+      )}
     </div>
   );
 };

@@ -30,12 +30,12 @@ const PatientDashboardSidebar = () => {
     {
       name: "Doctors",
       icon: Group,
-      route: "",
+      route: "doctors",
     },
     {
       name: "Reports",
       icon: DocumentOnePage,
-      route: "",
+      route: "reports",
     },
     {
       name: "Problems List",
@@ -46,12 +46,18 @@ const PatientDashboardSidebar = () => {
     {
       name: "Calendar",
       icon: CalendarAlt,
-      route: "",
+      route: "calendar",
     },
   ];
 
   useEffect(() => {
-    console.log(router.pathname, "pathanme");
+    const pathName = router.pathname;
+    data.map((ele, index) => {
+      console.log(pathName.includes(ele["route"]), "pathName");
+      if (pathName.includes(ele["route"])) {
+        setSelectedItemIndex(index);
+      }
+    });
   }, [router.pathname]);
 
   const onClickItem = (index) => {
