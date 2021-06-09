@@ -1,4 +1,5 @@
 import React from "react";
+//react data table
 import DataTable from "react-data-table-component";
 
 const VisitTable = () => {
