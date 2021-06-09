@@ -1,8 +1,5 @@
 // react
 import React, { FC } from "react";
-//local components
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import { CommonCard } from "@components/card";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons
