@@ -19,5 +19,8 @@ export { default as SignDocuments } from "./SignDocuments";
 export { default as AdminNavbar } from "./AdminNavbar";
 export { default as BillingSummary } from "./BillingSummary";
 export { default as LiveClaims } from "./LiveClaims";
+export { default as PatientPayments } from "./PatientPayments";
 export { default as ProblemListStepOne } from "./ProblemListStepOne";
 export { default as LiveClaimsFeed } from "./LiveClaimsFeed";
+export { default as DashboardTasks } from "./DashboardTasks";
+export { default as DashboardMessages } from "./DashboardMessages";

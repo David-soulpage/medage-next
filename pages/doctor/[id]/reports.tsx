@@ -26,12 +26,9 @@ const analytics = () => {
               <h6 className="title m-0">Reports List</h6>
               <div className="d-flex flex-column flex-md-row ms-auto align-items-center">
                 <InputGroup className="bg-light px-2 py-0 rounded me-4 d-flex align-items-center">
-                  <Form.Control
-                    placeholder="Search  by ID, Name"
-                    className="border-0 bg-light me-2"
-                  />
+                  <Form.Control placeholder="Search  by ID, Name" className="border-0 bg-light" />
                   <InputGroup.Append>
-                    <Search className="text-dark icon-height" />
+                    <Search className="text-dark ms-2" size="20" />
                   </InputGroup.Append>
                 </InputGroup>
                 <button className="btn btn-outline-dark w-75 text-muted btn-sm">

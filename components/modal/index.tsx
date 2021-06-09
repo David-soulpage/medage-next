@@ -1,3 +1,3 @@
-import CommonModal from './CommonModal';
+import CommonModal from "./CommonModal";
 
-export {CommonModal};
+export { CommonModal };

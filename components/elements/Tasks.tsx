@@ -106,7 +106,7 @@ const Tasks: FC = () => {
                 alt="Profile Image"
                 height="50px"
                 width="50px"
-                className="rounded"
+                className="rounded img-fit"
               />
             </div>
           </div>
@@ -117,7 +117,7 @@ const Tasks: FC = () => {
         <Modal.Header>
           <div className="d-flex w-100 justify-content-between align-items-center">
             <h6 className="title m-0">New Task</h6>
-            <ThreeDotsVertical className="text-dark icon-height" />
+            <ThreeDotsVertical className="text-dark" size="20" />
           </div>
         </Modal.Header>
         <Modal.Body>
@@ -128,7 +128,7 @@ const Tasks: FC = () => {
           <div className="border-top my-5" />
         </Modal.Body>
         <Modal.Footer className="bg-secondary d-flex justify-content-start">
-          <Attach className="text-dark icon-height" />
+          <Attach className="text-dark" size="20" />
           <span className="mx-3 title">
             <input type="checkbox" /> <small>Mark as Completed</small>
           </span>

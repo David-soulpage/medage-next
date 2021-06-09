@@ -1,5 +1,6 @@
-import React, {FC} from 'react';
-import {Modal} from 'react-bootstrap';
+import React, { FC } from "react";
+//react bootstrap
+import { Modal } from "react-bootstrap";
 interface ICommonModal {
   show: boolean;
   onHide: () => void;
@@ -7,7 +8,7 @@ interface ICommonModal {
   children: React.ReactNode;
 }
 
-const CommonModal: FC<ICommonModal> = ({children, show, onHide, centered}: any) => {
+const CommonModal: FC<ICommonModal> = ({ children, show, onHide, centered }: any) => {
   return (
     <Modal show={show} onHide={onHide} centered={centered}>
       {children}
@@ -16,6 +17,6 @@ const CommonModal: FC<ICommonModal> = ({children, show, onHide, centered}: any) 
 };
 export default CommonModal;
 
-export const ModalHeader = ({children}: any): any => <Modal.Header>{children}</Modal.Header>;
-export const ModalBody = ({children}: any): any => <Modal.Body>{children}</Modal.Body>;
-export const ModalFooter = ({children}): any => <Modal.Footer>{children}</Modal.Footer>;
+export const ModalHeader = ({ children }: any): any => <Modal.Header>{children}</Modal.Header>;
+export const ModalBody = ({ children }: any): any => <Modal.Body>{children}</Modal.Body>;
+export const ModalFooter = ({ children }): any => <Modal.Footer>{children}</Modal.Footer>;

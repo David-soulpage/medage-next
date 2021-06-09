@@ -1,14 +1,16 @@
-import { FC } from "react";
+// react
+import React, { FC } from "react";
 //local components
 import { AdminNavbar, Header } from "@components/elements";
-// props
+
 interface IAdminProps {
   children: any;
 }
-const AdminLayout = ({ children }) => {
+
+const AdminLayout: FC<IAdminProps> = ({ children }) => {
   return (
     <>
-      <div className="bg-light ">
+      <div className="bg-light">
         <Header />
         <AdminNavbar />
         {children}

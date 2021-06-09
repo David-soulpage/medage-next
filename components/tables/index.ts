@@ -9,3 +9,8 @@ export { default as MedicationTable } from "./MedicationTable";
 export { default as StudyListTable } from "./StudyListTable";
 export { default as VisitList } from "./VisitList";
 export { default as VisitTable } from "./VisitTable";
+export { default as PatientList } from "./PatientList";
+export { default as VitalTable } from "./VitalTable";
+export { default as VitalTestsTable } from "./VitalTestsTable";
+export { default as PatientPaymentsTable } from "./PatientPaymentsTable";
+export { default as TransactionTable } from "./TransactionTable";
