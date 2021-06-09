@@ -1,11 +1,15 @@
 //React
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 // components
 import CommonForm from "@components/forms/CommonForm";
 
-interface IProps {}
+interface IProps {
+  onPressNext: () => void;
+}
 
 const ActiveProblemCard: FC<IProps> = (props) => {
+  const [step, setStep] = useState(0);
+
   const initialValues = {
     patientRelation: "",
     phoneNumber: "",
@@ -203,7 +207,7 @@ const ActiveProblemCard: FC<IProps> = (props) => {
   const styles1 = {
     formControl: "font-smaller py-2 border-0 px-0",
     formLabel: "text-base-black fw-bold",
-    formGroup: "mb-2",
+    formGroup: "mb-2 ",
     row: "",
     col: {
       small: "12",
@@ -219,8 +223,8 @@ const ActiveProblemCard: FC<IProps> = (props) => {
 
   const styles2 = {
     formControl: "font-smaller py-2 border-0 px-0",
-    formLabel: "text-base-black fw-bold",
-    formGroup: "mb-2",
+    formLabel: "text-base-black fw-bold mb-2",
+    formGroup: "mb-2 mt-3",
     row: "",
     col: {
       small: "12",
@@ -256,14 +260,31 @@ const ActiveProblemCard: FC<IProps> = (props) => {
       name: "howOftenYouFeel",
     },
   ];
+
+  const buttonsList1 = [
+    {
+      buttonStyles: "btn btn-primary text-white fw-bold font-smaller px-5 btn-lg mt-5",
+      buttonTextStyles: "fw-bold text-white font-smaller",
+      title: "Next",
+    },
+  ];
+
+  useEffect(() => {
+    if (step === 3) props.onPressNext();
+  }, [step]);
+
+  const onPressForm = () => {
+    setStep(step + 1);
+  };
   return (
-    <div className="card border-0 shadow-sm p-4 mx-4 d-flex flex-column bg-white">
+    <div className="d-flex mt-2 flex-column bg-white">
       <CommonForm
-        initialValues={initialValues2}
-        styles={styles2}
-        buttonsList={buttonsList}
-        list={list2}
-        underline="true"
+        initialValues={step === 0 ? initialValues2 : step == 1 ? initialValues1 : initialValues}
+        styles={step === 0 ? styles2 : step == 1 ? styles1 : styles}
+        buttonsList={step === 0 ? buttonsList1 : buttonsList}
+        list={step === 0 ? list2 : step == 1 ? list1 : list}
+        underline={step === 0 || step === 1 ? "true" : ""}
+        onPressForm={onPressForm}
       />
     </div>
   );

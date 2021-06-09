@@ -14,13 +14,15 @@ interface IProps {
   styles: any;
   buttonsList: any;
   underline?: string;
+  form?: string;
+  onPressForm?: () => void;
 }
 
 const CommonForm: FC<IProps> = (props) => {
   const formik = useFormik({
     initialValues: props.initialValues,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      props.onPressForm();
     },
   });
 

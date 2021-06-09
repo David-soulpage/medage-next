@@ -82,8 +82,8 @@ const columns = [
         <div className="me-2">
           <AccountBox size={45} className="text-light-grey  " />
         </div>
-        <div>
-          <small className="text-base-black font-smaller fw-bold">{row["doctorName"]}</small>
+        <div className="text-truncate ">
+          <small className="text-base-black font-smaller fw-bold ">{row["doctorName"]}</small>
         </div>
       </div>
     ),
@@ -138,6 +138,9 @@ const customStyles = {
       border: "none",
       fontWeight: "bold",
     },
+  },
+  cells: {
+    style: {},
   },
 
   rows: {
