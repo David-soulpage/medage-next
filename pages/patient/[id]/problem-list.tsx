@@ -2,7 +2,6 @@
 import React, { FC, useState } from "react";
 // components
 import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import ActiveProblemCard from "@components/card/ActiveProblemCard";
 import RecurringProblem from "@components/elements/RecurringProblem";
 
 interface IProps {}
@@ -15,17 +14,11 @@ const PatientDashboard: FC<IProps> = (props) => {
     setSelectedIndex(index);
   };
 
-  const onPressNext = () => {
-    setSelectedIndex(selectedIndex + 1);
-  };
-
   const RenderBasedOnIndex = () => {
     switch (selectedIndex) {
       case 0:
-        return <ActiveProblemCard onPressNext={onPressNext} />;
-      case 1:
         return <RecurringProblem />;
-      case 2:
+      case 1:
         return <RecurringProblem />;
     }
   };

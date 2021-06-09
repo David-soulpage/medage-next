@@ -25,8 +25,7 @@ const ProblemListStepOne: FC<Iprops> = (props) => {
     "Immunization",
   ];
   return (
-    <div className="container pt-2">
-      <h6 className="fw-bold m-0">Select problem</h6>
+    <React.Fragment>
       <div className="row">
         <div className="col-12 col-md-4">
           <InputGroup className="border-1 border mt-4 d-flex align-items-center rounded px-2">
@@ -54,7 +53,7 @@ const ProblemListStepOne: FC<Iprops> = (props) => {
           </button>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

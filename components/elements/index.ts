@@ -20,3 +20,4 @@ export { default as AdminNavbar } from "./AdminNavbar";
 export { default as BillingSummary } from "./BillingSummary";
 export { default as LiveClaims } from "./LiveClaims";
 export { default as ProblemListStepOne } from "./ProblemListStepOne";
+export { default as LiveClaimsFeed } from "./LiveClaimsFeed";
