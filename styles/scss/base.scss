@@ -20,3 +20,7 @@
 .linear-background {
   background: linear-gradient(90deg, #fff 25%, #dcf0ff 75%) !important;
 }
+
+.img-fit {
+  object-fit: cover !important;
+}

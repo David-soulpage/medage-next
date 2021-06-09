@@ -16,3 +16,6 @@ export { default as PaymentStep2 } from "./PaymentStep2";
 export { default as Medication } from "./Medication";
 export { default as Questions } from "./Questions";
 export { default as SignDocuments } from "./SignDocuments";
+export { default as AdminNavbar } from "./AdminNavbar";
+export { default as BillingSummary } from "./BillingSummary";
+export { default as LiveClaims } from "./LiveClaims";
