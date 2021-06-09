@@ -13,7 +13,7 @@ const PatientDetailsSmall: FC = () => {
             alt="Profile Image"
             height="150px"
             width="120px"
-            className="rounded"
+            className="rounded img-fit"
           />
           <p className="m-0 rounded text-center mt-3">JA-09821</p>
         </div>
