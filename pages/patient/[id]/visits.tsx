@@ -80,9 +80,9 @@ const columns = [
           <Star size="15" />
         </div>
         <div className="me-2">
-          <AccountBox size={45} className="text-light-grey  " />
+          <AccountBox size={30} className="text-light-grey" />
         </div>
-        <div className="text-truncate ">
+        <div>
           <small className="text-base-black font-smaller fw-bold ">{row["doctorName"]}</small>
         </div>
       </div>
@@ -140,7 +140,9 @@ const customStyles = {
     },
   },
   cells: {
-    style: {},
+    style: {
+      minWidth: "300px",
+    },
   },
 
   rows: {

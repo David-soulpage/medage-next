@@ -21,3 +21,5 @@ export { default as BillingSummary } from "./BillingSummary";
 export { default as LiveClaims } from "./LiveClaims";
 export { default as PatientPayments } from "./PatientPayments";
 export { default as ProblemListStepOne } from "./ProblemListStepOne";
+export { default as DashboardTasks } from "./DashboardTasks";
+export { default as DashboardMessages } from "./DashboardMessages";
