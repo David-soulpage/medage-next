@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-//lodash
-import _ from "lodash";
+
 import { AnyNsRecord } from "dns";
 
 interface IPayProps {
@@ -38,7 +37,7 @@ const PaymentStep1: FC<IPayProps> = ({ nextStep }) => {
         <h6>Pay for this Visit</h6>
         <small className="text-muted">Select a amount</small>
         <div className="row my-4">
-          {_.map(plans, (plan, id) => (
+          {plans.map((plan, id) => (
             <div key={id} className="col-lg-4">
               <div className="card h-100 shadow-sm p-4">
                 <div className="d-flex align-items-center">

@@ -5,7 +5,7 @@ import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 // react bootstrap
 import { Form, InputGroup, Dropdown } from "react-bootstrap";
 //icons
-import { KeyboardArrowDown } from "@styled-icons/material";
+import { KeyboardArrowDown } from "components/styled-icons";
 
 const CreateAppointment = () => {
   return (

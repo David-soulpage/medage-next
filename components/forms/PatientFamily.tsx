@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 // boostrap
 import { Form, FormControl, FormGroup, FormLabel, InputGroup, Dropdown } from "react-bootstrap";
 // styled-icons
-import { ArrowDropDown } from "@styled-icons/remix-line";
+import { ArrowDropDown } from "components/styled-icons";
 
 interface IProps {}
 

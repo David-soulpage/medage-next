@@ -3,9 +3,7 @@ import React, { FC } from "react";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons
-import { Search } from "@styled-icons/bootstrap";
-//lodash
-import _ from "lodash";
+import { Search } from "components/styled-icons";
 
 interface Iprops {
   onPressForm: () => void;
@@ -37,7 +35,7 @@ const ProblemListStepOne: FC<Iprops> = (props) => {
         </div>
       </div>
       <div className="row mt-4 g-4">
-        {_.map(problems, (problem, id) => (
+        {problems.map((problem, id) => (
           <div key={id} className="col-2">
             <div className="border rounded p-2 shadow-sm text-muted text-center">{problem}</div>
           </div>

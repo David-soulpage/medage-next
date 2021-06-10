@@ -2,10 +2,9 @@
 import React, { FC } from "react";
 // boostrap
 import { Modal, Form } from "react-bootstrap";
-// lodash
-import _ from "lodash";
+
 // styled icons
-import { Attachment, Cross } from "@styled-icons/entypo";
+import { Attachment, Cross } from "components/styled-icons";
 // formik
 import { useFormik } from "formik";
 

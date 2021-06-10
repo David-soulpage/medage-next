@@ -2,14 +2,13 @@ import React from "react";
 //local components
 import AdminLayout from "layouts/AdminLayout";
 import { CommonCard } from "components/card";
-//lodash
-import _ from "lodash";
+
 //icons
 import { Tasks as TaskList } from "components/elements";
-import { Tasks as TaskIcon } from "@styled-icons/fa-solid";
-import { CheckCircle } from "@styled-icons/feather";
-import { ArrowCounterclockwise } from "@styled-icons/bootstrap";
-import { FilterAlt } from "@styled-icons/boxicons-regular";
+import { Tasks as TaskIcon } from "components/styled-icons";
+import { CheckCircle } from "components/styled-icons";
+import { ArrowCounterclockwise } from "components/styled-icons";
+import { FilterAlt } from "components/styled-icons";
 
 const Tasks = () => {
   return (

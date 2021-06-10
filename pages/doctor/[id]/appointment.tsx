@@ -6,7 +6,7 @@ import { CommonCard } from "components/card";
 import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 import { PatientDetails } from "components/elements";
 //icons
-import { Printer } from "@styled-icons/bootstrap";
+import { Printer } from "components/styled-icons";
 import { AppointmentsTable } from "components/tables";
 
 const Appointment = () => {

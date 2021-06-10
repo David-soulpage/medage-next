@@ -4,11 +4,9 @@ import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 import { CommonCard } from "components/card";
 import { PatientDetailsSmall } from "components/elements";
 //icons
-import { ThreeDotsVertical } from "@styled-icons/bootstrap";
-import { Capsule } from "@styled-icons/remix-line";
-import { DotFill } from "@styled-icons/octicons";
-//lodash
-import _ from "lodash";
+import { ThreeDotsVertical } from "components/styled-icons";
+import { Capsule } from "components/styled-icons";
+import { DotFill } from "components/styled-icons/";
 
 const PatientOverview = () => {
   const medications = [
@@ -63,7 +61,7 @@ const PatientOverview = () => {
                   <h6 className="m-0">Current Medications</h6>
                   <ThreeDotsVertical size="20" className="ms-auto" />
                 </div>
-                {_.map(medications, (medication, id) => (
+                {medications.map((medication, id) => (
                   <div className="d-flex justify-content-between p-3 border-bottom">
                     <Capsule size="20" className="text-primary" />
                     <p className="m-0">{medication.name}</p>
@@ -104,7 +102,7 @@ const PatientOverview = () => {
                   <h6 className="m-0">Lab Results</h6>
                   <ThreeDotsVertical size="20" className="ms-auto" />
                 </div>
-                {_.map(results, (result, id) => (
+                {results.map((result, id) => (
                   <div className="d-flex justify-content-between p-3 border-bottom">
                     <DotFill size="20" className="text-muted" />
                     <p className="m-0">{result.name}</p>

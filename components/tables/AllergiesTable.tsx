@@ -3,8 +3,8 @@ import React, { FC, useState } from "react";
 import DataTable from "react-data-table-component";
 import { CommonModal } from "components/modal";
 //icons
-import { Edit } from "@styled-icons/material";
-import { Delete } from "@styled-icons/fluentui-system-regular";
+import { Edit } from "components/styled-icons";
+import { Delete } from "components/styled-icons";
 //react bootstrap
 import { Modal, Form } from "react-bootstrap";
 

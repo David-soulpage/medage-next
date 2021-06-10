@@ -9,8 +9,7 @@ import { AppointmentCard, CommonCard } from "components/card";
 import { DashboardMessages } from "components/elements";
 import DashboardTasks from "components/elements/DashboardTasks";
 import CardSection from "components/elements/CardSection";
-//lodash
-import _ from "lodash";
+
 import CustomCalender from "components/elements/CustomCalender";
 
 const Dashboard = () => {

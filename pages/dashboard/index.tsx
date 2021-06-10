@@ -4,7 +4,7 @@ import withAdminAuth from "lib/hoc/withAdminAuth";
 // user
 import { getCurrentUser } from "constants/global";
 
-import { PhoneCall } from "@styled-icons/boxicons-regular/";
+import { PhoneCall } from "components/styled-icons/";
 
 const AdminDashboardView = () => {
   const userData = getCurrentUser();

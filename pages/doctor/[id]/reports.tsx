@@ -10,7 +10,7 @@ import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons
-import { Search } from "@styled-icons/bootstrap";
+import { Search } from "components/styled-icons";
 
 const analytics = () => {
   return (

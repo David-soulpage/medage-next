@@ -5,11 +5,10 @@ import { CommonCard } from "components/card";
 import { TransactionTable } from "components/tables";
 //react bootstrap
 import { Form, Dropdown } from "react-bootstrap";
-//lodash
-import _ from "lodash";
+
 //icons
 import { ChevronDown, Filter, Printer } from "styled-icons/bootstrap";
-import { Open } from "@styled-icons/fluentui-system-filled";
+import { Open } from "components/styled-icons";
 
 const Transactions = () => {
   return (

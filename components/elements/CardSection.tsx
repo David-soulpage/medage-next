@@ -3,10 +3,10 @@ import React, { FC } from "react";
 // local components
 import { CommonCard } from "components/card";
 //styled icons
-import { User } from "@styled-icons/fa-regular";
-import { Clock } from "@styled-icons/bootstrap";
-import { MessageCircleOutline } from "@styled-icons/evaicons-outline";
-import { LineGraph } from "@styled-icons/entypo";
+import { User } from "components/styled-icons";
+import { Clock } from "components/styled-icons";
+import { MessageCircleOutline } from "components/styled-icons";
+import { LineGraph } from "components/styled-icons";
 
 interface IProps {
   list: Array<any>;

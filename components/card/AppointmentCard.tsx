@@ -2,7 +2,7 @@ import React from "react";
 import { AppointmentsList } from "components/tables";
 import CommonCard from "./CommonCard";
 import { Form, InputGroup } from "react-bootstrap";
-import { Search } from "@styled-icons/bootstrap";
+import { Search } from "components/styled-icons";
 
 const AppointmentCard = () => {
   return (

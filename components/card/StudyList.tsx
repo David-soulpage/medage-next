@@ -6,7 +6,7 @@ import CommonCard from "./CommonCard";
 // react-boostrap
 import { Form, InputGroup } from "react-bootstrap";
 // styled-icons
-import { Search } from "@styled-icons/bootstrap";
+import { Search } from "components/styled-icons";
 
 const StudyList = () => {
   return (

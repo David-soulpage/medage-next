@@ -5,11 +5,9 @@ import { CommonCard, DoctorCard } from "components/card";
 // react bootstrap
 import { Form, InputGroup, Dropdown } from "react-bootstrap";
 //icons
-import { Filter, Search, Calendar } from "@styled-icons/bootstrap";
-import { Location } from "@styled-icons/zondicons";
-import { DotFill } from "@styled-icons/octicons";
-//lodash
-import _ from "lodash";
+import { Filter, Search, Calendar } from "components/styled-icons";
+import { Location } from "components/styled-icons";
+import { DotFill } from "components/styled-icons/";
 
 const ProblemList = () => {
   const options = [
@@ -60,7 +58,7 @@ const ProblemList = () => {
         <CommonCard>
           <Header />
           <div className="d-flex mt-4">
-            {_.map(options, (option, id) => (
+            {options.map((option, id) => (
               <div key={id} className="border px-2 py-1 me-2 rounded text-muted">
                 {option}
               </div>

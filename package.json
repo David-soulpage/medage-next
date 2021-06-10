@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
     "@types/cookie": "^0.4.0",
@@ -16,7 +19,6 @@
     "chart.js": "^3.3.2",
     "formik": "^2.2.9",
     "js-cookie": "^2.2.1",
-    "lodash": "^4.17.21",
     "next": "10.2.2",
     "next-cookies": "^2.0.3",
     "next-seo": "^4.19.0",
@@ -34,6 +36,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^10.2.3",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
     "cross-env": "^7.0.3",

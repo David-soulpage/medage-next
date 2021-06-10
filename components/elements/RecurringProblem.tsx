@@ -4,8 +4,8 @@ import React, { FC } from "react";
 import CommonTable from "components/tables/CommonTable";
 import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 // styled-icons
-import { Pencil } from "@styled-icons/boxicons-regular/";
-import { Delete } from "@styled-icons/fluentui-system-regular/";
+import { Pencil } from "components/styled-icons/";
+import { Delete } from "components/styled-icons/";
 
 interface IProps {}
 

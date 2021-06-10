@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import _ from "lodash";
+import { FC } from "react";
+
 import DataTable from "react-data-table-component";
-import { EyeFill } from "@styled-icons/bootstrap/EyeFill";
+import { EyeFill } from "components/styled-icons";
 
 const AppointmentsList: FC = () => {
   // Sample Table Data

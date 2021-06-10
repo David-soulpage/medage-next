@@ -1,10 +1,10 @@
 // material icons
-import { Dashboard } from "@styled-icons/material/";
-import { School } from "@styled-icons/ionicons-sharp/";
-import { Cart, User } from "@styled-icons/boxicons-regular/";
-import { Documents } from "@styled-icons/ionicons-solid/";
-import { PeopleFill } from "@styled-icons/bootstrap/";
-import { Cog } from "@styled-icons/fa-solid/";
+import { Dashboard } from "components/styled-icons";
+import { School } from "components/styled-icons";
+import { Cart, User } from "components/styled-icons/";
+import { Documents } from "components/styled-icons";
+import { PeopleFill } from "components/styled-icons/";
+import { Cog } from "components/styled-icons/";
 // components
 import PreFetchLink from "components/PreFetchLink";
 

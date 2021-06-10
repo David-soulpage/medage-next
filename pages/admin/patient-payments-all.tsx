@@ -5,8 +5,7 @@ import { CommonCard } from "components/card";
 import { PatientPaymentsTable } from "components/tables";
 //react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
-//lodash
-import _ from "lodash";
+
 //icons
 import { Search } from "styled-icons/bootstrap";
 

@@ -10,9 +10,6 @@ import {
 import CardSection from "components/elements/CardSection";
 import AdminLayout from "layouts/AdminLayout";
 
-//lodash
-import _ from "lodash";
-
 const Dashboard = () => {
   const list = [
     {

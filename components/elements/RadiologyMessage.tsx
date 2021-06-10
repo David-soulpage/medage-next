@@ -1,10 +1,10 @@
 // react
 import React, { FC } from "react";
 // styled icons
-import { Attachment } from "@styled-icons/entypo";
-import { ThreeDotsVertical } from "@styled-icons/bootstrap";
-import { Star } from "@styled-icons/boxicons-regular";
-import { AccountCircle } from "@styled-icons/material/";
+import { Attachment } from "components/styled-icons";
+import { ThreeDotsVertical } from "components/styled-icons";
+import { Star } from "components/styled-icons";
+import { AccountCircle } from "components/styled-icons";
 
 interface ImessageProps {
   message: any;

@@ -7,8 +7,8 @@ import DataTable from "react-data-table-component";
 // components
 import { CommonModal } from "components/modal";
 // icons
-import { Edit } from "@styled-icons/material";
-import { Delete } from "@styled-icons/fluentui-system-regular";
+import { Edit } from "components/styled-icons";
+import { Delete } from "components/styled-icons";
 
 const ProblemsTable: FC = () => {
   const [show, setShow] = useState(false);
