@@ -1,12 +1,12 @@
 // react
 import React from "react";
 // local components
-import CustomCalender from "@components/elements/CustomCalender";
-import RadiologyTasks from "@components/elements/RadiologyTasks";
-import CardSection from "@components/elements/CardSection";
-import { StudyListTable } from "@components/tables";
-import RadiologyLayout from "@layouts/RadiologyLayout";
-import { RadiologyMessagesList } from "@components/elements";
+import CustomCalender from "components/elements/CustomCalender";
+import RadiologyTasks from "components/elements/RadiologyTasks";
+import CardSection from "components/elements/CardSection";
+import { StudyListTable } from "components/tables";
+import RadiologyLayout from "layouts/RadiologyLayout";
+import { RadiologyMessagesList } from "components/elements";
 //lodash
 import _ from "lodash";
 

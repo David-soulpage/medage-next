@@ -1,6 +1,6 @@
 import axios from "axios";
 // api routes
-import { ONBOARD_WITH_ID } from "@constants/routes";
+import { ONBOARD_WITH_ID } from "constants/routes";
 
 export const UpdateUser = async (data: any) => {
   try {

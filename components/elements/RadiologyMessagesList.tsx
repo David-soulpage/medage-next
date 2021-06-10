@@ -3,10 +3,10 @@ import React, { FC, useState } from "react";
 // next
 import Link from "next/link";
 // components
-import MessagesCard from "@components/card/MessagesCard";
+import MessagesCard from "components/card/MessagesCard";
 // react boostrap
 import { Dropdown } from "react-bootstrap";
-import RadiologyMessagesModal from "@components/modal/RadiologyMessagesModal";
+import RadiologyMessagesModal from "components/modal/RadiologyMessagesModal";
 
 const messagesList = [
   {

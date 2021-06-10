@@ -4,7 +4,7 @@ import { Toast } from "react-bootstrap";
 // material icons
 import { Close } from "@styled-icons/evaicons-solid";
 // global context provider
-import { globalContext } from "@contexts/global";
+import { globalContext } from "contexts/global";
 
 const ToastAlert = (props: any) => {
   const [globalState, globalDispatch] = React.useContext(globalContext);

@@ -1,8 +1,8 @@
 // react
 import React, { FC } from "react";
 // components
-import CustomCalender from "@components/elements/CustomCalender";
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
+import CustomCalender from "components/elements/CustomCalender";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 
 interface IProps {}
 

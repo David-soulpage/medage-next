@@ -3,7 +3,7 @@ import React, { FC } from "react";
 // react-boostrap
 import { Image } from "react-bootstrap";
 // forms
-import SignIn from "@components/forms/SignIn";
+import SignIn from "components/forms/SignIn";
 // layouts
 import { AuthPageLayout } from "layouts";
 

@@ -2,7 +2,7 @@ import axios from "axios";
 // cookie
 import cookie from "js-cookie";
 // constants
-import { BASE_STAGING, BASE_LOCAL, BASE_PROD } from "@constants/routes";
+import { BASE_STAGING, BASE_LOCAL, BASE_PROD } from "constants/routes";
 
 // if (process.env.APP_ENV === "production") {
 //   axios.defaults.baseURL = BASE_PROD;

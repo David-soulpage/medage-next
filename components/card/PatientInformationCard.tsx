@@ -3,8 +3,8 @@ import React, { FC, useState } from "react";
 // styled icons
 import { AccountBox } from "@styled-icons/material-rounded";
 // forms
-import { PatientPersonal } from "@components/forms";
-import PatientFamily from "@components/forms/PatientFamily";
+import { PatientPersonal } from "components/forms";
+import PatientFamily from "components/forms/PatientFamily";
 
 interface IProps {}
 

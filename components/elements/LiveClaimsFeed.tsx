@@ -1,7 +1,7 @@
 // react
 import React, { FC } from "react";
 // components
-import { CustomDropDown } from "@components/dropdown";
+import { CustomDropDown } from "components/dropdown";
 
 interface IProps {}
 

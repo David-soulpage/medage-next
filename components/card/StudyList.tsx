@@ -1,7 +1,7 @@
 // react
 import React from "react";
 // components
-import { AppointmentsList } from "@components/tables";
+import { AppointmentsList } from "components/tables";
 import CommonCard from "./CommonCard";
 // react-boostrap
 import { Form, InputGroup } from "react-bootstrap";

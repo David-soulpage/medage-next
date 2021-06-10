@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 //local component
 import DataTable from "react-data-table-component";
-import { CommonModal } from "@components/modal";
+import { CommonModal } from "components/modal";
 //icons
 import { Edit } from "@styled-icons/material";
 import { Delete } from "@styled-icons/fluentui-system-regular";

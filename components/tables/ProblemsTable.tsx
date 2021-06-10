@@ -5,7 +5,7 @@ import { Modal, Form } from "react-bootstrap";
 // react-data-table-component
 import DataTable from "react-data-table-component";
 // components
-import { CommonModal } from "@components/modal";
+import { CommonModal } from "components/modal";
 // icons
 import { Edit } from "@styled-icons/material";
 import { Delete } from "@styled-icons/fluentui-system-regular";

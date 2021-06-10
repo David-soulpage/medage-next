@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 //local components
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import { CommonCard, DoctorCard } from "@components/card";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import { CommonCard, DoctorCard } from "components/card";
 // react bootstrap
 import { Form, InputGroup, Dropdown } from "react-bootstrap";
 //icons

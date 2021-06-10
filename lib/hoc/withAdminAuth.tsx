@@ -2,9 +2,9 @@ import React from "react";
 // axios configurations
 import { setAxiosHeader } from "config/axios";
 // server cookie validations
-import { getServerAuthenticationCookie } from "@lib/cookie";
+import { getServerAuthenticationCookie } from "lib/cookie";
 // redirect
-import redirect from "@lib/redirect";
+import redirect from "lib/redirect";
 
 const withAdminAuth = (WrappedComponent: any) => {
   const Wrapper = (props: any) => {

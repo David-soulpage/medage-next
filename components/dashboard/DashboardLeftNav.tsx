@@ -6,7 +6,7 @@ import { Documents } from "@styled-icons/ionicons-solid/";
 import { PeopleFill } from "@styled-icons/bootstrap/";
 import { Cog } from "@styled-icons/fa-solid/";
 // components
-import PreFetchLink from "@components/PreFetchLink";
+import PreFetchLink from "components/PreFetchLink";
 
 function DashboardLeftNav() {
   return (

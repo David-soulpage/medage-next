@@ -1,7 +1,7 @@
 // react
 import React from "react";
 // components
-import { CommonCard } from "@components/card";
+import { CommonCard } from "components/card";
 // lodash
 import _ from "lodash";
 

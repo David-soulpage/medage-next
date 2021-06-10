@@ -1,7 +1,7 @@
 import { useState } from "react";
 //local components
-import { CommonCard } from "@components/card";
-import { CommonModal } from "@components/modal";
+import { CommonCard } from "components/card";
+import { CommonModal } from "components/modal";
 //react bootstrap
 import { Dropdown, Form, InputGroup, Modal } from "react-bootstrap";
 //icons

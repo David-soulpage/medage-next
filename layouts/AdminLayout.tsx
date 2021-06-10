@@ -1,7 +1,7 @@
 // react
 import React, { FC } from "react";
 //local components
-import { AdminNavbar, Header } from "@components/elements";
+import { AdminNavbar, Header } from "components/elements";
 
 interface IAdminProps {
   children: any;

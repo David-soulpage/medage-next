@@ -3,15 +3,15 @@ import React from "react";
 // next
 import Head from "next/head";
 // layouts
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 // components
-import { AppointmentCard, CommonCard } from "@components/card";
-import { DashboardMessages } from "@components/elements";
-import DashboardTasks from "@components/elements/DashboardTasks";
-import CardSection from "@components/elements/CardSection";
+import { AppointmentCard, CommonCard } from "components/card";
+import { DashboardMessages } from "components/elements";
+import DashboardTasks from "components/elements/DashboardTasks";
+import CardSection from "components/elements/CardSection";
 //lodash
 import _ from "lodash";
-import CustomCalender from "@components/elements/CustomCalender";
+import CustomCalender from "components/elements/CustomCalender";
 
 const Dashboard = () => {
   const cards = [

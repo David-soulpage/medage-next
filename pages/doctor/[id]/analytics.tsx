@@ -2,9 +2,9 @@ import React from "react";
 //head
 import Head from "next/head";
 //local components
-import { CommonCard } from "@components/card";
-import { Appointments, BarChart, LineChart } from "@components/elements";
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import { CommonCard } from "components/card";
+import { Appointments, BarChart, LineChart } from "components/elements";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 
 const analytics = () => {
   return (

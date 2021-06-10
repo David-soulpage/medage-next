@@ -5,7 +5,7 @@ import nextCookie from "next-cookies";
 // js cookie
 import cookie from "js-cookie";
 // axios
-import { setAxiosHeader } from "@config/axios";
+import { setAxiosHeader } from "config/axios";
 // redirect
 import redirect from "./redirect";
 

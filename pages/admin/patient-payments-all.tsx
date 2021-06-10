@@ -1,8 +1,8 @@
 import React from "react";
 //local components
-import AdminLayout from "@layouts/AdminLayout";
-import { CommonCard } from "@components/card";
-import { PatientPaymentsTable } from "@components/tables";
+import AdminLayout from "layouts/AdminLayout";
+import { CommonCard } from "components/card";
+import { PatientPaymentsTable } from "components/tables";
 //react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //lodash

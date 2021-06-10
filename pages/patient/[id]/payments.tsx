@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 //local components
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import { CommonCard } from "@components/card";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import { CommonCard } from "components/card";
 import {
   Medication,
   PaymentStep1,
   PaymentStep2,
   Questions,
   SignDocuments,
-} from "@components/elements";
+} from "components/elements";
 //lodash
 import _ from "lodash";
 

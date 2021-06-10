@@ -1,8 +1,8 @@
 // react
 import React, { FC } from "react";
 // components
-import CommonTable from "@components/tables/CommonTable";
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
+import CommonTable from "components/tables/CommonTable";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 // styled-icons
 import { Star } from "@styled-icons/boxicons-regular";
 import { AccountBox } from "@styled-icons/material";

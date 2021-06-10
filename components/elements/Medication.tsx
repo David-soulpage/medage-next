@@ -2,7 +2,7 @@ import React, { useState, FC } from "react";
 //lodash
 import _ from "lodash";
 //local components
-import { CommonModal } from "@components/modal";
+import { CommonModal } from "components/modal";
 //react bootstrap
 import { Form, Modal } from "react-bootstrap";
 //icons

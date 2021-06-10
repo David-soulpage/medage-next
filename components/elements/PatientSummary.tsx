@@ -6,7 +6,7 @@ import _ from "lodash";
 import DataTable from "react-data-table-component";
 //icons
 import { ThreeDotsVertical } from "@styled-icons/bootstrap";
-import { CommonCard } from "@components/card";
+import { CommonCard } from "components/card";
 
 const PatientSummary: FC = () => {
   const problems = ["Head Ache", "Fever", "Abdominal Pain", "Joint Pain"];
