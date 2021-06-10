@@ -5,13 +5,13 @@ import Head from "next/head";
 // layouts
 import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 // components
-import { AppointmentCard, CommonCard } from "components/card";
+import { AppointmentCard } from "components/card";
 import { DashboardMessages } from "components/elements";
 import DashboardTasks from "components/elements/DashboardTasks";
 import CardSection from "components/elements/CardSection";
+import CustomCalender from "components/elements/CustomCalender";
 //lodash
 import _ from "lodash";
-import CustomCalender from "components/elements/CustomCalender";
 
 const Dashboard = () => {
   const cards = [

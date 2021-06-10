@@ -10,12 +10,12 @@ import { CommonCard } from "components/card";
 //lodash
 import _ from "lodash";
 //styled icons
-import { User } from "@styled-icons/fa-regular";
-import { Clock } from "@styled-icons/bootstrap";
-import { MessageCircleOutline } from "@styled-icons/evaicons-outline";
-import { CheckDouble } from "@styled-icons/boxicons-regular";
-import { LineGraph } from "@styled-icons/entypo";
-import { Search } from "@styled-icons/bootstrap";
+import { User } from "styled-icons/fa-regular";
+import { Clock } from "styled-icons/bootstrap";
+import { MessageCircleOutline } from "styled-icons/evaicons-outline";
+import { CheckDouble } from "styled-icons/boxicons-regular";
+import { LineGraph } from "styled-icons/entypo";
+import { Search } from "styled-icons/bootstrap";
 //react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 
@@ -72,7 +72,7 @@ const Dashboard = () => {
   return (
     <>
       <Head>
-        <title>Doctor Dashboard</title>
+        <title>Patient Dashboard</title>
       </Head>
       <PatientDashboardLayout>
         <div className="container pt-2">

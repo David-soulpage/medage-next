@@ -1,6 +1,4 @@
 import React from "react";
-//local components
-import { CommonCard } from "components/card";
 //icons
 import { Location } from "@styled-icons/icomoon";
 import { Search, CameraVideoFill } from "@styled-icons/bootstrap";

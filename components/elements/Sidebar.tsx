@@ -1,5 +1,6 @@
 import React from "react";
-import { useRouter } from "next/router";
+//next
+import Link from "next/link";
 //icons
 import { Dashboard } from "@styled-icons/material-outlined";
 import { ClipboardList } from "@styled-icons/heroicons-outline";
@@ -11,7 +12,6 @@ import { Googleanalytics } from "@styled-icons/simple-icons";
 import _ from "lodash";
 
 const Sidebar = () => {
-  const router = useRouter();
   const data = [
     {
       name: "Dashboard",
@@ -47,14 +47,12 @@ const Sidebar = () => {
   return (
     <ul className="list-group">
       {_.map(data, (item, id) => (
-        <li
-          key={id}
-          onClick={() => router.push(`/doctor/1/${item.route}`)}
-          className="list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center"
-        >
-          {item.icon}
-          <span className="d-none d-lg-block mx-2">{item.name}</span>
-        </li>
+        <Link key={id} href={`${item.route}`}>
+          <li className="list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center">
+            {item.icon}
+            <span className="d-none d-lg-block mx-2">{item.name}</span>
+          </li>
+        </Link>
       ))}
     </ul>
   );

@@ -7,8 +7,8 @@ import DataTable from "react-data-table-component";
 // components
 import { CommonModal } from "components/modal";
 // icons
-import { Edit } from "@styled-icons/material";
-import { Delete } from "@styled-icons/fluentui-system-regular";
+import { Edit } from "styled-icons/material";
+import { Delete } from "styled-icons/fluentui-system-regular";
 
 const ProblemsTable: FC = () => {
   const [show, setShow] = useState(false);
@@ -120,17 +120,19 @@ const ProblemsTable: FC = () => {
   };
   return (
     <>
-      <div className="d-flex justify-content-between align-items-center">
-        <div className="d-flex">
-          <h6 className="title m-0">Active Problems</h6>
-          <h6 className="sub-title m-0 mx-4">Inactive Problems</h6>
+      <div className="d-flex align-items-center border-bottom">
+        <div className="d-flex h-100">
+          <h6 className="m-0 border-primary border-bottom">Active Problems</h6>
+          <h6 className="m-0 mx-4">Inactive Problems</h6>
         </div>
-        <button className="btn btn-outline-primary btn-sm" onClick={() => setShow(true)}>
+        <button className="btn btn-outline-primary btn-sm ms-auto" onClick={() => setShow(true)}>
           + Add Problem
         </button>
       </div>
-      <div className="border-top my-3"></div>
-      <DataTable columns={columns} data={tableData} customStyles={customStyles} />
+      <div className="my-3"></div>
+      {/* Problems Table */}
+      <DataTable noHeader columns={columns} data={tableData} customStyles={customStyles} />
+      {/* Add Problem Modal */}
       <CommonModal show={show} onHide={() => setShow(false)} centered={true}>
         <Modal.Header className="d-flex justify-content-center">
           <h6 className="title m-0">Enter Problem</h6>

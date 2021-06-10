@@ -137,7 +137,9 @@ const AllergiesTable: FC = () => {
         </button>
       </div>
       <div className="border-top my-3"></div>
+      {/* Table */}
       <DataTable columns={columns} data={tableData} customStyles={customStyles} />
+      {/* Modal */}
       <CommonModal show={show} onHide={() => setShow(false)} centered={true}>
         <Modal.Header className="d-flex justify-content-center">
           <h6 className="title m-0">Add New Allergy</h6>

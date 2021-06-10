@@ -140,14 +140,14 @@ const ReportsTable: FC = () => {
         borderRadius: "10px",
         border: "1px solid #ECECF2",
         marginTop: "5px",
-        height: "74px",
+        height: "60px",
         fontSize: "16px",
       },
     },
   };
   return (
     <div>
-      <DataTable columns={columns} data={tableData} customStyles={customStyles} />
+      <DataTable noHeader columns={columns} data={tableData} customStyles={customStyles} />
     </div>
   );
 };
