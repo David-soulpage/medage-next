@@ -72,7 +72,7 @@ const PatientSidebar = () => {
       <li className="list-group-item bg-light-primary text-primary text-center fw-bold py-3 d-none d-lg-block">
         Summary Visits
       </li>
-      {_.map(data, (item, id) => {
+      {data.map((item, id) => {
         const Icon = item.icon;
         return (
           <Link href={`${item.route}`}>

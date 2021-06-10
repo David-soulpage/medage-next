@@ -63,7 +63,7 @@ const ProblemList = () => {
           <CommonCard>
             <Header />
             <div className="d-flex mt-4">
-              {_.map(options, (option, id) => (
+              {options.map((option, id) => (
                 <div key={id} className="border px-2 py-1 me-2 rounded text-muted">
                   {option}
                 </div>
