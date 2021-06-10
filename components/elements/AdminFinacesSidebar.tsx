@@ -64,10 +64,6 @@ const AdminFinancesSidebar: FC<IProps> = (props) => {
     },
   ];
 
-  const onClickItem = (index) => {
-    setSelectedItemIndex(index);
-    props.onPressItem(data[index]["name"]);
-  };
   return (
     <div>
       <ul className="list-group">
@@ -76,10 +72,6 @@ const AdminFinancesSidebar: FC<IProps> = (props) => {
           return (
             <li
               key={index}
-              onClick={() => {
-                router.push(`/admin/finances/${item.route}`);
-                onClickItem(index);
-              }}
               className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 ${
                 index === selectedItemIndex ? "bg-light-primary" : "bg-white"
               }`}
