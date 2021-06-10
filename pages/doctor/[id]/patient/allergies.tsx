@@ -1,10 +1,10 @@
 // react
 import React from "react";
 // components
-import { CommonCard } from "@components/card";
-import { PatientDetailsSmall } from "@components/elements";
-import { AllergiesTable } from "@components/tables";
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import { CommonCard } from "components/card";
+import { PatientDetailsSmall } from "components/elements";
+import { AllergiesTable } from "components/tables";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 
 const Allergies = () => {
   return (

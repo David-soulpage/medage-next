@@ -6,9 +6,9 @@ import {
   DashboardTasks,
   LiveClaims,
   PatientPayments,
-} from "@components/elements";
-import CardSection from "@components/elements/CardSection";
-import AdminLayout from "@layouts/AdminLayout";
+} from "components/elements";
+import CardSection from "components/elements/CardSection";
+import AdminLayout from "layouts/AdminLayout";
 
 //lodash
 import _ from "lodash";

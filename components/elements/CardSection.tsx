@@ -1,7 +1,7 @@
 // react
 import React, { FC } from "react";
 // local components
-import { CommonCard } from "@components/card";
+import { CommonCard } from "components/card";
 //styled icons
 import { User } from "@styled-icons/fa-regular";
 import { Clock } from "@styled-icons/bootstrap";

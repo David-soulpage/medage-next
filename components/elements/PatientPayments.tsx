@@ -1,6 +1,6 @@
 import React from "react";
 //local components
-import { CommonCard } from "@components/card";
+import { CommonCard } from "components/card";
 // react circular progressbar
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";

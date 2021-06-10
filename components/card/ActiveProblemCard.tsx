@@ -1,8 +1,8 @@
 //React
 import React, { FC, useEffect, useState } from "react";
 // components
-import CommonForm from "@components/forms/CommonForm";
-import { ProblemListStepOne } from "@components/elements";
+import CommonForm from "components/forms/CommonForm";
+import { ProblemListStepOne } from "components/elements";
 
 interface IProps {
   onPressNext: () => void;

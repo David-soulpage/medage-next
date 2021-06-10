@@ -1,7 +1,7 @@
 // react
 import React, { FC, ReactNode } from "react";
 // components
-import RadiologyHeader from "@components/elements/RadiologyHeader";
+import RadiologyHeader from "components/elements/RadiologyHeader";
 
 interface IRadiologyLayout {
   children: ReactNode;

@@ -1,8 +1,8 @@
 import React from "react";
 //local components
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import { CommonCard } from "@components/card";
-import { PatientDetailsSmall } from "@components/elements";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import { CommonCard } from "components/card";
+import { PatientDetailsSmall } from "components/elements";
 //icons
 import { ThreeDotsVertical } from "@styled-icons/bootstrap";
 import { Capsule } from "@styled-icons/remix-line";

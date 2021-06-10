@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 // modal
-import AddTaskModal from "@components/modal/AddTaskModal";
+import AddTaskModal from "components/modal/AddTaskModal";
 //styled icons
 import { CheckDouble, DotsVerticalRounded } from "@styled-icons/boxicons-regular";
 import { Exclamation } from "styled-icons/bootstrap";

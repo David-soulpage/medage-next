@@ -2,7 +2,7 @@
 import withAdminAuth from "lib/hoc/withAdminAuth";
 
 // user
-import { getCurrentUser } from "@constants/global";
+import { getCurrentUser } from "constants/global";
 
 import { PhoneCall } from "@styled-icons/boxicons-regular/";
 

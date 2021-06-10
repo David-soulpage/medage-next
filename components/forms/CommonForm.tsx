@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 // boostrap
 import { Form } from "react-bootstrap";
 // components
-import { CustomDropDown } from "@components/dropdown";
+import { CustomDropDown } from "components/dropdown";
 // prop types
 interface IProps {
   list: Array<any>;

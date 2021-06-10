@@ -3,9 +3,9 @@ import React from "react";
 // next
 import Head from "next/head";
 //components
-import { CommonCard } from "@components/card";
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
-import { Tasks as TasksList } from "@components/elements";
+import { CommonCard } from "components/card";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import { Tasks as TasksList } from "components/elements";
 //icons
 import { Tasks as TaskIcon } from "@styled-icons/fa-solid";
 import { CheckCircle } from "@styled-icons/feather";

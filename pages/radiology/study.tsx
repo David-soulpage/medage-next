@@ -1,8 +1,8 @@
 // react
 import React, { FC } from "react";
 // local components
-import StudyList from "@components/elements/StudyList";
-import RadiologyLayout from "@layouts/RadiologyLayout";
+import StudyList from "components/elements/StudyList";
+import RadiologyLayout from "layouts/RadiologyLayout";
 // react-bbostrap
 import { Form, InputGroup, Dropdown } from "react-bootstrap";
 // icons

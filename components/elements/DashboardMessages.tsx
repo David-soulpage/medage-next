@@ -1,6 +1,6 @@
 import React from "react";
 //local components
-import { CommonCard } from "@components/card";
+import { CommonCard } from "components/card";
 
 const DashboardMessages = () => {
   return (

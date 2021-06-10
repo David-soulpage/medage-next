@@ -10,9 +10,9 @@ import "styles/App.scss";
 // axios config
 import "config/axios";
 // components
-import ToastAlert from "@components/alert";
+import ToastAlert from "components/alert";
 // context provider
-import { GlobalContextProvider } from "@contexts/global";
+import { GlobalContextProvider } from "contexts/global";
 
 class MyApp extends App {
   render() {

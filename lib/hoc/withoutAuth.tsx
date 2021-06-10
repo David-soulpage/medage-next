@@ -1,8 +1,8 @@
 import React from "react";
 // server cookie validations
-import { getServerAuthenticationCookie } from "@lib/cookie";
+import { getServerAuthenticationCookie } from "lib/cookie";
 // redirect
-import redirect from "@lib/redirect";
+import redirect from "lib/redirect";
 
 const withoutAuth = (WrappedComponent: any) => {
   const Wrapper = (props: any) => {

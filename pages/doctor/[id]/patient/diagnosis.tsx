@@ -3,11 +3,11 @@ import React from "react";
 // next
 import Head from "next/head";
 //local components
-import { CommonCard } from "@components/card";
-import { PatientDetailsSmall } from "@components/elements";
-import { DiagnosisTable } from "@components/tables";
+import { CommonCard } from "components/card";
+import { PatientDetailsSmall } from "components/elements";
+import { DiagnosisTable } from "components/tables";
 // layouts
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 
 const Diagnosis = () => {
   return (

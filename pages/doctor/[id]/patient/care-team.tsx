@@ -2,10 +2,10 @@
 import React from "react";
 import Head from "next/head";
 // local components
-import { CommonCard, DoctorProfileCard } from "@components/card";
-import { PatientDetailsSmall } from "@components/elements";
+import { CommonCard, DoctorProfileCard } from "components/card";
+import { PatientDetailsSmall } from "components/elements";
 // layouts
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 
 const CareTeam = () => {
   return (

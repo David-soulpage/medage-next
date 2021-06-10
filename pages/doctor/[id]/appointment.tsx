@@ -2,12 +2,12 @@ import React from "react";
 //head
 import Head from "next/head";
 //local components
-import { CommonCard } from "@components/card";
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
-import { PatientDetails } from "@components/elements";
+import { CommonCard } from "components/card";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import { PatientDetails } from "components/elements";
 //icons
 import { Printer } from "@styled-icons/bootstrap";
-import { AppointmentsTable } from "@components/tables";
+import { AppointmentsTable } from "components/tables";
 
 const Appointment = () => {
   return (

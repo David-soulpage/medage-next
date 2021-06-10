@@ -1,8 +1,8 @@
 import React from "react";
 //local components
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import { CommonCard } from "@components/card";
-import { VisitTable } from "@components/tables";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import { CommonCard } from "components/card";
+import { VisitTable } from "components/tables";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons

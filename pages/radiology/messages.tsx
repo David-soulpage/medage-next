@@ -5,9 +5,9 @@ import { Dropdown } from "react-bootstrap";
 // lodash
 import _ from "lodash";
 // component
-import RadiologyMessage from "@components/elements/RadiologyMessage";
-import RadiologyMessagesModal from "@components/modal/RadiologyMessagesModal";
-import RadiologyLayout from "@layouts/RadiologyLayout";
+import RadiologyMessage from "components/elements/RadiologyMessage";
+import RadiologyMessagesModal from "components/modal/RadiologyMessagesModal";
+import RadiologyLayout from "layouts/RadiologyLayout";
 
 const Messages: FC = () => {
   const [show, setShow] = useState(false);

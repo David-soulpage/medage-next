@@ -1,5 +1,5 @@
 import React from "react";
-import { AppointmentsList } from "@components/tables";
+import { AppointmentsList } from "components/tables";
 import CommonCard from "./CommonCard";
 import { Form, InputGroup } from "react-bootstrap";
 import { Search } from "@styled-icons/bootstrap";

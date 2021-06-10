@@ -4,7 +4,7 @@ import React, { FC, useEffect, useState } from "react";
 import { getMonthArray, getMonthOfDate, getWeekArray } from "lib/helper";
 // styled icons
 import { ChevronLeft, ChevronRight } from "@styled-icons/boxicons-regular";
-import { CalenderButton } from "@components/buttons";
+import { CalenderButton } from "components/buttons";
 
 const buttonsList = ["Month", "Week", "Day"];
 

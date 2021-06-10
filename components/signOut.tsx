@@ -4,7 +4,7 @@ import { Button, Modal } from "react-bootstrap";
 // material icons
 import { Close } from "@styled-icons/evaicons-solid";
 // cookie
-import { logout } from "@lib/cookie";
+import { logout } from "lib/cookie";
 
 const SignOutView = (props: any) => {
   const [modalShow, setModalShow] = useState(false);

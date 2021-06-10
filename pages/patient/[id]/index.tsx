@@ -2,9 +2,9 @@
 import React, { FC, useState } from "react";
 // styled icons
 import { CheckCircleFill } from "@styled-icons/bootstrap/";
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import { ProblemListStepOne } from "@components/elements";
-import CommonForm from "@components/forms/CommonForm";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import { ProblemListStepOne } from "components/elements";
+import CommonForm from "components/forms/CommonForm";
 
 interface IProps {}
 

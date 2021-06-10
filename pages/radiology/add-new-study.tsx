@@ -1,8 +1,8 @@
 // react
 import React, { FC } from "react";
 // components
-import { AddStudyForm } from "@components/forms";
-import RadiologyLayout from "@layouts/RadiologyLayout";
+import { AddStudyForm } from "components/forms";
+import RadiologyLayout from "layouts/RadiologyLayout";
 const AddNewStudy: FC = () => {
   return (
     <RadiologyLayout>

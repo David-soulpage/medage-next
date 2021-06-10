@@ -1,8 +1,8 @@
 // react
 import React, { FC } from "react";
 // components
-import { PatientInformationCard } from "@components/card";
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
+import { PatientInformationCard } from "components/card";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 
 interface IProps {}
 

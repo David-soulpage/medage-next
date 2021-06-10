@@ -1,6 +1,6 @@
 import axios from "axios";
 // api routes
-import { AUTH_LOGIN, AUTH_SIGNUP } from "@constants/routes";
+import { AUTH_LOGIN, AUTH_SIGNUP } from "constants/routes";
 
 export const LogIn = async (data: any) => {
   try {

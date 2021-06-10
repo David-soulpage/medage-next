@@ -3,10 +3,10 @@ import React from "react";
 // next
 import Head from "next/head";
 //local components
-import { CommonCard } from "@components/card";
-import { PatientDetailsSmall } from "@components/elements";
-import { ProblemsTable } from "@components/tables";
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import { CommonCard } from "components/card";
+import { PatientDetailsSmall } from "components/elements";
+import { ProblemsTable } from "components/tables";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 
 const Problems = () => {
   return (

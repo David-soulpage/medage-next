@@ -3,9 +3,9 @@ import React from "react";
 // next
 import Head from "next/head";
 //local components
-import { CommonCard } from "@components/card";
-import { PatientDetailsSmall, Pharmacies } from "@components/elements";
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import { CommonCard } from "components/card";
+import { PatientDetailsSmall, Pharmacies } from "components/elements";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 
 const Pharmacy = () => {
   return (

@@ -6,7 +6,7 @@ import {
   getAuthenticationToken,
   removeAuthenticationToken,
   setAuthenticationToken,
-} from "@lib/cookie";
+} from "lib/cookie";
 
 // get current user details
 export const getCurrentUser = () => {

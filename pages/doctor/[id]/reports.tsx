@@ -3,10 +3,10 @@ import React from "react";
 // next
 import Head from "next/head";
 //local components
-import { CommonCard } from "@components/card";
-import { ReportsTable } from "@components/tables";
+import { CommonCard } from "components/card";
+import { ReportsTable } from "components/tables";
 // layouts
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons

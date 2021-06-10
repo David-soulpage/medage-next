@@ -3,9 +3,9 @@ import React from "react";
 // next
 import Head from "next/head";
 //local components
-import { CommonCard } from "@components/card";
-import { PatientDetailsSmall } from "@components/elements";
-import DoctorDashboardLayout from "@layouts/DoctorDashboardLayout";
+import { CommonCard } from "components/card";
+import { PatientDetailsSmall } from "components/elements";
+import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 //lodash
 import _ from "lodash";
 

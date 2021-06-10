@@ -1,8 +1,8 @@
 // react
 import React, { FC, useState } from "react";
 // components
-import { AdminNavbar, BillingSummary, Header, LiveClaimsFeed } from "@components/elements";
-import AdminFinancesSidebar from "@components/elements/AdminFinacesSidebar";
+import { AdminNavbar, BillingSummary, Header, LiveClaimsFeed } from "components/elements";
+import AdminFinancesSidebar from "components/elements/AdminFinacesSidebar";
 
 interface IProps {}
 

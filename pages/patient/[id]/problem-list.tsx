@@ -1,8 +1,8 @@
 // react
 import React, { FC, useState } from "react";
 // components
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
-import RecurringProblem from "@components/elements/RecurringProblem";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import RecurringProblem from "components/elements/RecurringProblem";
 
 interface IProps {}
 

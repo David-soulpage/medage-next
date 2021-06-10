@@ -8,7 +8,7 @@ import { Modal } from "react-bootstrap";
 import { ThreeDotsVertical } from "@styled-icons/bootstrap";
 import { Attach } from "@styled-icons/evaicons-solid";
 import { Messages } from "@styled-icons/typicons";
-import { CommonModal } from "@components/modal";
+import { CommonModal } from "components/modal";
 
 const Tasks: FC = () => {
   const [show, setShow] = useState(false);

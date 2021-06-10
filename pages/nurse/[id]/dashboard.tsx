@@ -3,10 +3,10 @@ import React from "react";
 // next
 import Head from "next/head";
 // layouts
-import PatientDashboardLayout from "@layouts/PatientDashboardLayout";
+import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 // components
-import { PatientList } from "@components/tables";
-import { CommonCard } from "@components/card";
+import { PatientList } from "components/tables";
+import { CommonCard } from "components/card";
 //lodash
 import _ from "lodash";
 //styled icons
