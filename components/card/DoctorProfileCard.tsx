@@ -9,7 +9,7 @@ const DoctorProfileCard = () => {
         alt="Profile Image"
         height="100px"
         width="100px"
-        className="rounded-circle"
+        className="rounded-circle img-fit"
       />
       <small className="mt-3">Dr. Willkins Axe</small>
       <small className="my-1">Demotologist</small>

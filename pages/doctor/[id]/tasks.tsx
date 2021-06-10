@@ -25,17 +25,17 @@ const Tasks = () => {
             {/* Header */}
             <div className="d-flex flex-column flex-md-row align-items-center">
               <div>
-                <button className="btn bg-light-primary fw-bold text-primary border-0">
+                <button className="btn btn-sm bg-light-primary fw-bold text-primary border-0">
                   <TaskIcon className="text-primary" size="20" /> All
                 </button>
-                <button className="btn bg-light-primary fw-bold text-primary border-0 mx-3">
+                <button className="btn btn-sm bg-light-primary fw-bold text-primary border-0 mx-3">
                   <CheckCircle className="text-primary" size="20" /> Done
                 </button>
-                <button className="btn bg-light-primary fw-bold text-primary border-0">
+                <button className="btn btn-sm bg-light-primary fw-bold text-primary border-0">
                   <ArrowCounterclockwise className="text-primary" size="20" /> Pending
                 </button>
               </div>
-              <button className="btn btn-outline-dark ms-auto">
+              <button className="btn btn-sm btn-outline-dark ms-auto">
                 <FilterAlt className="text-muted" size="20" /> SORT : A-Z
               </button>
             </div>

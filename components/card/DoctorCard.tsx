@@ -61,7 +61,7 @@ const DoctorCard = () => {
     <>
       {_.map(doctors, (doctor, id) => (
         <div key={id} className="mt-4">
-          <CommonCard>
+          <div className="card border-1 shadow-sm p-4 h-100 ">
             <div className="row">
               <div className="col-md-3 d-flex flex-column align-items-center justify-content-between">
                 <img
@@ -69,7 +69,7 @@ const DoctorCard = () => {
                   alt="Profile Image"
                   height="275px"
                   width="215px"
-                  className="rounded"
+                  className="rounded img-fit"
                 />
                 <small className="text-primary" onClick={() => setShowProfile(!showProfile)}>
                   View Profile
@@ -186,7 +186,7 @@ const DoctorCard = () => {
                             alt="Patient Photo"
                             height="95px"
                             width="95px"
-                            className="rounded"
+                            className="rounded img-fit"
                           />
                           <div className="d-flex flex-column ms-2">
                             <h6 className="fw-bold mb-1">William Oliver</h6>
@@ -206,7 +206,7 @@ const DoctorCard = () => {
                             alt="Patient Photo"
                             height="95px"
                             width="95px"
-                            className="rounded"
+                            className="rounded img-fit"
                           />
                           <div className="d-flex flex-column ms-2">
                             <h6 className="fw-bold mb-1">William Oliver</h6>
@@ -225,7 +225,7 @@ const DoctorCard = () => {
                 </div>
               </div>
             ) : null}
-          </CommonCard>
+          </div>
         </div>
       ))}
 
@@ -238,7 +238,7 @@ const DoctorCard = () => {
                 alt="Profile Image"
                 height="108px"
                 width="86px"
-                className="rounded"
+                className="rounded img-fit"
               />
               <div className="d-flex flex-column justify-content-between mx-2">
                 <small className="fw-bold">{doctor.name}</small>

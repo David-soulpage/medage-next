@@ -1,57 +1,93 @@
-import React from "react";
+// react
+import React, { useEffect, useState } from "react";
+// next
 import { useRouter } from "next/router";
 //icons
 import { Dashboard } from "@styled-icons/material-outlined";
 import { ClipboardList } from "@styled-icons/heroicons-outline";
-import { TextBulletListSquare } from "@styled-icons/fluentui-system-regular";
 import { DocumentOnePage } from "@styled-icons/fluentui-system-regular";
 import { CalendarAlt } from "@styled-icons/boxicons-regular";
-import { Googleanalytics } from "@styled-icons/simple-icons";
 import { Group } from "@styled-icons/material";
+import { FormatLineSpacing } from "@styled-icons/material-outlined";
+
 //lodash
 import _ from "lodash";
 
 const PatientDashboardSidebar = () => {
+  const [selectedItemIndex, setSelectedItemIndex] = useState(0);
   const router = useRouter();
   const data = [
     {
       name: "Dashboard",
-      icon: <Dashboard size="20" className="text-dark me-2" />,
-      route: "",
+      icon: Dashboard,
+      route: "dashboard",
     },
     {
       name: "Patient Information",
-      icon: <ClipboardList size="20" className="text-dark me-2" />,
-      route: "",
+      icon: ClipboardList,
+      route: "patient-information",
     },
     {
       name: "Doctors",
-      icon: <Group size="20" className="text-dark me-2" />,
-      route: "",
+      icon: Group,
+      route: "doctor-list",
     },
     {
       name: "Reports",
-      icon: <DocumentOnePage size="20" className="text-dark me-2" />,
-      route: "",
+      icon: DocumentOnePage,
+      route: "reports",
     },
     {
+      name: "Problems List",
+      icon: FormatLineSpacing,
+      route: "problem-list",
+    },
+
+    {
       name: "Calendar",
-      icon: <CalendarAlt size="20" className="text-dark me-2" />,
-      route: "",
+      icon: CalendarAlt,
+      route: "calendar",
     },
   ];
+
+  useEffect(() => {
+    const pathName = router.pathname;
+    data.map((ele, index) => {
+      console.log(pathName.includes(ele["route"]), "pathName");
+      if (pathName.includes(ele["route"])) {
+        setSelectedItemIndex(index);
+      }
+    });
+  }, [router.pathname]);
+
+  const onClickItem = (index) => {
+    setSelectedItemIndex(index);
+  };
   return (
     <ul className="list-group">
-      {_.map(data, (item, id) => (
-        <li
-          key={id}
-          onClick={() => router.push(`/doctor/1/${item.route}`)}
-          className="list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center"
-        >
-          {item.icon}
-          <span className="d-none d-lg-block mx-2">{item.name}</span>
-        </li>
-      ))}
+      {data.map((item, index) => {
+        const Icon = item.icon;
+        return (
+          <li
+            key={index}
+            onClick={() => {
+              router.push(`/patient/1/${item.route}`);
+              onClickItem(index);
+            }}
+            className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center ${
+              index === selectedItemIndex ? "bg-light-primary" : "bg-white"
+            }`}
+          >
+            <Icon
+              size="20"
+              className={`me-2 ${selectedItemIndex === index ? "text-primary" : "text-base-black"}`}
+            />
+            <span className={index === selectedItemIndex ? "text-primary" : "text-base-black"}>
+              {item.name}
+            </span>
+          </li>
+        );
+      })}
     </ul>
   );
 };

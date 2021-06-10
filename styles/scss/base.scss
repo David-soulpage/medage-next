@@ -9,7 +9,21 @@
 .br-10 {
   border-radius: 10px !important;
 }
+.w-85 {
+  width: 85% !important;
+}
+.top-30 {
+  top: 30% !important;
+}
 
 .cr-p {
   cursor: pointer;
+}
+
+.linear-background {
+  background: linear-gradient(90deg, #fff 25%, #dcf0ff 75%) !important;
+}
+
+.img-fit {
+  object-fit: cover !important;
 }
