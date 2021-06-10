@@ -44,7 +44,7 @@ const Sidebar = () => {
   ];
   return (
     <ul className="list-group">
-      {_.map(data, (item, id) => (
+      {data.map((item, id) => (
         <Link key={id} href={`${item.route}`}>
           <li className="list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center">
             {item.icon}

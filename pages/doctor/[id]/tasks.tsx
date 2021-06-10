@@ -39,7 +39,7 @@ const Tasks = () => {
             {/* Header */}
             <div className="d-flex flex-column flex-md-row align-items-center">
               <div>
-                {_.map(buttons, (item, id) => {
+                {buttons.map((item, id) => {
                   const Icon = item.icon;
                   return (
                     <button className="btn btn-sm bg-light-primary fw-bold text-primary border-0 me-3">
