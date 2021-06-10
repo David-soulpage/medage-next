@@ -7,12 +7,10 @@ import { CommonCard } from "components/card";
 import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 import { Tasks as TasksList } from "components/elements";
 //icons
-import { Tasks as TaskIcon } from "@styled-icons/fa-solid";
-import { CheckCircle } from "@styled-icons/feather";
-import { ArrowCounterclockwise } from "@styled-icons/bootstrap";
-import { FilterAlt } from "@styled-icons/boxicons-regular";
-//lodash
-import _ from "lodash";
+import { Tasks as TaskIcon } from "components/styled-icons";
+import { CheckCircle } from "components/styled-icons";
+import { ArrowCounterclockwise } from "components/styled-icons";
+import { FilterAlt } from "components/styled-icons";
 
 const Tasks = () => {
   const buttons = [

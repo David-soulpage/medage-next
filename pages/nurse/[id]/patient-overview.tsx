@@ -5,11 +5,9 @@ import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 import { CommonCard } from "components/card";
 import { PatientDetailsSmall } from "components/elements";
 //icons
-import { ThreeDotsVertical } from "styled-icons/bootstrap";
-import { Capsule } from "styled-icons/remix-line";
-import { DotFill } from "styled-icons/octicons";
-//lodash
-import _ from "lodash";
+import { ThreeDotsVertical } from "components/styled-icons";
+import { Capsule } from "components/styled-icons";
+import { DotFill } from "components/styled-icons/";
 
 const PatientOverview = () => {
   const medications = [
@@ -50,6 +48,7 @@ const PatientOverview = () => {
     },
   ];
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Patient Overview</title>
@@ -60,6 +59,30 @@ const PatientOverview = () => {
           <CommonCard>
             <div className="card p-2 shadow-sm">
               <PatientDetailsSmall />
+=======
+    <PatientDashboardLayout>
+      <div className="container pt-2">
+        <h6 className="fw-bold">Patient Overview</h6>
+        <CommonCard>
+          <div className="card p-2 shadow-sm">
+            <PatientDetailsSmall />
+          </div>
+          <div className="row mt-3 g-3">
+            <div className="col-md-4">
+              <div className="card shadow-sm pt-2">
+                <div className="d-flex align-items-center p-3 border-bottom">
+                  <h6 className="m-0">Current Medications</h6>
+                  <ThreeDotsVertical size="20" className="ms-auto" />
+                </div>
+                {medications.map((medication, id) => (
+                  <div className="d-flex justify-content-between p-3 border-bottom">
+                    <Capsule size="20" className="text-primary" />
+                    <p className="m-0">{medication.name}</p>
+                    <p className="m-0">{medication.timings}</p>
+                  </div>
+                ))}
+              </div>
+>>>>>>> fca0adb2c2517781c4c382e55ff1fffc8fc1765f
             </div>
             <div className="row mt-3 g-3">
               <div className="col-md-4">
@@ -103,11 +126,26 @@ const PatientOverview = () => {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="col-md-4">
                 <div className="card shadow-sm pt-2">
                   <div className="d-flex align-items-center p-3 border-bottom">
                     <h6 className="m-0">Lab Results</h6>
                     <ThreeDotsVertical size="20" className="ms-auto" />
+=======
+            </div>
+            <div className="col-md-4">
+              <div className="card shadow-sm pt-2">
+                <div className="d-flex align-items-center p-3 border-bottom">
+                  <h6 className="m-0">Lab Results</h6>
+                  <ThreeDotsVertical size="20" className="ms-auto" />
+                </div>
+                {results.map((result, id) => (
+                  <div className="d-flex justify-content-between p-3 border-bottom">
+                    <DotFill size="20" className="text-muted" />
+                    <p className="m-0">{result.name}</p>
+                    <p className="m-0">{result.date}</p>
+>>>>>>> fca0adb2c2517781c4c382e55ff1fffc8fc1765f
                   </div>
                   {_.map(results, (result, id) => (
                     <div className="d-flex justify-content-between p-3 border-bottom">

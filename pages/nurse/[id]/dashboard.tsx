@@ -8,15 +8,14 @@ import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 import { PatientList } from "components/tables";
 import { CommonCard } from "components/card";
 import { DashboardMessages, DashboardTasks } from "components/elements";
-//lodash
-import _ from "lodash";
+
 //styled icons
-import { User } from "styled-icons/fa-regular";
-import { Clock } from "styled-icons/bootstrap";
-import { MessageCircleOutline } from "styled-icons/evaicons-outline";
-import { CheckDouble } from "styled-icons/boxicons-regular";
-import { LineGraph } from "styled-icons/entypo";
-import { Search } from "styled-icons/bootstrap";
+import { User } from "components/styled-icons";
+import { Clock } from "components/styled-icons";
+import { MessageCircleOutline } from "components/styled-icons";
+import { CheckDouble } from "components/styled-icons";
+import { LineGraph } from "components/styled-icons";
+import { Search } from "components/styled-icons";
 
 //react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
@@ -81,7 +80,7 @@ const Dashboard = () => {
           <h6 className="text-dark mb-3">Dashboard</h6>
 
           <div className="row g-3">
-            {_.map(cards, (card, id) => (
+            {cards.map((card, id) => (
               <div key={id} className="col-lg-3 col-md-6 col-12">
                 <CommonCard>
                   <div className="d-flex align-items-start">

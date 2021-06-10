@@ -6,11 +6,9 @@ import { CommonCard, DoctorCard } from "components/card";
 // react bootstrap
 import { Form, InputGroup, Dropdown } from "react-bootstrap";
 //icons
-import { Filter, Search, Calendar } from "styled-icons/bootstrap";
-import { Location } from "styled-icons/zondicons";
-import { DotFill } from "styled-icons/octicons";
-//lodash
-import _ from "lodash";
+import { Filter, Search, Calendar } from "components/styled-icons";
+import { Location } from "components/styled-icons";
+import { DotFill } from "components/styled-icons/";
 
 const ProblemList = () => {
   const options = [

@@ -2,14 +2,12 @@ import React from "react";
 //next
 import Link from "next/link";
 //icons
-import { Dashboard } from "@styled-icons/material-outlined";
-import { ClipboardList } from "@styled-icons/heroicons-outline";
-import { TextBulletListSquare } from "@styled-icons/fluentui-system-regular";
-import { DocumentOnePage } from "@styled-icons/fluentui-system-regular";
-import { CalendarAlt } from "@styled-icons/boxicons-regular";
-import { Googleanalytics } from "@styled-icons/simple-icons";
-//lodash
-import _ from "lodash";
+import { Dashboard } from "components/styled-icons";
+import { ClipboardList } from "components/styled-icons";
+import { TextBulletListSquare } from "components/styled-icons";
+import { DocumentOnePage } from "components/styled-icons";
+import { CalendarAlt } from "components/styled-icons";
+import { Googleanalytics } from "components/styled-icons";
 
 const Sidebar = () => {
   const data = [

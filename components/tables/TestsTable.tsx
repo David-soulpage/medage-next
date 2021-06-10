@@ -3,8 +3,8 @@ import React, { FC } from "react";
 // react-data-table-component
 import DataTable from "react-data-table-component";
 //styled-icons
-import { Edit } from "@styled-icons/material";
-import { Delete } from "@styled-icons/fluentui-system-regular";
+import { Edit } from "components/styled-icons";
+import { Delete } from "components/styled-icons";
 
 const TestsTable: FC = () => {
   const tableData = [

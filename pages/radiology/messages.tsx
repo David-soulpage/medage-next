@@ -2,8 +2,7 @@
 import React, { FC, useState } from "react";
 // boostrap
 import { Dropdown } from "react-bootstrap";
-// lodash
-import _ from "lodash";
+
 // component
 import RadiologyMessage from "components/elements/RadiologyMessage";
 import RadiologyMessagesModal from "components/modal/RadiologyMessagesModal";
@@ -106,7 +105,7 @@ const Messages: FC = () => {
         <div className="card p-3 w-100">
           <Header />
           {/* Messages */}
-          {_.map(messages, (message: any, id) => {
+          {messages.map((message: any, id) => {
             return <RadiologyMessage key={id} message={message} />;
           })}
           {show && <RadiologyMessagesModal show={show} handleClose={handleClose} />}

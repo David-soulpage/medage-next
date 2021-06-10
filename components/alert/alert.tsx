@@ -2,7 +2,7 @@ import React from "react";
 // react bootstrap
 import { Toast } from "react-bootstrap";
 // material icons
-import { Close } from "@styled-icons/evaicons-solid";
+import { Close } from "components/styled-icons";
 // global context provider
 import { globalContext } from "contexts/global";
 

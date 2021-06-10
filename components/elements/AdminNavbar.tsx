@@ -2,7 +2,7 @@ import React from "react";
 //react bootstrap
 import { InputGroup, Form } from "react-bootstrap";
 //icons
-import { Search } from "@styled-icons/boxicons-regular";
+import { Search } from "components/styled-icons";
 
 const AdminNavbar = () => {
   return (

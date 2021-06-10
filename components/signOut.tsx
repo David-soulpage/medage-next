@@ -2,7 +2,7 @@ import { useState } from "react";
 // react bootstrap
 import { Button, Modal } from "react-bootstrap";
 // material icons
-import { Close } from "@styled-icons/evaicons-solid";
+import { Close } from "components/styled-icons";
 // cookie
 import { logout } from "lib/cookie";
 

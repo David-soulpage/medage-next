@@ -2,8 +2,6 @@
 import React from "react";
 // components
 import { CommonCard } from "components/card";
-// lodash
-import _ from "lodash";
 
 const Pharmacies = () => {
   const data = [
@@ -47,7 +45,7 @@ const Pharmacies = () => {
     <CommonCard>
       <h6 className="title m-0">Pharmacy</h6>
       <div className="row g-4 mt-4">
-        {_.map(data, (item, id) => (
+        {data.map((item, id) => (
           <div key={id} className="col-md-4 col-12">
             <div className="card border shadow-sm p-3 rounded">
               <div className="d-flex align-items-center">

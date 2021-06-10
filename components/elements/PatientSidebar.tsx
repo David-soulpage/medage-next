@@ -3,18 +3,16 @@ import React from "react";
 //next
 import Link from "next/link";
 //icons
-import { Warning } from "@styled-icons/ionicons-outline";
-import { Stethoscope } from "@styled-icons/zondicons";
-import { CalendarAlt } from "@styled-icons/boxicons-regular";
-import { TextBulletListSquare } from "@styled-icons/fluentui-system-regular";
-import { XRay } from "@styled-icons/fa-solid";
-import { Microgenetics } from "@styled-icons/simple-icons";
-import { Doctor } from "@styled-icons/fluentui-system-regular";
-import { Capsule } from "@styled-icons/remix-line";
-import { UserGroup } from "@styled-icons/heroicons-outline";
-import { Contacts } from "@styled-icons/typicons";
-//lodash
-import _ from "lodash";
+import { Warning } from "components/styled-icons";
+import { Stethoscope } from "components/styled-icons";
+import { CalendarAlt } from "components/styled-icons";
+import { TextBulletListSquare } from "components/styled-icons";
+import { XRay } from "components/styled-icons";
+import { Microgenetics } from "components/styled-icons";
+import { Doctor } from "components/styled-icons";
+import { Capsule } from "components/styled-icons";
+import { UserGroup } from "components/styled-icons";
+import { Contacts } from "components/styled-icons";
 
 const PatientSidebar = () => {
   const data = [

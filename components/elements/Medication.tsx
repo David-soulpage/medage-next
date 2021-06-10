@@ -1,13 +1,12 @@
 import React, { useState, FC } from "react";
-//lodash
-import _ from "lodash";
+
 //local components
 import { CommonModal } from "components/modal";
 //react bootstrap
 import { Form, Modal } from "react-bootstrap";
 //icons
-import { ThreeDotsVertical } from "@styled-icons/bootstrap";
-import { Cross } from "@styled-icons/entypo";
+import { ThreeDotsVertical } from "components/styled-icons";
+import { Cross } from "components/styled-icons";
 
 interface IMedication {
   setCurrent: any;
@@ -69,7 +68,7 @@ const Medication: FC<IMedication> = ({ setCurrent }) => {
         </div>
         <h6 className="my-3">Select a Pharmacy for this visit</h6>
         <div className="row g-4 mt-4">
-          {_.map(data, (item, id) => (
+          {data.map((item, id) => (
             <div key={id} className="col-md-4 col-12">
               <div className="card border shadow-sm p-3 rounded">
                 <div className="d-flex align-items-center">

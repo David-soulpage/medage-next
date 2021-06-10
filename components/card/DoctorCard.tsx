@@ -5,7 +5,7 @@ import { CommonModal } from "components/modal";
 //react bootstrap
 import { Dropdown, Form, InputGroup, Modal } from "react-bootstrap";
 //icons
-import { ChevronWithCircleLeft, ChevronWithCircleRight } from "@styled-icons/entypo";
+import { ChevronWithCircleLeft, ChevronWithCircleRight } from "components/styled-icons";
 import {
   StarFill,
   CameraVideoFill,
@@ -13,9 +13,7 @@ import {
   ChevronRight,
   ChevronLeft,
   Calendar,
-} from "@styled-icons/bootstrap";
-//lodash
-import _ from "lodash";
+} from "components/styled-icons";
 
 const DoctorCard = () => {
   const [showProfile, setShowProfile] = useState(false);
@@ -59,7 +57,7 @@ const DoctorCard = () => {
 
   return (
     <>
-      {_.map(doctors, (doctor, id) => (
+      {doctors.map((doctor, id) => (
         <div key={id} className="mt-4">
           <div className="card border-1 shadow-sm p-4 h-100 ">
             <div className="row">
@@ -120,7 +118,7 @@ const DoctorCard = () => {
                     </div>
                   </div>
                   <div className="d-flex justify-content-between">
-                    {_.map(dates, (item, id) => (
+                    {dates.map((item, id) => (
                       <div
                         key={id}
                         className="d-flex flex-column justify-content-between align-items-center"
@@ -133,7 +131,7 @@ const DoctorCard = () => {
                 </div>
                 <div className="d-flex mt-2">
                   <div className="row g-2">
-                    {_.map(timings, (time, id) => (
+                    {timings.map((time, id) => (
                       <div key={id} className="col-3">
                         <div className="border p-2 rounded me-2">
                           <small>{time}</small>
@@ -275,7 +273,7 @@ const DoctorCard = () => {
             <div>
               <h6>May 23 Sunday</h6>
               <div className="row g-2">
-                {_.map(timings, (time, id) => (
+                {timings.map((time, id) => (
                   <div key={id} className="col-3">
                     <div className="border p-2 rounded me-2">
                       <small>{time}</small>

@@ -2,8 +2,8 @@ import React, { FC } from "react";
 //local component
 import DataTable from "react-data-table-component";
 //icons
-import { PhoneAlt } from "@styled-icons/fa-solid";
-import { MessageSquare } from "@styled-icons/evaicons-solid";
+import { PhoneAlt } from "components/styled-icons";
+import { MessageSquare } from "components/styled-icons";
 
 const EmergencyContactTable: FC = () => {
   const tableData = [

@@ -3,7 +3,7 @@ import React, { FC, useState } from "react";
 // boostrap
 import { Dropdown } from "react-bootstrap";
 // styled-icons
-import { ArrowDropDown } from "@styled-icons/remix-line";
+import { ArrowDropDown } from "components/styled-icons";
 // prop types
 interface IProps {
   optionsList: Array<any>;

@@ -1,11 +1,10 @@
 // react
 import React, { FC } from "react";
-//lodash
-import _ from "lodash";
+
 //react data table
 import DataTable from "react-data-table-component";
 //icons
-import { ThreeDotsVertical } from "@styled-icons/bootstrap";
+import { ThreeDotsVertical } from "components/styled-icons";
 import { CommonCard } from "components/card";
 
 const PatientSummary: FC = () => {
@@ -189,7 +188,7 @@ const PatientSummary: FC = () => {
 
   const CardInfo = ({ cardData }) => {
     const headers = Object.keys(cardData.tableData[0]);
-    const columns = _.map(headers, (item) => {
+    const columns = headers.map((item) => {
       return { name: item, selector: item };
     });
 
@@ -243,7 +242,7 @@ const PatientSummary: FC = () => {
           </div>
           <div className="border-top my-3" />
           <div>
-            {_.map(problems, (problem, id) => (
+            {problems.map((problem, id) => (
               <button key={id} className="btn btn-sm bg-light-primary text-primary fw-bold m-2">
                 {problem}
               </button>
@@ -259,7 +258,7 @@ const PatientSummary: FC = () => {
         </CommonCard>
       </div>
 
-      {_.map(data, (item, id) => (
+      {data.map((item, id) => (
         <div key={id} className="col-lg-4 col-md-6 col-12">
           <CardInfo cardData={item} />
         </div>

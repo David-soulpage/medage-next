@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 //icons
-import { CcPaypal, CcMastercard, CcVisa, CcDiscover } from "@styled-icons/fa-brands";
-import { Americanexpress } from "@styled-icons/simple-icons";
+import { CcPaypal, CcMastercard, CcVisa, CcDiscover } from "components/styled-icons";
+import { Americanexpress } from "components/styled-icons";
 //react bootstrap
 import { Form } from "react-bootstrap";
 

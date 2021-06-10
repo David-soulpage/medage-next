@@ -6,8 +6,6 @@ import Head from "next/head";
 import { CommonCard } from "components/card";
 import { PatientDetailsSmall } from "components/elements";
 import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
-//lodash
-import _ from "lodash";
 
 const Visits = () => {
   const problems = ["Head Ache", "Fever", "Abdominal Pain", "Joint Pain"];
@@ -50,14 +48,14 @@ const Visits = () => {
             <div className="col-12">
               <CommonCard>
                 <div className="row g-3 mt-4">
-                  {_.map(cards, (item, id) => (
+                  {cards.map((item, id) => (
                     <div key={id} className="col-lg-4 col-12">
                       <div className="card p-3 h-100 rounded shadow-sm">
                         <div className="d-flex justify-content-between">
                           <h6 className="sub-title m-0 my-4">{item.date}</h6>
                         </div>
                         <div>
-                          {_.map(problems, (problem, id) => (
+                          {problems.map((problem, id) => (
                             <button key={id} className="btn btn-sm bg-light-primary text-dark m-2">
                               {problem}
                             </button>
