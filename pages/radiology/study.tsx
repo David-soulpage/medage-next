@@ -6,7 +6,7 @@ import RadiologyLayout from "layouts/RadiologyLayout";
 // react-bbostrap
 import { Form, InputGroup, Dropdown } from "react-bootstrap";
 // icons
-import { Search } from "@styled-icons/boxicons-regular";
+import { Search } from "components/styled-icons";
 
 const Study: FC = () => {
   const HeaderButtons = () => {

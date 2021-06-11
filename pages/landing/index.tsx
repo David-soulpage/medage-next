@@ -1,11 +1,7 @@
 import React from "react";
-//local components
-import { CommonCard } from "components/card";
 //icons
-import { Location } from "@styled-icons/icomoon";
-import { Search, CameraVideoFill } from "@styled-icons/bootstrap";
-//lodash
-import _ from "lodash";
+import { Location } from "components/styled-icons";
+import { Search, CameraVideoFill } from "components/styled-icons";
 
 const Index = () => {
   const options = ["Search Doctors", "Schedule Appointment", "Health Records", "Online payment"];
@@ -79,7 +75,7 @@ const Index = () => {
           industries for previewing layouts.
         </h5>
         <div className="row mt-4">
-          {_.map(options, (option, id) => (
+          {options.map((option, id) => (
             <div key={id} className="col-lg-3 col-md-6 col-12">
               <div className="card p-2 border-0">
                 <div className="d-flex flex-column align-items-center">

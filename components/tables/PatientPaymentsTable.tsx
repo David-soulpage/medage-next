@@ -1,10 +1,9 @@
-import React, { FC } from "react";
-//lodash
-import _ from "lodash";
+import { FC } from "react";
+
 //react data table
 import DataTable from "react-data-table-component";
 //icons
-import { Refresh } from "@styled-icons/zondicons";
+import { Refresh } from "components/styled-icons";
 
 const PatientPaymentsTable: FC = () => {
   const tableData = [

@@ -9,7 +9,7 @@ const DiagnosisTable: FC = () => {
       apmntID: "JA-09821",
       date: "15-Apr-2021",
       reportName: "CT-PET Scan ",
-      report: "125/95-mmHg/mmHg",
+      report: "125/95-mmHg/mmHgasdfhasdfo asdf",
     },
     {
       apmntID: "JA-09821",
@@ -58,6 +58,10 @@ const DiagnosisTable: FC = () => {
     {
       name: "Radiologist Report",
       selector: "report",
+      style: {
+        textOverflow: "ellipsis",
+      },
+      width: "250px",
     },
     {
       name: "Doctor Comments",

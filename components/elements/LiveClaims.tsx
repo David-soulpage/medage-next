@@ -2,7 +2,7 @@ import React from "react";
 //local components
 import { CommonCard } from "components/card";
 //icons
-import { ChevronRight } from "@styled-icons/bootstrap";
+import { ChevronRight } from "components/styled-icons";
 //react chartjs
 import { Pie } from "react-chartjs-2";
 

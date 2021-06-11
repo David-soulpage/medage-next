@@ -2,8 +2,7 @@ import React, { FC } from "react";
 //React data table
 import DataTable from "react-data-table-component";
 //icons
-import { Edit } from "@styled-icons/material";
-import { EyeFill } from "@styled-icons/bootstrap/EyeFill";
+import { Edit, EyeFill } from "components/styled-icons";
 
 const AppointmentsTable: FC = () => {
   const data = [

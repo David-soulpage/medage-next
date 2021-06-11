@@ -7,8 +7,6 @@ import CardSection from "components/elements/CardSection";
 import { StudyListTable } from "components/tables";
 import RadiologyLayout from "layouts/RadiologyLayout";
 import { RadiologyMessagesList } from "components/elements";
-//lodash
-import _ from "lodash";
 
 const Dashboard = () => {
   const cards = [

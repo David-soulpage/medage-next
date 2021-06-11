@@ -1,15 +1,14 @@
 import React, { useState } from "react";
+import Head from "next/head";
 //local components
 import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 import { CommonCard, DoctorCard } from "components/card";
 // react bootstrap
 import { Form, InputGroup, Dropdown } from "react-bootstrap";
 //icons
-import { Filter, Search, Calendar } from "@styled-icons/bootstrap";
-import { Location } from "@styled-icons/zondicons";
-import { DotFill } from "@styled-icons/octicons";
-//lodash
-import _ from "lodash";
+import { Filter, Search, Calendar } from "components/styled-icons";
+import { Location } from "components/styled-icons";
+import { DotFill } from "components/styled-icons/";
 
 const ProblemList = () => {
   const options = [
@@ -54,27 +53,32 @@ const ProblemList = () => {
   );
 
   return (
-    <PatientDashboardLayout>
-      <div className="container pt-2">
-        <h6 className="fw-bold">Search Doctor</h6>
-        <CommonCard>
-          <Header />
-          <div className="d-flex mt-4">
-            {_.map(options, (option, id) => (
-              <div key={id} className="border px-2 py-1 me-2 rounded text-muted">
-                {option}
-              </div>
-            ))}
-          </div>
-          <h6 className="my-5 fw-bold">
-            Total 23 Doctors are Available <DotFill size="20" className="text-success" />
-          </h6>
-          <div>
-            <DoctorCard />
-          </div>
-        </CommonCard>
-      </div>
-    </PatientDashboardLayout>
+    <>
+      <Head>
+        <title>Doctor List</title>
+      </Head>
+      <PatientDashboardLayout>
+        <div className="container pt-2">
+          <h6 className="fw-bold">Search Doctor</h6>
+          <CommonCard>
+            <Header />
+            <div className="d-flex mt-4">
+              {options.map((option, id) => (
+                <div key={id} className="border px-2 py-1 me-2 rounded text-muted">
+                  {option}
+                </div>
+              ))}
+            </div>
+            <h6 className="my-5 fw-bold">
+              Total 23 Doctors are Available <DotFill size="20" className="text-success" />
+            </h6>
+            <div>
+              <DoctorCard />
+            </div>
+          </CommonCard>
+        </div>
+      </PatientDashboardLayout>
+    </>
   );
 };
 

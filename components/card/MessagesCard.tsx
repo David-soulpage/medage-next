@@ -1,10 +1,10 @@
 // react
 import React, { FC } from "react";
 // styled-icons
-import { DotsVerticalRounded } from "@styled-icons/boxicons-regular";
-import { AccountCircle } from "@styled-icons/material-outlined";
+import { DotsVerticalRounded } from "components/styled-icons";
+import { AccountCircle } from "components/styled-icons";
 import { Exclamation } from "styled-icons/bootstrap";
-import { Forward } from "@styled-icons/entypo";
+import { Forward } from "components/styled-icons";
 
 interface IMessagesCard {
   data: {

@@ -1,6 +1,6 @@
 import React from "react";
 //icons
-import { CheckDouble } from "@styled-icons/remix-line";
+import { CheckDouble } from "components/styled-icons";
 
 const SignDocuments = () => {
   return (

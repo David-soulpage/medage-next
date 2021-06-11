@@ -5,9 +5,9 @@ import Link from "next/link";
 // react-boostrap
 import { Form, InputGroup, Image, Navbar, Nav, Container } from "react-bootstrap";
 // styled-icons
-import { Search } from "@styled-icons/boxicons-regular";
-import { AccountCircle } from "@styled-icons/material-outlined";
-import { ArrowDropDown } from "@styled-icons/remix-line";
+import { Search } from "components/styled-icons";
+import { AccountCircle } from "components/styled-icons";
+import { ArrowDropDown } from "components/styled-icons";
 
 const RadiologyHeader: FC = () => {
   return (

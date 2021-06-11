@@ -9,8 +9,6 @@ import {
   Questions,
   SignDocuments,
 } from "components/elements";
-//lodash
-import _ from "lodash";
 
 const Payments = () => {
   const [step, setStep] = useState(1);

@@ -1,13 +1,11 @@
 import React, { FC, useState } from "react";
 
-//lodash
-import _ from "lodash";
 //react bootstrap
 import { Modal } from "react-bootstrap";
 //icons
-import { ThreeDotsVertical } from "@styled-icons/bootstrap";
-import { Attach } from "@styled-icons/evaicons-solid";
-import { Messages } from "@styled-icons/typicons";
+import { ThreeDotsVertical } from "components/styled-icons";
+import { Attach } from "components/styled-icons";
+import { Messages } from "components/styled-icons";
 import { CommonModal } from "components/modal";
 
 const Tasks: FC = () => {
@@ -64,7 +62,7 @@ const Tasks: FC = () => {
   ];
   return (
     <>
-      {_.map(data, (item, id) => (
+      {data.map((item, id) => (
         <div
           key={id}
           onClick={() => {

@@ -1,7 +1,7 @@
 // react
 import React, { FC, useState, useEffect } from "react";
 // styled-icons
-import { Bill } from "@styled-icons/remix-line/";
+import { Bill } from "components/styled-icons/";
 import { useRouter } from "next/router";
 
 interface IProps {

@@ -6,9 +6,7 @@ import { VisitTable } from "components/tables";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons
-import { Search } from "@styled-icons/bootstrap";
-//lodash
-import _ from "lodash";
+import { Search } from "components/styled-icons";
 
 const VisitSummary = () => {
   const problems = [

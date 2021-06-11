@@ -1,7 +1,7 @@
 // react
 import React, { FC, useState } from "react";
 // styled icons
-import { AccountBox } from "@styled-icons/material-rounded";
+import { AccountBox } from "components/styled-icons";
 // forms
 import { PatientPersonal } from "components/forms";
 import PatientFamily from "components/forms/PatientFamily";

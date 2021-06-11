@@ -1,11 +1,10 @@
 import React, { FC } from "react";
-// lodash
-import _ from "lodash";
+
 // data -table
 import DataTable from "react-data-table-component";
 // icons
-import { Attachment } from "@styled-icons/entypo";
-import { Copy } from "@styled-icons/boxicons-solid";
+import { Attachment } from "components/styled-icons";
+import { Copy } from "components/styled-icons";
 
 const StudyList: FC = () => {
   const tableData = [

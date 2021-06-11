@@ -4,10 +4,10 @@ import React, { FC } from "react";
 import CommonTable from "components/tables/CommonTable";
 import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 // styled-icons
-import { Star } from "@styled-icons/boxicons-regular";
-import { AccountBox } from "@styled-icons/material";
-import { VideoCall } from "@styled-icons/material-rounded";
-import { ThreeDotsVertical } from "@styled-icons/bootstrap/";
+import { Star } from "components/styled-icons";
+import { AccountBox } from "components/styled-icons";
+import { VideoCall } from "components/styled-icons";
+import { ThreeDotsVertical } from "components/styled-icons/";
 
 interface IProps {}
 

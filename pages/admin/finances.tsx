@@ -36,8 +36,7 @@ const AdminFinances: FC<IProps> = (props) => {
         </div>
         <div className="admin-dashboard-grid-main bg-grey-two">
           <div className="h-100 mt-5 bg-white mx-5">
-            {selectedSideItem}
-            {<RenderSelectedSideItemContent />}
+            <RenderSelectedSideItemContent />
           </div>
         </div>
       </div>

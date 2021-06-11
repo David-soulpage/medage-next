@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 //local components
 import {
   BillingSummary,
@@ -9,9 +10,6 @@ import {
 } from "components/elements";
 import CardSection from "components/elements/CardSection";
 import AdminLayout from "layouts/AdminLayout";
-
-//lodash
-import _ from "lodash";
 
 const Dashboard = () => {
   const list = [
@@ -42,28 +40,33 @@ const Dashboard = () => {
   ];
 
   return (
-    <AdminLayout>
-      <div className="container-fluid mt-3 py-3 px-5">
-        <CardSection list={list} />
-        <div className="row mt-4 g-3">
-          <div className="col-md-6 ">
-            <BillingSummary />
-          </div>
-          <div className="col-md-3">
-            <LiveClaims />
-          </div>
-          <div className="col-md-3">
-            <PatientPayments />
-          </div>
-          <div className="col-md-6">
-            <DashboardTasks />
-          </div>
-          <div className="col-md-6">
-            <DashboardMessages />
+    <>
+      <Head>
+        <title>Admin Dashboard</title>
+      </Head>
+      <AdminLayout>
+        <div className="container-fluid mt-3 py-3 px-5">
+          <CardSection list={list} />
+          <div className="row mt-4 g-3">
+            <div className="col-md-6">
+              <BillingSummary />
+            </div>
+            <div className="col-md-3">
+              <LiveClaims />
+            </div>
+            <div className="col-md-3">
+              <PatientPayments />
+            </div>
+            <div className="col-md-6">
+              <DashboardTasks />
+            </div>
+            <div className="col-md-6">
+              <DashboardMessages />
+            </div>
           </div>
         </div>
-      </div>
-    </AdminLayout>
+      </AdminLayout>
+    </>
   );
 };
 

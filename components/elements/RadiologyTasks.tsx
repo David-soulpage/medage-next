@@ -2,10 +2,9 @@ import React, { FC, useState } from "react";
 // modal
 import AddTaskModal from "components/modal/AddTaskModal";
 //styled icons
-import { CheckDouble, DotsVerticalRounded } from "@styled-icons/boxicons-regular";
+import { CheckDouble, DotsVerticalRounded } from "components/styled-icons";
 import { Exclamation } from "styled-icons/bootstrap";
-//lodash
-import _ from "lodash";
+
 // next router
 import Router from "next/router";
 
@@ -47,7 +46,7 @@ const RadiologyTasks: FC = () => {
         </button>
       </div>
       {/* Tasks */}
-      {_.map(tasks, (task, id) => {
+      {tasks.map((task, id) => {
         return (
           <div key={id} className="mt-4">
             <div className="d-flex align-items-center">

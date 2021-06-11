@@ -10,7 +10,7 @@ import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons
-import { Search } from "@styled-icons/bootstrap";
+import { Search } from "components/styled-icons";
 
 const analytics = () => {
   return (
@@ -22,7 +22,7 @@ const analytics = () => {
         <div className="container pt-2">
           <h6 className="text-dark mb-3">Reports</h6>
           <CommonCard>
-            <div className="d-flex flex-column flex-md-row align-items-center">
+            <div className="d-flex flex-column flex-md-row align-items-center mb-3">
               <h6 className="title m-0">Reports List</h6>
               <div className="d-flex flex-column flex-md-row ms-auto align-items-center">
                 <InputGroup className="bg-light px-2 py-0 rounded me-4 d-flex align-items-center">

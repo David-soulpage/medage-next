@@ -5,8 +5,8 @@ import { useFormik } from "formik";
 // boostrap
 import { Form, FormControl, FormGroup, FormLabel, InputGroup } from "react-bootstrap";
 // styled icons
-import { EyeFill, EyeSlashFill } from "@styled-icons/bootstrap/";
-import { Google } from "@styled-icons/boxicons-logos/";
+import { EyeFill, EyeSlashFill } from "components/styled-icons/";
+import { Google } from "components/styled-icons/";
 
 const SignIn: FC = () => {
   const [showPassword, setPassword] = useState(false);

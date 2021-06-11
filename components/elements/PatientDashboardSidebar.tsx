@@ -1,21 +1,18 @@
 // react
-import React, { useEffect, useState } from "react";
-// next
-import { useRouter } from "next/router";
-//icons
-import { Dashboard } from "@styled-icons/material-outlined";
-import { ClipboardList } from "@styled-icons/heroicons-outline";
-import { DocumentOnePage } from "@styled-icons/fluentui-system-regular";
-import { CalendarAlt } from "@styled-icons/boxicons-regular";
-import { Group } from "@styled-icons/material";
-import { FormatLineSpacing } from "@styled-icons/material-outlined";
+import { useState } from "react";
 
-//lodash
-import _ from "lodash";
+//icons
+import { Dashboard } from "components/styled-icons";
+import { ClipboardList } from "components/styled-icons";
+import { DocumentOnePage } from "components/styled-icons";
+import { CalendarAlt } from "components/styled-icons";
+import { Group } from "components/styled-icons";
+import { FormatLineSpacing } from "components/styled-icons";
+import ActiveLink from "./ActiveLink";
 
 const PatientDashboardSidebar = () => {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  const router = useRouter();
+
   const data = [
     {
       name: "Dashboard",
@@ -50,16 +47,6 @@ const PatientDashboardSidebar = () => {
     },
   ];
 
-  useEffect(() => {
-    const pathName = router.pathname;
-    data.map((ele, index) => {
-      console.log(pathName.includes(ele["route"]), "pathName");
-      if (pathName.includes(ele["route"])) {
-        setSelectedItemIndex(index);
-      }
-    });
-  }, [router.pathname]);
-
   const onClickItem = (index) => {
     setSelectedItemIndex(index);
   };
@@ -68,24 +55,15 @@ const PatientDashboardSidebar = () => {
       {data.map((item, index) => {
         const Icon = item.icon;
         return (
-          <li
-            key={index}
-            onClick={() => {
-              router.push(`/patient/1/${item.route}`);
-              onClickItem(index);
-            }}
-            className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center ${
-              index === selectedItemIndex ? "bg-light-primary" : "bg-white"
-            }`}
-          >
-            <Icon
-              size="20"
-              className={`me-2 ${selectedItemIndex === index ? "text-primary" : "text-base-black"}`}
-            />
-            <span className={index === selectedItemIndex ? "text-primary" : "text-base-black"}>
-              {item.name}
-            </span>
-          </li>
+          <ActiveLink href={item.route} key={index}>
+            <li
+              key={index}
+              className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center`}
+            >
+              <Icon size="20" className={`me-2`} />
+              <span>{item.name}</span>
+            </li>
+          </ActiveLink>
         );
       })}
     </ul>

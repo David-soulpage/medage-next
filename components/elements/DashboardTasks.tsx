@@ -1,10 +1,9 @@
 import React from "react";
 //local components
 import { CommonCard } from "components/card";
-//lodash
-import _ from "lodash";
+
 //icons
-import { CheckDouble } from "@styled-icons/boxicons-regular";
+import { CheckDouble } from "components/styled-icons";
 
 const DashboardTasks = () => {
   const tasks = [
@@ -39,7 +38,7 @@ const DashboardTasks = () => {
           <button className="btn btn-sm btn-outline-dark text-muted">New Task +</button>
         </div>
       </div>
-      {_.map(tasks, (task, id) => (
+      {tasks.map((task, id) => (
         <div key={id} className="mt-4">
           <div className="d-flex align-items-center">
             <div className="p-3 border-0 bg-light-primary rounded">

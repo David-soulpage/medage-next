@@ -4,14 +4,13 @@ import React, { FC } from "react";
 import { InputGroup, Form } from "react-bootstrap";
 // react-data-table-component
 import DataTable from "react-data-table-component";
-// lodash
-import _ from "lodash";
+
 // Link
 import Link from "next/link";
 //styled-icons
 // icons
-import { Attachment } from "@styled-icons/entypo";
-import { Search } from "@styled-icons/boxicons-regular";
+import { Attachment } from "components/styled-icons";
+import { Search } from "components/styled-icons";
 
 const StudyListTable: FC = () => {
   const tableData = [

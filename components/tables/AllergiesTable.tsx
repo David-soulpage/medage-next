@@ -3,8 +3,8 @@ import React, { FC, useState } from "react";
 import DataTable from "react-data-table-component";
 import { CommonModal } from "components/modal";
 //icons
-import { Edit } from "@styled-icons/material";
-import { Delete } from "@styled-icons/fluentui-system-regular";
+import { Edit } from "components/styled-icons";
+import { Delete } from "components/styled-icons";
 //react bootstrap
 import { Modal, Form } from "react-bootstrap";
 
@@ -137,7 +137,9 @@ const AllergiesTable: FC = () => {
         </button>
       </div>
       <div className="border-top my-3"></div>
+      {/* Table */}
       <DataTable columns={columns} data={tableData} customStyles={customStyles} />
+      {/* Modal */}
       <CommonModal show={show} onHide={() => setShow(false)} centered={true}>
         <Modal.Header className="d-flex justify-content-center">
           <h6 className="title m-0">Add New Allergy</h6>

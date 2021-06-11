@@ -1,17 +1,15 @@
 import React from "react";
-import { useRouter } from "next/router";
+//next
+import Link from "next/link";
 //icons
-import { Dashboard } from "@styled-icons/material-outlined";
-import { ClipboardList } from "@styled-icons/heroicons-outline";
-import { TextBulletListSquare } from "@styled-icons/fluentui-system-regular";
-import { DocumentOnePage } from "@styled-icons/fluentui-system-regular";
-import { CalendarAlt } from "@styled-icons/boxicons-regular";
-import { Googleanalytics } from "@styled-icons/simple-icons";
-//lodash
-import _ from "lodash";
+import { Dashboard } from "components/styled-icons";
+import { ClipboardList } from "components/styled-icons";
+import { TextBulletListSquare } from "components/styled-icons";
+import { DocumentOnePage } from "components/styled-icons";
+import { CalendarAlt } from "components/styled-icons";
+import { Googleanalytics } from "components/styled-icons";
 
 const Sidebar = () => {
-  const router = useRouter();
   const data = [
     {
       name: "Dashboard",
@@ -46,15 +44,13 @@ const Sidebar = () => {
   ];
   return (
     <ul className="list-group">
-      {_.map(data, (item, id) => (
-        <li
-          key={id}
-          onClick={() => router.push(`/doctor/1/${item.route}`)}
-          className="list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center"
-        >
-          {item.icon}
-          <span className="d-none d-lg-block mx-2">{item.name}</span>
-        </li>
+      {data.map((item, id) => (
+        <Link key={id} href={`${item.route}`}>
+          <li className="list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center">
+            {item.icon}
+            <span className="d-none d-lg-block mx-2">{item.name}</span>
+          </li>
+        </Link>
       ))}
     </ul>
   );
