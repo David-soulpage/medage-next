@@ -48,16 +48,28 @@ const PatientOverview = () => {
     },
   ];
   return (
-    <>
-      <Head>
-        <title>Patient Overview</title>
-      </Head>
-      <PatientDashboardLayout>
-        <div className="container pt-2">
-          <h6 className="fw-bold">Patient Overview</h6>
-          <CommonCard>
-            <div className="card p-2 shadow-sm">
-              <PatientDetailsSmall />
+    <PatientDashboardLayout>
+      <div className="container pt-2">
+        <h6 className="fw-bold">Patient Overview</h6>
+        <CommonCard>
+          <div className="card p-2 shadow-sm">
+            <PatientDetailsSmall />
+          </div>
+          <div className="row mt-3 g-3">
+            <div className="col-md-4">
+              <div className="card shadow-sm pt-2">
+                <div className="d-flex align-items-center p-3 border-bottom">
+                  <h6 className="m-0">Current Medications</h6>
+                  <ThreeDotsVertical size="20" className="ms-auto" />
+                </div>
+                {medications.map((medication, id) => (
+                  <div className="d-flex justify-content-between p-3 border-bottom">
+                    <Capsule size="20" className="text-primary" />
+                    <p className="m-0">{medication.name}</p>
+                    <p className="m-0">{medication.timings}</p>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="row mt-3 g-3">
               <div className="col-md-4">
@@ -139,10 +151,10 @@ const PatientOverview = () => {
                 </div>
               </div>
             </div>
-          </CommonCard>
-        </div>
-      </PatientDashboardLayout>
-    </>
+          </div>
+        </CommonCard>
+      </div>
+    </PatientDashboardLayout>
   );
 };
 
