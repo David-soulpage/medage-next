@@ -338,12 +338,11 @@ const ProblemStepper: FC<IProps> = (props) => {
                   onClick={() => setSelectedItemIndex(index)}
                 >
                   <div className="d-flex flex-column justify-content-center align-items-center">
-                    <div className="bg-white">
+                    <div className="bg-white z-index">
                       <CheckCircleFill
                         size="20"
-                        className={
-                          index <= selectedItemIndex ? "text-primary" : "text-light-grey-two"
-                        }
+                        className={`
+                          ${index <= selectedItemIndex ? "text-primary" : "text-light-grey-two"}`}
                       />
                     </div>
                     <div>
@@ -360,7 +359,7 @@ const ProblemStepper: FC<IProps> = (props) => {
                   <div
                     className={`position-absolute top-30 w-100 ${
                       index <= selectedItemIndex ? "bg-primary" : "bg-light-grey-two"
-                    }`}
+                    } `}
                     style={{ height: 2 }}
                   ></div>
                 </div>

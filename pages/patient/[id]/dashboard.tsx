@@ -2,6 +2,7 @@
 import React from "react";
 // next
 import Head from "next/head";
+
 // layouts
 import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 // components
@@ -17,6 +18,7 @@ import { LineGraph } from "components/styled-icons";
 import { Search } from "components/styled-icons";
 //react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
+import Link from "next/link";
 
 const Dashboard = () => {
   const cards = [
@@ -115,9 +117,11 @@ const Dashboard = () => {
                     <h6 className="fw-bold m-0">Appointments</h6>
                   </div>
                   <div className="ms-3">
-                    <button className="btn btn-sm btn-outline-primary">
-                      <small>Create Appiointment</small>{" "}
-                    </button>
+                    <Link href="/patient/1/new-problem">
+                      <button className="btn btn-sm btn-outline-primary">
+                        <small>Create Appiointment</small>{" "}
+                      </button>
+                    </Link>
                   </div>
                   <div className="ms-auto">
                     <InputGroup className="d-flex align-items-center bg-light">
