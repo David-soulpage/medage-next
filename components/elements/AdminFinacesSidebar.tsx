@@ -5,11 +5,13 @@ import { Bill } from "components/styled-icons/";
 import { useRouter } from "next/router";
 
 interface IProps {
-  onPressItem: (name: string) => void;
+  onPressItem?: (name: string) => void;
 }
 
 const AdminSidebar: FC<IProps> = (props) => {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
+  const [items, setItems] = useState([]);
+  const router = useRouter();
 
   const data = [
     {
@@ -50,6 +52,76 @@ const AdminSidebar: FC<IProps> = (props) => {
     },
   ];
 
+  const data2 = [
+    {
+      name: "Hospital Stretchers",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Beds",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Defibrillators",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Anesthesia Machines",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Patient Monitors",
+      icon: Bill,
+      route: "",
+    },
+  ];
+
+  const data3 = [
+    {
+      name: "Doctors",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Nurses",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Administration",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "IT",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Billing",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Support",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Leadership",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "HR Team",
+      icon: Bill,
+      route: "",
+    },
+  ];
   const onClickItem = (index) => {
     setSelectedItemIndex(index);
     props.onPressItem(data[index]["name"]);
@@ -58,7 +130,14 @@ const AdminSidebar: FC<IProps> = (props) => {
   return (
     <div>
       <ul className="list-group">
-        {data.map((item, index) => {
+        {(router.pathname.includes("finances")
+          ? data
+          : router.pathname.includes("inventory")
+          ? data2
+          : router.pathname.includes("hr")
+          ? data3
+          : []
+        ).map((item, index) => {
           const Icon = item.icon;
           return (
             <div

@@ -12,11 +12,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // prop types
 interface IProps {
-  list: Array<any>;
+  list?: Array<any>;
 
-  initialValues: any;
-  styles: any;
-  buttonsList: any;
+  initialValues?: any;
+  styles?: any;
+  buttonsList?: any;
   underline?: string;
   form?: string;
   onPressForm?: () => void;

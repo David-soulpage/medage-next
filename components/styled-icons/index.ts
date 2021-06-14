@@ -1,4 +1,4 @@
-export { Bill, ArrowDropDown, Capsule } from "@styled-icons/remix-line";
+export { Bill, ArrowDropDown, Capsule, AddCircle } from "@styled-icons/remix-line";
 export { School } from "@styled-icons/ionicons-sharp/";
 
 export {
