@@ -3,8 +3,7 @@ import React from "react";
 //next
 import Link from "next/link";
 //icons
-import { Warning } from "components/styled-icons";
-import { Stethoscope } from "components/styled-icons";
+import { Warning, Stethoscope } from "components/styled-icons";
 import { CalendarAlt } from "components/styled-icons";
 import { TextBulletListSquare } from "components/styled-icons";
 import { XRay } from "components/styled-icons";
