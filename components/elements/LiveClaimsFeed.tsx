@@ -2,28 +2,11 @@
 import React, { FC } from "react";
 // components
 import { CustomDropDown } from "components/dropdown";
+import CommonForm from "components/forms/CommonForm";
 
 interface IProps {}
 
 const list = [
-  {
-    title: "Select Offices",
-    name: "selectOffices",
-    placeholder: "Select...",
-    subType: "dropDown",
-    textType: "text",
-    optionsList: [
-      {
-        title: "Myself",
-        textStyles: "text-dark-grey fw-normal",
-      },
-      {
-        title: "Mother",
-        textStyles: "text-dark-grey fw-normal",
-      },
-    ],
-  },
-
   {
     title: "Claim St",
     name: "claimSt",
@@ -59,8 +42,10 @@ const list = [
   },
   {
     title: "Appoinment Profils",
+    placeholder: "Select...",
     name: "appointmentProfil",
     type: "dropDown",
+    subType: "dropDown",
     optionsList: [
       {
         title: "All",
@@ -108,6 +93,24 @@ const list = [
   },
 ];
 
+const initialValues = {
+  claimSt: "",
+  billingSt: "",
+  appointmentProfil: "",
+};
+
+const styles = {
+  formControl: "font-smaller py-2 border-0 px-0",
+  formLabel: "text-base-black fw-bold mb-2",
+  formGroup: "mb-2 mt-3",
+  row: "",
+  col: {
+    small: "12",
+    tablet: "6",
+    large: "3",
+  },
+};
+
 const LiveClaimsFeed: FC<IProps> = (props) => {
   return (
     <div className="p-4 d-flex flex-column">
@@ -130,7 +133,13 @@ const LiveClaimsFeed: FC<IProps> = (props) => {
           />
         </div>
       </div>
-      <div className=""></div>
+      <CommonForm
+        list={list}
+        styles={styles}
+        buttonsList={[]}
+        underline=""
+        initialValues={initialValues}
+      />
     </div>
   );
 };

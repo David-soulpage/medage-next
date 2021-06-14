@@ -3,6 +3,7 @@ import React, { FC, useState } from "react";
 // components
 import { AdminNavbar, BillingSummary, Header, LiveClaimsFeed } from "components/elements";
 import AdminFinancesSidebar from "components/elements/AdminFinacesSidebar";
+import AdminSidebar from "components/elements/AdminFinacesSidebar";
 
 interface IProps {}
 
@@ -32,7 +33,7 @@ const AdminFinances: FC<IProps> = (props) => {
           <AdminNavbar />
         </div>
         <div className="admin-dashboard-left-sidebar mt-5 bg-white h-100">
-          <AdminFinancesSidebar onPressItem={onPressSideItem} />
+          <AdminSidebar onPressItem={onPressSideItem} />
         </div>
         <div className="admin-dashboard-grid-main bg-grey-two">
           <div className="h-100 mt-5 bg-white mx-5">

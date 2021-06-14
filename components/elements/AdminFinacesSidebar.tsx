@@ -8,9 +8,9 @@ interface IProps {
   onPressItem: (name: string) => void;
 }
 
-const AdminFinancesSidebar: FC<IProps> = (props) => {
+const AdminSidebar: FC<IProps> = (props) => {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  const router = useRouter();
+
   const data = [
     {
       name: "Billing Summary",
@@ -27,11 +27,7 @@ const AdminFinancesSidebar: FC<IProps> = (props) => {
       icon: Bill,
       route: "",
     },
-    {
-      name: "Tasks",
-      icon: Bill,
-      route: "",
-    },
+
     {
       name: "Transactions",
       icon: Bill,
@@ -52,17 +48,12 @@ const AdminFinancesSidebar: FC<IProps> = (props) => {
       icon: Bill,
       route: "",
     },
-    {
-      name: "Human Resources",
-      icon: Bill,
-      route: "",
-    },
-    {
-      name: "Calender",
-      icon: Bill,
-      route: "",
-    },
   ];
+
+  const onClickItem = (index) => {
+    setSelectedItemIndex(index);
+    props.onPressItem(index);
+  };
 
   return (
     <div>
@@ -70,11 +61,12 @@ const AdminFinancesSidebar: FC<IProps> = (props) => {
         {data.map((item, index) => {
           const Icon = item.icon;
           return (
-            <li
+            <div
               key={index}
               className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 ${
                 index === selectedItemIndex ? "bg-light-primary" : "bg-white"
               }`}
+              onClick={() => onClickItem(index)}
             >
               <div className="me-3">
                 <Icon
@@ -90,11 +82,11 @@ const AdminFinancesSidebar: FC<IProps> = (props) => {
               <div className="bg-light-grey" style={{ height: 2 }}>
                 {" "}
               </div>
-            </li>
+            </div>
           );
         })}
       </ul>
     </div>
   );
 };
-export default AdminFinancesSidebar;
+export default AdminSidebar;
