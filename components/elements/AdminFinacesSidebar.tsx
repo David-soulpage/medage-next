@@ -52,7 +52,7 @@ const AdminSidebar: FC<IProps> = (props) => {
 
   const onClickItem = (index) => {
     setSelectedItemIndex(index);
-    props.onPressItem(index);
+    props.onPressItem(data[index]["name"]);
   };
 
   return (

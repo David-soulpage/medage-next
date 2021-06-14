@@ -4,6 +4,7 @@ import React, { FC, useState } from "react";
 import { AdminNavbar, BillingSummary, Header, LiveClaimsFeed } from "components/elements";
 import AdminFinancesSidebar from "components/elements/AdminFinacesSidebar";
 import AdminSidebar from "components/elements/AdminFinacesSidebar";
+import AdminFinancesExpenditure from "components/elements/AdminFinancesExpenditure";
 
 interface IProps {}
 
@@ -11,6 +12,7 @@ const AdminFinances: FC<IProps> = (props) => {
   const [selectedSideItem, setSelectedSideItem] = useState("Live Claims Feed");
 
   const onPressSideItem = (name) => {
+    console.log(name, "name");
     setSelectedSideItem(name);
   };
 
@@ -20,6 +22,8 @@ const AdminFinances: FC<IProps> = (props) => {
         return <BillingSummary />;
       case "Live Claims Feed":
         return <LiveClaimsFeed />;
+      case "Expenditures":
+        return <AdminFinancesExpenditure />;
       default:
         return <LiveClaimsFeed />;
     }
@@ -36,7 +40,7 @@ const AdminFinances: FC<IProps> = (props) => {
           <AdminSidebar onPressItem={onPressSideItem} />
         </div>
         <div className="admin-dashboard-grid-main bg-grey-two">
-          <div className="h-100 mt-5 bg-white mx-5">
+          <div className="mt-5 bg-white mx-5">
             <RenderSelectedSideItemContent />
           </div>
         </div>

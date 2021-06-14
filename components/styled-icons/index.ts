@@ -14,6 +14,8 @@ export {
   DotsVerticalRounded,
   FilterAlt,
   PhoneCall,
+  Square,
+  PlusCircle,
 } from "@styled-icons/boxicons-regular";
 export {
   Clock,
@@ -58,7 +60,7 @@ export { Close, Attach, MessageSquare } from "@styled-icons/evaicons-solid";
 
 export { VideoCall, FormatLineSpacing } from "@styled-icons/material-rounded";
 
-export { Documents } from "@styled-icons/ionicons-solid/";
+export { Documents, Download } from "@styled-icons/ionicons-solid/";
 
 export { Cog, XRay, PhoneAlt, Tasks } from "@styled-icons/fa-solid/";
 
