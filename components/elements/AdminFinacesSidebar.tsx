@@ -122,6 +122,14 @@ const AdminSidebar: FC<IProps> = (props) => {
       route: "",
     },
   ];
+
+  const data4 = [
+    {
+      name: "Form Builder",
+      icon: Bill,
+      route: "",
+    },
+  ];
   const onClickItem = (index) => {
     setSelectedItemIndex(index);
     props.onPressItem(data[index]["name"]);
@@ -136,6 +144,8 @@ const AdminSidebar: FC<IProps> = (props) => {
           ? data2
           : router.pathname.includes("hr")
           ? data3
+          : router.pathname.includes("form")
+          ? data4
           : []
         ).map((item, index) => {
           const Icon = item.icon;
