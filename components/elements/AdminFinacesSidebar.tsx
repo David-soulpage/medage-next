@@ -3,52 +3,49 @@ import React, { FC, useState, useEffect } from "react";
 // styled-icons
 import { Bill } from "components/styled-icons/";
 import { useRouter } from "next/router";
+import ActiveLink from "./ActiveLink";
 
-interface IProps {
-  onPressItem?: (name: string) => void;
-}
+interface IProps {}
 
 const AdminSidebar: FC<IProps> = (props) => {
-  const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  const [items, setItems] = useState([]);
   const router = useRouter();
 
   const data = [
     {
       name: "Billing Summary",
       icon: Bill,
-      route: "",
+      route: "finances/billing-summary",
     },
     {
       name: "Live Claims Feed",
       icon: Bill,
-      route: "",
+      route: "live-claims-feed",
     },
     {
       name: "Patient Payments",
       icon: Bill,
-      route: "",
+      route: "finances/patient-payments",
     },
 
     {
       name: "Transactions",
       icon: Bill,
-      route: "",
+      route: "transactions",
     },
     {
       name: "Expenditures",
       icon: Bill,
-      route: "",
+      route: "expenditures",
     },
     {
       name: "Fee Schedule",
       icon: Bill,
-      route: "",
+      route: "fee-schedule",
     },
     {
       name: "Underpaid Items",
       icon: Bill,
-      route: "",
+      route: "underpaid-items",
     },
   ];
 
@@ -122,10 +119,6 @@ const AdminSidebar: FC<IProps> = (props) => {
       route: "",
     },
   ];
-  const onClickItem = (index) => {
-    setSelectedItemIndex(index);
-    props.onPressItem(data[index]["name"]);
-  };
 
   return (
     <div>
@@ -140,28 +133,22 @@ const AdminSidebar: FC<IProps> = (props) => {
         ).map((item, index) => {
           const Icon = item.icon;
           return (
-            <div
-              key={index}
-              className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 ${
-                index === selectedItemIndex ? "bg-light-primary" : "bg-white"
-              }`}
-              onClick={() => onClickItem(index)}
-            >
-              <div className="me-3">
-                <Icon
-                  size="20"
-                  className={` ${selectedItemIndex === index ? "text-primary" : "text-base-black"}`}
-                />
-              </div>
-              <div>
-                <span className={index === selectedItemIndex ? "text-primary" : "text-base-black"}>
-                  {item.name}
-                </span>
-              </div>
-              <div className="bg-light-grey" style={{ height: 2 }}>
-                {" "}
-              </div>
-            </div>
+            <ActiveLink href={item.route} key={index}>
+              <li
+                key={index}
+                className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 `}
+              >
+                <div className="me-3">
+                  <Icon size="20" />
+                </div>
+                <div>
+                  <span>{item.name}</span>
+                </div>
+                <div className="bg-light-grey" style={{ height: 2 }}>
+                  {" "}
+                </div>
+              </li>
+            </ActiveLink>
           );
         })}
       </ul>

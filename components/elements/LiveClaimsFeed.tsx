@@ -331,7 +331,7 @@ const dropDownStyles = {
 const LiveClaimsFeed: FC<IProps> = (props) => {
   const [showModal, setShowModal] = useState(false);
   return (
-    <div className="p-4 d-flex flex-column">
+    <div className="p-4 d-flex flex-column bg-white">
       <small className="text-base-black fw-bold mb-3">Live Claims Feed</small>
       <div className="bg-light-grey-two" style={{ height: 1 }}></div>
       <div className="row my-3">
