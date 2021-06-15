@@ -121,6 +121,14 @@ const AdminSidebar: FC<IProps> = (props) => {
     },
   ];
 
+  const data4 = [
+    {
+      name: "Form Builder",
+      icon: Bill,
+      route: "",
+    },
+  ];
+
   return (
     <div>
       <ul className="list-group">
@@ -130,6 +138,8 @@ const AdminSidebar: FC<IProps> = (props) => {
           ? data2
           : router.pathname.includes("hr")
           ? data3
+          : router.pathname.includes("form")
+          ? data4
           : []
         ).map((item, index) => {
           const Icon = item.icon;

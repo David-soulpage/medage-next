@@ -1,15 +1,14 @@
-// react
-import React, { FC, useState } from "react";
-// boostrap
-import { Dropdown } from "react-bootstrap";
-
-// component
-import RadiologyMessage from "components/elements/RadiologyMessage";
-import RadiologyMessagesModal from "components/modal/RadiologyMessagesModal";
-import RadiologyLayout from "layouts/RadiologyLayout";
+import React, { useState } from "react";
+import Head from "next/head";
+//local components
 import { CommonCard } from "components/card";
+import RadiologyMessagesModal from "components/modal/RadiologyMessagesModal";
+import { AdminNavbar, Header } from "components/elements";
+//icons
+import { Dropdown } from "react-bootstrap";
+import RadiologyMessage from "components/elements/RadiologyMessage";
 
-const Messages: FC = () => {
+const Messages = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => {
@@ -73,7 +72,7 @@ const Messages: FC = () => {
     },
   ];
 
-  const Header = () => {
+  const MessagesHeader = () => {
     return (
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
         <h6 className="m-0">Messages</h6>
@@ -104,10 +103,18 @@ const Messages: FC = () => {
     );
   };
   return (
-    <RadiologyLayout>
-      <div className="p-5">
+    <>
+      <Head>
+        <title>Admin Messages</title>
+      </Head>
+      <div className="sticky-top">
+        <Header />
+        <AdminNavbar />
+      </div>
+      <div className="container-fluid py-3 px-5 bg-light">
         <CommonCard>
-          <Header />
+          {/* Header */}
+          <MessagesHeader />
           {/* Messages */}
           {messages.map((message: any, id) => {
             return <RadiologyMessage key={id} message={message} />;
@@ -115,7 +122,7 @@ const Messages: FC = () => {
           {show && <RadiologyMessagesModal show={show} handleClose={handleClose} />}
         </CommonCard>
       </div>
-    </RadiologyLayout>
+    </>
   );
 };
 

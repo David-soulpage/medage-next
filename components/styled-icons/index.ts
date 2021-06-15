@@ -34,6 +34,7 @@ export {
   CheckCircleFill,
   Printer,
   FilterSquare,
+  ArrowsMove,
 } from "@styled-icons/bootstrap";
 
 export { MessageCircleOutline } from "@styled-icons/evaicons-outline";
@@ -46,8 +47,8 @@ export {
   ChevronWithCircleRight,
 } from "@styled-icons/entypo";
 
-export { Copy } from "@styled-icons/boxicons-solid";
-export { Edit, AccountBox, Dashboard, Group } from "@styled-icons/material";
+export { Copy, Circle } from "@styled-icons/boxicons-solid";
+export { Edit, AccountBox, Dashboard, Group, Cancel } from "@styled-icons/material";
 export { AccountCircle } from "@styled-icons/material-outlined";
 export { FileExport } from "@styled-icons/boxicons-solid/";
 export {
