@@ -19,4 +19,6 @@ export default CommonModal;
 
 export const ModalHeader = ({ children }: any): any => <Modal.Header>{children}</Modal.Header>;
 export const ModalBody = ({ children }: any): any => <Modal.Body>{children}</Modal.Body>;
-export const ModalFooter = ({ children }): any => <Modal.Footer>{children}</Modal.Footer>;
+export const ModalFooter = ({ children, footerStyles = "" }): any => (
+  <Modal.Footer className={footerStyles}>{children}</Modal.Footer>
+);

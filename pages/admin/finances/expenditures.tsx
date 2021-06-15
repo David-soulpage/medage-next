@@ -1,8 +1,12 @@
+// react
+import React, { FC, useState } from "react";
+// react-boostrap
+import { Form } from "react-bootstrap";
+// components
+import { AdminLayout } from "layouts";
+import { ExpensesModal } from "components/modal";
 import { PlusCircle } from "components/styled-icons";
 import CommonTable from "components/tables/CommonTable";
-import { AdminLayout } from "layouts";
-import React, { FC, useState } from "react";
-import { Form } from "react-bootstrap";
 
 interface IProps {}
 
@@ -176,6 +180,9 @@ const AdminFinancesExpenditure: FC<IProps> = (props) => {
   const addExpense = () => {
     setShowModalStatus(true);
   };
+  const onHide = () => {
+    setShowModalStatus(false);
+  };
 
   return (
     <AdminLayout>
@@ -207,6 +214,7 @@ const AdminFinancesExpenditure: FC<IProps> = (props) => {
           />
         </div>
       </div>
+      {showModal && <ExpensesModal onHide={onHide} />}
     </AdminLayout>
   );
 };

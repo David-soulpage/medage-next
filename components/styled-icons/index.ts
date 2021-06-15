@@ -17,6 +17,7 @@ export {
   Square,
   PlusCircle,
 } from "@styled-icons/boxicons-regular";
+
 export {
   Clock,
   EyeSlashFill,
@@ -32,6 +33,7 @@ export {
   Filter,
   CheckCircleFill,
   Printer,
+  FilterSquare,
 } from "@styled-icons/bootstrap";
 
 export { MessageCircleOutline } from "@styled-icons/evaicons-outline";
@@ -47,7 +49,7 @@ export {
 export { Copy } from "@styled-icons/boxicons-solid";
 export { Edit, AccountBox, Dashboard, Group } from "@styled-icons/material";
 export { AccountCircle } from "@styled-icons/material-outlined";
-
+export { FileExport } from "@styled-icons/boxicons-solid/";
 export {
   Delete,
   DocumentOnePage,
@@ -64,10 +66,10 @@ export { Documents, Download } from "@styled-icons/ionicons-solid/";
 
 export { Cog, XRay, PhoneAlt, Tasks } from "@styled-icons/fa-solid/";
 
-export { ClipboardList, UserGroup } from "@styled-icons/heroicons-outline";
+export { ClipboardList, UserGroup, Refresh } from "@styled-icons/heroicons-outline";
 
 export { Warning } from "@styled-icons/ionicons-outline";
-export { Stethoscope, Refresh } from "@styled-icons/zondicons";
+export { Stethoscope } from "@styled-icons/zondicons";
 
 export { Contacts, Messages } from "@styled-icons/typicons";
 

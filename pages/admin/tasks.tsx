@@ -1,9 +1,9 @@
 import React from "react";
+// next
 import Head from "next/head";
 //local components
 import AdminLayout from "layouts/AdminLayout";
 import { CommonCard } from "components/card";
-
 //icons
 import { Tasks as TaskList } from "components/elements";
 import { Tasks as TaskIcon } from "components/styled-icons";

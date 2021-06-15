@@ -2,8 +2,9 @@
 import React, { FC, useState, useEffect } from "react";
 // styled-icons
 import { Bill } from "components/styled-icons/";
-import { useRouter } from "next/router";
 import ActiveLink from "./ActiveLink";
+// next
+import { useRouter } from "next/router";
 
 interface IProps {}
 
@@ -14,7 +15,7 @@ const AdminSidebar: FC<IProps> = (props) => {
     {
       name: "Billing Summary",
       icon: Bill,
-      route: "finances/billing-summary",
+      route: "billing-summary",
     },
     {
       name: "Live Claims Feed",
@@ -24,7 +25,7 @@ const AdminSidebar: FC<IProps> = (props) => {
     {
       name: "Patient Payments",
       icon: Bill,
-      route: "finances/patient-payments",
+      route: "patient-payments",
     },
 
     {
