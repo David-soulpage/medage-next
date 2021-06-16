@@ -22,8 +22,8 @@ const Header = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <ul className="navbar-nav justify-content-end">
             <li className="nav-item">
-              <a className="nav-link fw-bold text-dark" href="#">
-                Welcome, Jeevan Jessi
+              <a className="nav-link " href="#">
+                <h6 className="text-base-black fw-bold">Welcome, Jeevan Jessi</h6>
               </a>
             </li>
             <li className="nav-item ms-3">

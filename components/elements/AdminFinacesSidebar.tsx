@@ -2,63 +2,128 @@
 import React, { FC, useState, useEffect } from "react";
 // styled-icons
 import { Bill } from "components/styled-icons/";
+import ActiveLink from "./ActiveLink";
+// next
 import { useRouter } from "next/router";
 
-interface IProps {
-  onPressItem: (name: string) => void;
-}
+interface IProps {}
 
-const AdminFinancesSidebar: FC<IProps> = (props) => {
-  const [selectedItemIndex, setSelectedItemIndex] = useState(0);
+const AdminSidebar: FC<IProps> = (props) => {
   const router = useRouter();
+
   const data = [
     {
       name: "Billing Summary",
       icon: Bill,
-      route: "",
+      route: "billing-summary",
     },
     {
       name: "Live Claims Feed",
       icon: Bill,
-      route: "",
+      route: "live-claims-feed",
     },
     {
       name: "Patient Payments",
       icon: Bill,
-      route: "",
+      route: "patient-payments",
     },
-    {
-      name: "Tasks",
-      icon: Bill,
-      route: "",
-    },
+
     {
       name: "Transactions",
       icon: Bill,
-      route: "",
+      route: "transactions",
     },
     {
       name: "Expenditures",
       icon: Bill,
-      route: "",
+      route: "expenditures",
     },
     {
       name: "Fee Schedule",
       icon: Bill,
-      route: "",
+      route: "fee-schedule",
     },
     {
       name: "Underpaid Items",
       icon: Bill,
-      route: "",
+      route: "underpaid-items",
     },
+  ];
+
+  const data2 = [
     {
-      name: "Human Resources",
+      name: "Hospital Stretchers",
       icon: Bill,
       route: "",
     },
     {
-      name: "Calender",
+      name: "Beds",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Defibrillators",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Anesthesia Machines",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Patient Monitors",
+      icon: Bill,
+      route: "",
+    },
+  ];
+
+  const data3 = [
+    {
+      name: "Doctors",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Nurses",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Administration",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "IT",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Billing",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Support",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "Leadership",
+      icon: Bill,
+      route: "",
+    },
+    {
+      name: "HR Team",
+      icon: Bill,
+      route: "",
+    },
+  ];
+
+  const data4 = [
+    {
+      name: "Form Builder",
       icon: Bill,
       route: "",
     },
@@ -67,34 +132,38 @@ const AdminFinancesSidebar: FC<IProps> = (props) => {
   return (
     <div>
       <ul className="list-group">
-        {data.map((item, index) => {
+        {(router.pathname.includes("finances")
+          ? data
+          : router.pathname.includes("inventory")
+          ? data2
+          : router.pathname.includes("hr")
+          ? data3
+          : router.pathname.includes("form")
+          ? data4
+          : []
+        ).map((item, index) => {
           const Icon = item.icon;
           return (
-            <li
-              key={index}
-              className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 ${
-                index === selectedItemIndex ? "bg-light-primary" : "bg-white"
-              }`}
-            >
-              <div className="me-3">
-                <Icon
-                  size="20"
-                  className={` ${selectedItemIndex === index ? "text-primary" : "text-base-black"}`}
-                />
-              </div>
-              <div>
-                <span className={index === selectedItemIndex ? "text-primary" : "text-base-black"}>
-                  {item.name}
-                </span>
-              </div>
-              <div className="bg-light-grey" style={{ height: 2 }}>
-                {" "}
-              </div>
-            </li>
+            <ActiveLink href={item.route} key={index}>
+              <li
+                key={index}
+                className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 `}
+              >
+                <div className="me-3">
+                  <Icon size="20" />
+                </div>
+                <div>
+                  <span>{item.name}</span>
+                </div>
+                <div className="bg-light-grey" style={{ height: 2 }}>
+                  {" "}
+                </div>
+              </li>
+            </ActiveLink>
           );
         })}
       </ul>
     </div>
   );
 };
-export default AdminFinancesSidebar;
+export default AdminSidebar;
