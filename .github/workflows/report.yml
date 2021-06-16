@@ -21,11 +21,11 @@ jobs:
           node-version: 14
       - name: "Install Node Packages"
         run: npm install
-      - name: "Check lint Issues"
-        uses: wearerequired/lint-action@v1.7.0
+        # - name: "Check lint Issues"
+        #   uses: wearerequired/lint-action@v1.7.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          eslint: true
+          # eslint: true
           prettier: true
       - name: "Check For Build Issues"
         run: npm run build
