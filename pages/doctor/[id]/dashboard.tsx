@@ -3,7 +3,7 @@ import React from "react";
 // next
 import Head from "next/head";
 // layouts
-import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import DoctorLayout from "layouts/DoctorLayout";
 // components
 import { AppointmentCard } from "components/card";
 import { DashboardMessages } from "components/elements";
@@ -45,7 +45,7 @@ const Dashboard = () => {
       <Head>
         <title>Doctor Dashboard</title>
       </Head>
-      <DoctorDashboardLayout>
+      <DoctorLayout>
         <div className="container pt-2">
           <h6 className="text-dark mb-3">Dashboard</h6>
 
@@ -74,7 +74,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </DoctorDashboardLayout>
+      </DoctorLayout>
     </>
   );
 };

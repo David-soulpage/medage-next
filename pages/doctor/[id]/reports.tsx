@@ -6,7 +6,7 @@ import Head from "next/head";
 import { CommonCard } from "components/card";
 import { ReportsTable } from "components/tables";
 // layouts
-import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import DoctorLayout from "layouts/DoctorLayout";
 // react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 //icons
@@ -18,7 +18,7 @@ const analytics = () => {
       <Head>
         <title>Doctor Reports</title>
       </Head>
-      <DoctorDashboardLayout>
+      <DoctorLayout>
         <div className="container pt-2">
           <h6 className="text-dark mb-3">Reports</h6>
           <CommonCard>
@@ -39,7 +39,7 @@ const analytics = () => {
             <ReportsTable />
           </CommonCard>
         </div>
-      </DoctorDashboardLayout>
+      </DoctorLayout>
     </>
   );
 };

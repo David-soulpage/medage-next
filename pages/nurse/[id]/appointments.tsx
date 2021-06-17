@@ -2,9 +2,10 @@
 import React, { FC } from "react";
 import Head from "next/head";
 // components
-import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+
 import { CommonCard } from "components/card";
 import NurseAppointmentTable from "components/tables/NurseAppointmentTable";
+import { NurseDashboardLayout } from "layouts";
 //react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
 import { Search } from "@styled-icons/boxicons-regular";
@@ -13,7 +14,7 @@ interface IProps {}
 
 const Appointments: FC<IProps> = (props) => {
   return (
-    <PatientDashboardLayout>
+    <NurseDashboardLayout>
       <Head>
         <title>Appointments</title>
       </Head>
@@ -39,7 +40,7 @@ const Appointments: FC<IProps> = (props) => {
           </div>
         </CommonCard>
       </div>
-    </PatientDashboardLayout>
+    </NurseDashboardLayout>
   );
 };
 export default Appointments;

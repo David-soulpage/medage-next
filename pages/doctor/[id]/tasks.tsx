@@ -4,7 +4,7 @@ import React from "react";
 import Head from "next/head";
 //components
 import { CommonCard } from "components/card";
-import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import DoctorLayout from "layouts/DoctorLayout";
 import { Tasks as TasksList } from "components/elements";
 //icons
 import { Tasks as TaskIcon } from "components/styled-icons";
@@ -32,7 +32,7 @@ const Tasks = () => {
       <Head>
         <title>Doctor Tasks</title>
       </Head>
-      <DoctorDashboardLayout>
+      <DoctorLayout>
         <div className="container pt-2">
           <h6 className="text-dark mb-3">Tasks</h6>
           <CommonCard>
@@ -56,7 +56,7 @@ const Tasks = () => {
             <TasksList />
           </CommonCard>
         </div>
-      </DoctorDashboardLayout>
+      </DoctorLayout>
     </>
   );
 };

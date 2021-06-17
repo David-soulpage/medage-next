@@ -25,3 +25,4 @@ export { default as SupportList } from "./SupportList";
 export { default as LeadershipList } from "./LeadershipList";
 export { default as TeamList } from "./TeamList";
 export { default as SummaryTable } from "./SummaryTable";
+export { default as NurseReportsTable } from "./NurseReportsTable";

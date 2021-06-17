@@ -4,7 +4,7 @@ import Head from "next/head";
 //local components
 import { CommonCard } from "components/card";
 import { Appointments, BarChart, LineChart } from "components/elements";
-import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import DoctorLayout from "layouts/DoctorLayout";
 
 const analytics = () => {
   return (
@@ -12,7 +12,7 @@ const analytics = () => {
       <Head>
         <title>Doctor Analytics</title>
       </Head>
-      <DoctorDashboardLayout>
+      <DoctorLayout>
         <div className="container pt-2">
           <h6 className="text-dark mb-3">Analytics</h6>
           <div className="row g-3">
@@ -33,7 +33,7 @@ const analytics = () => {
             </div>
           </div>
         </div>
-      </DoctorDashboardLayout>
+      </DoctorLayout>
     </>
   );
 };
