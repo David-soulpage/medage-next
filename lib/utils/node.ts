@@ -1,8 +1,9 @@
-var id = 1;
+var id = 0;
 class Node {
   value;
   children;
   uid;
+
   constructor(value) {
     this.value = value;
     this.children = [];
