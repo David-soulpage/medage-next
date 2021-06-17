@@ -11,7 +11,6 @@ import {
   PatientPayments,
 } from "components/elements";
 import CardSection from "components/elements/CardSection";
-import AdminLayout from "layouts/AdminLayout";
 
 const Dashboard = () => {
   const list = [
