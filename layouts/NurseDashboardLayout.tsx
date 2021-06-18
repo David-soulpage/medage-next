@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { AdminNavbar, Header, PatientSidebar, Sidebar } from "../components/elements";
+import { AdminNavbar, Header } from "../components/elements";
 
 interface IProps {
   children: any;
