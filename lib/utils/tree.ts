@@ -19,7 +19,6 @@ class Tree {
   }
 
   searchingForParticularNode(ele, label) {
-    let height = 1;
     if (ele.uid === label) return ele;
     else if (ele.children != null) {
       var i;
@@ -32,10 +31,22 @@ class Tree {
     return null;
   }
 
+  updateParticularNodeValue(id, obj) {
+    const { type, value } = obj;
+
+    const currentNode = this.searchingForParticularNode(this.root, id);
+
+    if (type === "value") currentNode.value = value;
+    else if (type === "parentId") currentNode.parentUid = value;
+    else if (type === "serverId") currentNode.serverId = value;
+    else if (type === "serverParentId") currentNode.serverParentId = value;
+  }
+
   addNodeAsChildrenForParticularParent(ele, parentNode = null) {
     if (parentNode) {
       const result = this.searchingForParticularNode(this.root, parentNode.uid);
-      console.log(result, "parentElement");
+
+      ele.parentUid = result.uid;
       if (result) result.children.push(ele);
     } else {
       this.root.children.push(ele);
@@ -43,8 +54,13 @@ class Tree {
   }
 
   traverseAtparticularHeight(traversingHeight, givenHeight, parentNode, elementDetails) {
-    if (traversingHeight === givenHeight) return parentNode.children.push(elementDetails);
-    else if (parentNode.children.length > 0) {
+    if ((givenHeight === 0 || traversingHeight === givenHeight) && elementDetails["action"]) {
+      return parentNode;
+    } else if (traversingHeight === givenHeight) {
+      elementDetails.parentUid = parentNode.uid;
+      elementDetails.serverParentId = parentNode.serverId;
+      return parentNode.children.push(elementDetails);
+    } else if (parentNode.children.length > 0) {
       for (let i = 0; i < parentNode.children.length; i++) {
         const ele = this.traverseAtparticularHeight(
           traversingHeight + 1,
@@ -77,20 +93,22 @@ class Tree {
       }
       output.push({ value: node.value, level: level });
       if (queue.length === 0 && temp.length > 0) {
-        console.log(queue, "queue");
         level = level + 1;
         queue = [...temp];
         temp = [];
       }
     }
-    console.log(output, "Bfs");
   }
 
-  removeNode(ele) {
-    const parentElement = this.searchingForParticularNode(this.root, ele.value.label);
+  removeNode(id, depth) {
+    const parentElement = this.traverseAtparticularHeight(0, depth, this.root, {
+      action: "remove",
+      uid: id,
+    });
+
     if (parentElement)
-      parentElement.children.forEach((element, index) => {
-        if (element.uid === ele.uid) parentElement.result.children.splice(index, 1);
+      parentElement.children.forEach((ele, index) => {
+        if (ele.uid === id) parentElement.children.splice(index, 1);
       });
   }
 }
@@ -106,7 +124,7 @@ tree.addNodeAsChildrenForParticularParent(child3);
 tree.addNodeAsChildrenForParticularParent(child4, child3);
 const child2 = new Node("child2");
 tree.addNodeAsChildrenForParticularParent(child2, child1);
-console.log(tree.root.children[0].children, "root");
+
 tree.renderItemsOfTree();
 const child6 = new Node("child6");
 tree.addNodeAtParticularLevel(1, child6);
