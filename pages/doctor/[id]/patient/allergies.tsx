@@ -30,9 +30,7 @@ const Allergies = () => {
               <CommonCard>
                 <div className="d-flex align-items-center border-bottom">
                   <div className="d-flex h-100">
-                    <h6 className="m-0 border-primary border-bottom cr-p" onClick={toggle}>
-                      Lab Orders
-                    </h6>
+                    <h6 className="m-0 border-primary border-bottom cr-p">Lab Orders</h6>
                   </div>
                   <button
                     className="btn btn-outline-primary btn-sm ms-auto"
