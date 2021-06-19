@@ -156,7 +156,7 @@ const FormBuilder = () => {
     formBuilderService
       .appendNode({
         operation: "append",
-        node_id: serverParentId,
+        node_id: serverParentId ? serverParentId : formBuilderRef.current.formId,
         label: "child4",
         position: "right",
         data: value,
@@ -215,74 +215,6 @@ const FormBuilder = () => {
         setLoadingStatus(false);
       });
   };
-
-  // useEffect(() => {
-  //   if (renderItems.length === 1 && !formBuilderRef.current.formId) {
-  //     // ToDo: have to add dynamically tenant and name
-  //     setLoadingStatus(true);
-
-  //     formBuilderService
-  //       .createForm({
-  //         tenant: 1,
-  //         name: "patient form",
-  //       })
-  //       .then((res) => {
-  //         formBuilderRef.current.formId = res.tree.id;
-  //         formBuilderService
-  //           .addNode({
-  //             operation: "add",
-  //             node_id: res.tree.id,
-  //             label: "",
-  //             data: {},
-  //           })
-  //           .then((res) => {
-  //             console.log(res, "in creating");
-  //             if (res["new_node"]) {
-  //               const list = [...renderItems];
-  //               list[0]["serverId"] = res.new_node.id;
-  //               list[0]["serverParentId"] = formBuilderRef.current.formId;
-  //               setRenderItems(list);
-  //             }
-  //           })
-  //           .catch((error) => console.log(error, "creating first node"));
-  //       })
-  //       .catch((error) => console.log(error, "error in form creation"))
-  //       .finally(() => {
-  //         setLoadingStatus(false);
-  //       });
-  //   } else {
-  //     if (formBuilderRef.current.operation === "append") {
-  //       // added items->current node
-  //       const addedItems = renderItems.filter((ele) => {
-  //         if (ele.uid === formBuilderRef.current.id) return ele;
-  //       });
-  //       // parentElements
-  //       const parentElements = renderItems.filter((ele) => {
-  //         if (ele.uid === addedItems[0].parentId) return ele;
-  //       });
-  //       setLoadingStatus(true);
-  //       formBuilderService
-  //         .appendNode({
-  //           operation: "append",
-  //           node_id: parentElements[0]["serverId"],
-  //           label: "child4",
-  //           position: "right",
-  //           data: { lastname: "12345", firstname: "gowthami" },
-  //         })
-  //         .then((res) => {
-  //           console.log(res.new_node.id, "after appending");
-  //           const list = [...renderItems];
-  //           list.forEach((ele) => {});
-  //         })
-  //         .catch((error) => {
-  //           console.log(error, "error in appending");
-  //         })
-  //         .finally(() => {
-  //           setLoadingStatus(false);
-  //         });
-  //     }
-  //   }
-  // }, [renderItems]);
 
   const renderItemsOfTree = () => {
     let queue = [...treeInstance.root.children];
@@ -364,13 +296,13 @@ const FormBuilder = () => {
         <div className="mb-2 d-flex align-items-center">
           <div>
             <small className="fw-bold text-base-black">
-              {col.value.type ? col.value.type : "Add Label"}
+              {col.value.label ? col.value.label : "Add Label"}
             </small>
             <Pencil className="text-base-black ms-3" size="20" />
           </div>
 
           <div className="ms-auto" onClick={() => onRemoveItem(col.uid, col.serverId, index)}>
-            <Delete className="text-red" size="30" />
+            <Delete className="text-red" size="20" />
           </div>
         </div>
         <div className="w-100 py-2 border bg-white rounded px-2">{col.value.type}</div>
@@ -379,22 +311,20 @@ const FormBuilder = () => {
   };
 
   const renderForm = () => {
-    {
-      return renderItems.map((row, index) => {
-        return (
-          <div key={index}>
-            <div className="d-flex align-items-center my-5 ">
-              {row.map((col, ind) => {
-                return <RenderFormItem key={`${ind}${index}`} col={col} index={index} />;
-              })}
-              <div className="ms-auto me-4" onClick={() => onPressColumn(index)}>
-                +
-              </div>
+    return renderItems.map((row, index) => {
+      return (
+        <div key={index}>
+          <div className="d-flex align-items-center my-5 ">
+            {row.map((col, ind) => {
+              return <RenderFormItem key={`${ind}${index}`} col={col} index={index} />;
+            })}
+            <div className="ms-auto me-4" onClick={() => onPressColumn(index)}>
+              +
             </div>
           </div>
-        );
-      });
-    }
+        </div>
+      );
+    });
   };
 
   return (

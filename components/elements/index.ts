@@ -25,3 +25,4 @@ export { default as LiveClaimsFeed } from "./LiveClaimsFeed";
 export { default as DashboardTasks } from "./DashboardTasks";
 export { default as DashboardMessages } from "./DashboardMessages";
 export { default as AdminCalendar } from "./AdminCalendar";
+export { default as FormBuilderElement } from "./FormBuilderElement";
