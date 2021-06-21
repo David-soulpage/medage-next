@@ -15,9 +15,8 @@ const Summary = () => {
       </Head>
       <DoctorDashboardLayout>
         <div className="container pt-2">
-          <h6 className="text-dark mb-3">Appointments</h6>
           {/* Patient Details */}
-          <div className="row g-3">
+          <div className="row g-2">
             <div className="col-12">
               <CommonCard>
                 <PatientDetailsSmall />

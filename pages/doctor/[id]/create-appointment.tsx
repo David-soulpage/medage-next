@@ -1,15 +1,15 @@
 import React from "react";
 //local components
 import { CommonCard } from "components/card";
-import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import DoctorLayout from "layouts/DoctorLayout";
 // react bootstrap
-import { Form, InputGroup, Dropdown } from "react-bootstrap";
+import { Form, Dropdown } from "react-bootstrap";
 //icons
 import { KeyboardArrowDown } from "components/styled-icons";
 
 const CreateAppointment = () => {
   return (
-    <DoctorDashboardLayout>
+    <DoctorLayout>
       <div className="container pt-2">
         <h6 className="text-dark fw-bold mb-3">Create Appointment</h6>
         <CommonCard>
@@ -146,7 +146,7 @@ const CreateAppointment = () => {
           </div>
         </CommonCard>
       </div>
-    </DoctorDashboardLayout>
+    </DoctorLayout>
   );
 };
 

@@ -1,17 +1,13 @@
 // react
 import React, { FC, useState } from "react";
-//react bootstrap
-import { Modal, Form } from "react-bootstrap";
+
 // react-data-table-component
 import DataTable from "react-data-table-component";
-// components
-import { CommonModal } from "components/modal";
+
 // icons
-import { Edit } from "components/styled-icons";
-import { Delete } from "components/styled-icons";
+import { ThreeDotsVertical } from "components/styled-icons";
 
 const ProblemsTable: FC = () => {
-  const [show, setShow] = useState(false);
   const tableData = [
     {
       aptmntId: "JA-09821",
@@ -93,8 +89,7 @@ const ProblemsTable: FC = () => {
       name: "Report",
       cell: (row) => (
         <div>
-          <Edit size="20" className="text-muted" />
-          <Delete size="20" className="mx-2 text-danger" />
+          <ThreeDotsVertical size="20" className="text-muted" />
         </div>
       ),
     },
@@ -103,78 +98,27 @@ const ProblemsTable: FC = () => {
     headCells: {
       style: {
         background: "rgba(245, 245, 250, 0.4)",
+        borderBottom: "1px solid #ECECF2",
+        borderTop: "1px solid #ECECF2",
         color: "#1E2233",
         fontSize: "14px",
         border: "none",
+        fontWeight: "bold",
       },
     },
     rows: {
       style: {
-        borderRadius: "10px",
-        border: "1px solid #ECECF2",
+        borderBottom: "1px solid #ECECF2",
         marginTop: "5px",
         height: "60px",
-        fontSize: "16px",
+        fontSize: "14px",
+        fontWeight: "normal",
       },
     },
   };
   return (
     <>
-      <div className="d-flex align-items-center border-bottom">
-        <div className="d-flex h-100">
-          <h6 className="m-0 border-primary border-bottom">Active Problems</h6>
-          <h6 className="m-0 mx-4">Inactive Problems</h6>
-        </div>
-        <button className="btn btn-outline-primary btn-sm ms-auto" onClick={() => setShow(true)}>
-          + Add Problem
-        </button>
-      </div>
-      <div className="my-3"></div>
-      {/* Problems Table */}
       <DataTable noHeader columns={columns} data={tableData} customStyles={customStyles} />
-      {/* Add Problem Modal */}
-      <CommonModal show={show} onHide={() => setShow(false)} centered={true}>
-        <Modal.Header className="d-flex justify-content-center">
-          <h6 className="title m-0">Enter Problem</h6>
-        </Modal.Header>
-        <Modal.Body className="p-3">
-          <Form.Group className="d-flex align-items-center">
-            <small className="m-0 w-25">Problem</small>
-            <Form.Control placeholder="Search Dropdown" className="mx-3 w-75" />
-          </Form.Group>
-          <Form.Group className="d-flex align-items-center">
-            <small className="m-0 w-25">Status</small>
-            <div className="w-75">
-              <input type="radio" id="acitve" className="mx-3" />
-              <small>Active</small>
-              <input type="radio" id="acitve" className="mx-3" />
-              <small>Inactive</small>
-            </div>
-          </Form.Group>
-          <Form.Group className="d-flex align-items-center">
-            <small className="m-0 w-25">ICD 10 Code</small>
-            <Form.Control placeholder="Enter code" className="mx-3 w-75" />
-          </Form.Group>
-          <Form.Group className="d-flex align-items-center">
-            <small className="m-0 w-25">SNOMED CT Code</small>
-            <Form.Control placeholder="Enter CT code" className="mx-3 w-75" />
-          </Form.Group>
-          <Form.Group className="d-flex align-items-center">
-            <small className="m-0 w-25">Date Time Onset</small>
-            <Form.Control placeholder="Date Time Onset" className="mx-3 w-75" />
-          </Form.Group>
-          <Form.Group className="d-flex align-items-start">
-            <small className="m-0 w-25">Notes</small>
-            <Form.Control as="textarea" rows={4} className="mx-3 w-75" />
-          </Form.Group>
-        </Modal.Body>
-        <Modal.Footer className="bg-secondary d-flex justify-content-center">
-          <button className="btn btn-outline-secondary text-dark" onClick={() => setShow(false)}>
-            Close
-          </button>
-          <button className="btn btn-primary text-white">Save</button>
-        </Modal.Footer>
-      </CommonModal>
     </>
   );
 };

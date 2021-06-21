@@ -19,20 +19,22 @@ const Appointments: FC<IProps> = (props) => {
         <title>Appointments</title>
       </Head>
       <div className="mx-4">
-        <small className="text-base-black fw-bold mt-4 mb-3">Appointments</small>
         <CommonCard>
           <div className="d-flex align-items-center">
             <div>
-              <InputGroup className="p-1 bg-light d-flex align-items-center">
-                <Form.Control className="border-0 bg-light" placeholder="Search" />
-                <Search size="20" />
-              </InputGroup>
+              <h6 className="m-0">Appointments</h6>
             </div>
-            <div className="d-flex ms-auto">
-              <div className="me-2">
+            <div className="d-flex ms-auto align-items-center">
+              <div className="me-3 w-100">
+                <InputGroup className="p-1 bg-light d-flex align-items-center">
+                  <Form.Control className="border-0 bg-light" placeholder="Search" />
+                  <Search size="20" />
+                </InputGroup>
+              </div>
+              <div className="me-2 w-100">
                 <Form.Control placeholder="Select Date" />
               </div>
-              <button className="btn btn-outline-primary btn-sm">New Appointment</button>
+              <button className="btn btn-outline-primary btn-sm w-100">New Appointment</button>
             </div>
           </div>
           <div className="mt-3">

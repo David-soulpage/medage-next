@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Header, PatientSidebar, Sidebar } from "../components/elements";
 import { useRouter } from "next/router";
 
@@ -8,6 +8,11 @@ interface IProps {
 
 const DoctorDashboardLayout: FC<IProps> = ({ children }) => {
   const router = useRouter();
+  const [show, setShow] = useState(false);
+
+  const toggle = () => {
+    setShow(!show);
+  };
 
   return (
     <div>
@@ -16,7 +21,11 @@ const DoctorDashboardLayout: FC<IProps> = ({ children }) => {
           <Header />
         </div>
         <div className="doctor-dashboard-left-sidebar">
-          {router.pathname.includes("patient") ? <PatientSidebar /> : <Sidebar />}
+          {router.pathname.includes("patient") ? (
+            <PatientSidebar show={show} toggle={toggle} />
+          ) : (
+            <Sidebar />
+          )}
         </div>
         <div className="doctor-dashboard-grid-main">{children}</div>
       </div>

@@ -104,3 +104,33 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px,
 );
+
+.nurse-dashboard-grid-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60px 60px 1fr;
+  grid-template-areas:
+    "dashboard-header"
+    "dashboard-navbar"
+    "dashboard-main";
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nurse-dashboard-grid-header {
+  grid-area: dashboard-header;
+  box-sizing: border-box;
+}
+
+.nurse-dashboard-grid-navbar {
+  grid-area: dashboard-navbar;
+  box-sizing: border-box;
+}
+
+.nurse-dashboard-grid-main {
+  grid-area: dashboard-main;
+  box-sizing: border-box;
+  background: #f5f5fa;
+  overflow-y: scroll;
+  padding: 20px 0;
+}

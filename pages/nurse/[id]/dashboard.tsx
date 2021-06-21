@@ -3,18 +3,13 @@ import React from "react";
 // next
 import Head from "next/head";
 // layouts
-import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import NurseDashboardLayout from "layouts/NurseDashboardLayout";
 // components
 import { PatientList } from "components/tables";
 import { CommonCard } from "components/card";
 import { DashboardMessages, DashboardTasks } from "components/elements";
 
 //styled icons
-import { User } from "components/styled-icons";
-import { Clock } from "components/styled-icons";
-import { MessageCircleOutline } from "components/styled-icons";
-import { CheckDouble } from "components/styled-icons";
-import { LineGraph } from "components/styled-icons";
 import { Search } from "components/styled-icons";
 
 //react bootstrap
@@ -54,7 +49,7 @@ const Dashboard = () => {
       <Head>
         <title>Nurse Dashboard</title>
       </Head>
-      <PatientDashboardLayout>
+      <NurseDashboardLayout>
         <div className="container pt-2">
           <h6 className="text-dark mb-3">Dashboard</h6>
 
@@ -100,7 +95,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </PatientDashboardLayout>
+      </NurseDashboardLayout>
     </>
   );
 };
