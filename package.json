@@ -29,6 +29,7 @@
     "react-data-table-component": "^6.11.7",
     "react-datepicker": "^4.1.1",
     "react-dom": "17.0.1",
+    "react-draggable": "^4.4.3",
     "react-rating": "^2.0.5",
     "sass": "1.32.13",
     "styled-components": "^5.3.0",

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 //local components
 import { CommonCard } from "components/card";
+import Loader from "components/elements/Loader";
+import { FormBuilderModal } from "components/modal";
 //layout
 import { AdminLayout } from "layouts";
 //icons
@@ -17,10 +19,11 @@ import {
   RightArrowAlt,
   Delete,
 } from "components/styled-icons";
+// utils
 import Tree from "lib/utils/tree";
 import Node from "lib/utils/node";
+// services
 import FormBuilderService from "lib/services/form-builder.service";
-import Loader from "components/elements/Loader";
 
 const treeInstance = new Tree(new Node({ label: "root" }));
 const formBuilderService = new FormBuilderService();
@@ -30,6 +33,7 @@ const FormBuilder = () => {
   const [depth, setDepth] = useState(0);
   const formBuilderRef = useRef({ formId: null, operation: null, id: null, parentId: null });
   const [loading, setLoadingStatus] = useState(false);
+  const [showModal, setModalStatus] = useState(false);
 
   const options = [
     {
@@ -287,6 +291,11 @@ const FormBuilder = () => {
     renderItemsOfTree();
   };
 
+  const handleEdit = (e) => {
+    e.stopPropagation();
+    setModalStatus(true);
+  };
+
   const RenderFormItem = ({ col, index }) => {
     return (
       <div
@@ -294,7 +303,7 @@ const FormBuilder = () => {
         // onClick={() => updateNodeValue(col.id)}
       >
         <div className="mb-2 d-flex align-items-center">
-          <div>
+          <div onClick={handleEdit}>
             <small className="fw-bold text-base-black">
               {col.value.label ? col.value.label : "Add Label"}
             </small>
@@ -308,6 +317,10 @@ const FormBuilder = () => {
         <div className="w-100 py-2 border bg-white rounded px-2">{col.value.type}</div>
       </div>
     );
+  };
+
+  const onCloseModal = () => {
+    setModalStatus(false);
   };
 
   const renderForm = () => {
@@ -388,6 +401,14 @@ const FormBuilder = () => {
               </div>
             </div>
           </div>
+          {showModal && (
+            <FormBuilderModal
+              label="Label"
+              optionsList={[1, 2, 3]}
+              show={showModal}
+              onClose={onCloseModal}
+            />
+          )}
         </CommonCard>
       )}
     </AdminLayout>

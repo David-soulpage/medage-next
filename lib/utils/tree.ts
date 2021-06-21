@@ -114,27 +114,3 @@ class Tree {
 }
 
 export default Tree;
-const node = new Node("root");
-const tree = new Tree(node);
-const child1 = new Node("child1");
-const child3 = new Node("child3");
-const child4 = new Node("child4");
-tree.addNodeAsChildrenForParticularParent(child1);
-tree.addNodeAsChildrenForParticularParent(child3);
-tree.addNodeAsChildrenForParticularParent(child4, child3);
-const child2 = new Node("child2");
-tree.addNodeAsChildrenForParticularParent(child2, child1);
-
-tree.renderItemsOfTree();
-const child6 = new Node("child6");
-tree.addNodeAtParticularLevel(1, child6);
-tree.renderItemsOfTree();
-const child7 = new Node("child7");
-tree.addNodeAtParticularLevel(2, child7);
-tree.renderItemsOfTree();
-const child8 = new Node("child8");
-tree.addNodeAtParticularLevel(2, child8);
-tree.renderItemsOfTree();
-const child9 = new Node("child9");
-tree.addNodeAtParticularLevel(0, child9);
-tree.renderItemsOfTree();

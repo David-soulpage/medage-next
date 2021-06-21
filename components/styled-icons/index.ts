@@ -17,6 +17,7 @@ export {
   Square,
   PlusCircle,
   RightArrowAlt,
+  MinusCircle,
 } from "@styled-icons/boxicons-regular";
 
 export {
@@ -48,6 +49,7 @@ export {
   ChevronWithCircleLeft,
   ChevronWithCircleRight,
   Switch,
+  CircleWithCross,
 } from "@styled-icons/entypo";
 
 export { Copy, Circle } from "@styled-icons/boxicons-solid";
