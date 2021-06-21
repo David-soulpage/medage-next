@@ -24,6 +24,8 @@ import Tree from "lib/utils/tree";
 import Node from "lib/utils/node";
 // services
 import FormBuilderService from "lib/services/form-builder.service";
+import FormBuilderComponent from "components/elements/FormBuilderComponents";
+import DataTable from "react-data-table-component";
 
 const treeInstance = new Tree(new Node({ label: "root" }));
 const formBuilderService = new FormBuilderService();
@@ -228,7 +230,7 @@ const FormBuilder = () => {
     let temp = [];
     while (queue.length > 0) {
       const node = queue.shift();
-
+      console.log(node, "node");
       if (node.children.length > 0) {
         node.children.forEach((ele, index) => {
           temp.push(ele);
@@ -249,6 +251,8 @@ const FormBuilder = () => {
       }
     }
 
+    console.log(output, "output");
+
     setRenderItems(output);
   };
 
@@ -258,86 +262,61 @@ const FormBuilder = () => {
     if (treeInstance.root?.children.length === 0) {
       const node = new Node({ label: "", type: element.label, relation: false });
       treeInstance.addNodeAsChildrenForParticularParent(node);
-      createForm(node);
+      // createForm(node);
     } else {
       setDepth(depth + 1);
       // setInstance(
       const node = new Node({ label: "", type: element.label, relation: false });
-      treeInstance.addNodeAtParticularLevel(
-        depth + 1,
-        node
-        // )
-      );
-      addNodeToTree(node);
+      treeInstance.addNodeAtParticularLevel(depth + 1, 0, node);
+
+      // addNodeToTree(node);
     }
     renderItemsOfTree();
   };
 
-  const onPressColumn = (dep) => {
-    const newlyCreatedNode = new Node({ label: "", type: "dummy", relation: false });
-    treeInstance.addNodeAtParticularLevel(dep, newlyCreatedNode);
-    appendNodeToTree(newlyCreatedNode);
-    renderItemsOfTree();
-  };
-
-  const updateNodeValue = (id) => {
-    treeInstance.updateParticularNodeValue(id, { label: "", type: "updated", relation: false });
-    renderItemsOfTree();
-  };
-
-  const onRemoveItem = (id, serverId, dpth) => {
-    treeInstance.removeNode(id, dpth);
-    deleteNodeFromTree(serverId);
-    renderItemsOfTree();
-  };
-
-  const handleEdit = (e) => {
-    e.stopPropagation();
-    setModalStatus(true);
-  };
-
-  const RenderFormItem = ({ col, index }) => {
-    return (
-      <div
-        className="px-5 py-3 bg-secondary me-5 field-item-container position-relative"
-        // onClick={() => updateNodeValue(col.id)}
-      >
-        <div className="mb-2 d-flex align-items-center">
-          <div onClick={handleEdit}>
-            <small className="fw-bold text-base-black">
-              {col.value.label ? col.value.label : "Add Label"}
-            </small>
-            <Pencil className="text-base-black ms-3" size="20" />
-          </div>
-
-          <div className="ms-auto" onClick={() => onRemoveItem(col.uid, col.serverId, index)}>
-            <Delete className="text-red" size="20" />
-          </div>
-        </div>
-        <div className="w-100 py-2 border bg-white rounded px-2">{col.value.type}</div>
-      </div>
-    );
-  };
+  const handleEdit = (e) => {};
 
   const onCloseModal = () => {
     setModalStatus(false);
   };
 
-  const renderForm = () => {
-    return renderItems.map((row, index) => {
-      return (
-        <div key={index}>
-          <div className="d-flex align-items-center my-5 ">
-            {row.map((col, ind) => {
-              return <RenderFormItem key={`${ind}${index}`} col={col} index={index} />;
-            })}
-            <div className="ms-auto me-4" onClick={() => onPressColumn(index)}>
-              +
-            </div>
-          </div>
-        </div>
-      );
-    });
+  const onPressItem = (value: any) => {
+    const { data, type } = value;
+    switch (type) {
+      case "plus": {
+        const { depth, position } = data;
+        const newlyCreatedNode = new Node({
+          label: "",
+          type: `dum${depth}-${position}`,
+          relation: false,
+        });
+        treeInstance.addNodeAtParticularLevel(depth, position, newlyCreatedNode);
+        // appendNodeToTree(newlyCreatedNode);
+
+        break;
+      }
+
+      case "delete": {
+        const { id, serverId, depth } = data;
+        treeInstance.removeNode(id, depth);
+        // deleteNodeFromTree(serverId);
+
+        break;
+      }
+      case "update": {
+        const { depth, position, id } = data;
+        treeInstance.updateParticularNodeValue(id, { label: "", type: "updated", relation: false });
+
+        break;
+      }
+      case "onEdit": {
+        const { event } = data;
+        event.stopPropagation();
+        setModalStatus(true);
+        break;
+      }
+    }
+    renderItemsOfTree();
   };
 
   return (
@@ -390,7 +369,8 @@ const FormBuilder = () => {
                   <small className="text-base-black fw-bold">Choose a form</small>
                 </div>
                 <div className="bg-light-grey-two" style={{ height: 1 }}></div>
-                {renderForm()}
+                <FormBuilderComponent list={renderItems} onPressItem={onPressItem} />
+                {/* <FormBuilderComponent /> */}
               </div>
 
               <div className="d-flex align-items-center mt-5">
