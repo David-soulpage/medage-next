@@ -66,7 +66,7 @@ const AdminNavbar = () => {
     },
     {
       name: "Doctors",
-      route: "",
+      route: "doctor-list",
     },
     {
       name: "Reports",
@@ -92,6 +92,8 @@ const AdminNavbar = () => {
           : router.pathname.includes("admin")
           ? data2
           : router.pathname.includes("nurse")
+          ? data3
+          : router.pathname.includes("receptionist")
           ? data3
           : []
         ).map((item, id) => (
