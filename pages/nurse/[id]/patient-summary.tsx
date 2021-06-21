@@ -19,7 +19,6 @@ const PatientSummary: FC<IProps> = (props) => {
         <title>Patient Summary</title>
       </Head>
       <div className="mx-4">
-        <small className="text-base-black fw-bold mt-4 mb-3">Patient Summary</small>
         <CommonCard>
           <div className="d-flex align-items-center">
             <h6>Patient List</h6>
@@ -36,7 +35,9 @@ const PatientSummary: FC<IProps> = (props) => {
               </InputGroup>
             </div>
           </div>
-          <NursePatientList />
+          <div className="mt-3">
+            <NursePatientList />
+          </div>
         </CommonCard>
       </div>
     </NurseDashboardLayout>

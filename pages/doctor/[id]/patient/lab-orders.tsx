@@ -18,7 +18,7 @@ const LabOrders = () => {
   return (
     <>
       <Head>
-        <title>Tests</title>
+        <title>Lab Orders</title>
       </Head>
       <DoctorDashboardLayout>
         <div className="container pt-2">
@@ -41,8 +41,7 @@ const LabOrders = () => {
                     </h6>
                   </div>
                 </div>
-
-                {view ? <SummaryTable /> : <TestsTable />}
+                <div className="mt-3">{view ? <SummaryTable /> : <TestsTable />}</div>
               </CommonCard>
             </div>
           </div>

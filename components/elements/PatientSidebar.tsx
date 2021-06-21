@@ -36,9 +36,9 @@ const PatientSidebar: FC<ISidebarProps> = ({ show, toggle }) => {
       route: "visits",
     },
     {
-      name: "Tests",
+      name: "Lab Orders",
       icon: TextBulletListSquare,
-      route: "tests",
+      route: "lab-orders",
     },
     {
       name: "Imaging Orders",
@@ -61,9 +61,9 @@ const PatientSidebar: FC<ISidebarProps> = ({ show, toggle }) => {
       route: "pharmacy",
     },
     {
-      name: "Family History",
+      name: "Care Team",
       icon: UserGroup,
-      route: "pharmacy",
+      route: "care-team",
     },
     {
       name: "Emergency Contacts",
@@ -72,7 +72,7 @@ const PatientSidebar: FC<ISidebarProps> = ({ show, toggle }) => {
     },
   ];
   return (
-    <ul className="list-group">
+    <ul className="list-group m-0">
       <li className="list-group-item fw-bold py-3 d-none d-lg-block border-bottom">
         <ToggleOff size="20" className="text-primary" /> Summary Visits
       </li>

@@ -5,6 +5,25 @@ import { Bill } from "components/styled-icons/";
 import ActiveLink from "./ActiveLink";
 // next
 import { useRouter } from "next/router";
+//icons
+import {
+  Stethoscope,
+  UserNurse,
+  SettingsApplications,
+  FlowTree,
+  Hr,
+  SlideSettings,
+  Support,
+  Bed,
+  ElectricalServices,
+  Monitor,
+  PageEdit,
+  Payments,
+  ExchangeDollar,
+  ChartLine,
+  Calendar,
+  LineChartDown,
+} from "components/styled-icons";
 
 interface IProps {}
 
@@ -19,33 +38,33 @@ const AdminSidebar: FC<IProps> = (props) => {
     },
     {
       name: "Live Claims Feed",
-      icon: Bill,
+      icon: PageEdit,
       route: "live-claims-feed",
     },
     {
       name: "Patient Payments",
-      icon: Bill,
+      icon: Payments,
       route: "patient-payments",
     },
 
     {
       name: "Transactions",
-      icon: Bill,
+      icon: ExchangeDollar,
       route: "transactions",
     },
     {
       name: "Expenditures",
-      icon: Bill,
+      icon: ChartLine,
       route: "expenditures",
     },
     {
       name: "Fee Schedule",
-      icon: Bill,
+      icon: Calendar,
       route: "fee-schedule",
     },
     {
       name: "Underpaid Items",
-      icon: Bill,
+      icon: LineChartDown,
       route: "underpaid-items",
     },
   ];
@@ -53,71 +72,71 @@ const AdminSidebar: FC<IProps> = (props) => {
   const data2 = [
     {
       name: "Hospital Stretchers",
-      icon: Bill,
-      route: "",
+      icon: Bed,
+      route: "hospital-stretchers",
     },
     {
       name: "Beds",
-      icon: Bill,
-      route: "",
+      icon: Bed,
+      route: "beds",
     },
     {
       name: "Defibrillators",
-      icon: Bill,
-      route: "",
+      icon: ElectricalServices,
+      route: "defibrillators",
     },
     {
       name: "Anesthesia Machines",
       icon: Bill,
-      route: "",
+      route: "anesthesia-machines",
     },
     {
       name: "Patient Monitors",
-      icon: Bill,
-      route: "",
+      icon: Monitor,
+      route: "patient-monitors",
     },
   ];
 
   const data3 = [
     {
       name: "Doctors",
-      icon: Bill,
-      route: "",
+      icon: Stethoscope,
+      route: "doctors",
     },
     {
       name: "Nurses",
-      icon: Bill,
-      route: "",
+      icon: UserNurse,
+      route: "nurse",
     },
     {
       name: "Administration",
-      icon: Bill,
-      route: "",
+      icon: SettingsApplications,
+      route: "administration",
     },
     {
       name: "IT",
-      icon: Bill,
-      route: "",
+      icon: SlideSettings,
+      route: "it",
     },
     {
       name: "Billing",
       icon: Bill,
-      route: "",
+      route: "billing",
     },
     {
       name: "Support",
-      icon: Bill,
-      route: "",
+      icon: Support,
+      route: "support",
     },
     {
       name: "Leadership",
-      icon: Bill,
-      route: "",
+      icon: FlowTree,
+      route: "leadership",
     },
     {
       name: "HR Team",
-      icon: Bill,
-      route: "",
+      icon: Hr,
+      route: "team",
     },
   ];
 
@@ -131,7 +150,7 @@ const AdminSidebar: FC<IProps> = (props) => {
 
   return (
     <div>
-      <ul className="list-group">
+      <ul className="list-group m-0">
         {(router.pathname.includes("finances")
           ? data
           : router.pathname.includes("inventory")

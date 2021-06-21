@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { Header, PatientSidebar, Sidebar } from "../components/elements";
+import { AdminNavbar, Header, PatientSidebar, Sidebar } from "../components/elements";
 import { useRouter } from "next/router";
 
 interface IProps {
@@ -19,6 +19,9 @@ const DoctorDashboardLayout: FC<IProps> = ({ children }) => {
       <div className="doctor-dashboard-grid-wrapper">
         <div className="doctor-dashboard-grid-header">
           <Header />
+        </div>
+        <div className="doctor-dashboard-grid-navbar">
+          <AdminNavbar />
         </div>
         <div className="doctor-dashboard-left-sidebar">
           {router.pathname.includes("patient") ? (

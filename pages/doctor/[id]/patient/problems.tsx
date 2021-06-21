@@ -25,7 +25,7 @@ const Problems = () => {
         <title>Problems</title>
       </Head>
       <DoctorDashboardLayout>
-        <div className="container pt-2">
+        <div className="container">
           {/* Patient Details */}
           <div className="row g-3">
             <div className="col-12">

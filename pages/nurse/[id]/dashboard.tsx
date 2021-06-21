@@ -51,8 +51,6 @@ const Dashboard = () => {
       </Head>
       <NurseDashboardLayout>
         <div className="container pt-2">
-          <h6 className="text-dark mb-3">Dashboard</h6>
-
           <div className="row g-3">
             <CardSection list={cards} />
           </div>
