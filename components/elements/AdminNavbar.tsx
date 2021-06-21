@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { InputGroup, Form } from "react-bootstrap";
 //icons
 import { Search } from "components/styled-icons";
-import ActiveLink from "./ActiveLink";
+import ActiveLink2 from "./ActiveLink2";
 
 const AdminNavbar = () => {
   const router = useRouter();
@@ -27,8 +27,8 @@ const AdminNavbar = () => {
       route: "reports",
     },
     {
-      name: "Calendar",
-      route: "calendar",
+      name: "Analytics",
+      route: "analytics",
     },
   ];
 
@@ -87,19 +87,19 @@ const AdminNavbar = () => {
       </InputGroup>
 
       <div className="d-flex w-50 justify-content-between align-items-center me-5">
-        {(router.pathname.includes("doctor")
+        {(router.pathname.startsWith("/doctor")
           ? data
-          : router.pathname.includes("admin")
+          : router.pathname.startsWith("/admin")
           ? data2
-          : router.pathname.includes("nurse")
+          : router.pathname.startsWith("/nurse")
           ? data3
-          : router.pathname.includes("receptionist")
+          : router.pathname.startsWith("/receptionist")
           ? data3
           : []
         ).map((item, id) => (
-          <ActiveLink href={item.route} key={id}>
+          <ActiveLink2 href={item.route} key={id}>
             <h6 className="fw-normal m-0 cr-p">{item.name}</h6>
-          </ActiveLink>
+          </ActiveLink2>
         ))}
       </div>
     </div>
