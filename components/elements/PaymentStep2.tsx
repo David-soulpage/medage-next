@@ -6,7 +6,7 @@ import { Americanexpress } from "components/styled-icons";
 import { Form } from "react-bootstrap";
 
 interface IPayProps {
-  setCurrent: any;
+  setCurrent?: any;
 }
 
 const PaymentStep2: FC<IPayProps> = ({ setCurrent }) => {

@@ -3,22 +3,18 @@ import React from "react";
 // next
 import Head from "next/head";
 // layouts
-import PatientDashboardLayout from "layouts/PatientDashboardLayout";
+import NurseDashboardLayout from "layouts/NurseDashboardLayout";
 // components
 import { PatientList } from "components/tables";
 import { CommonCard } from "components/card";
 import { DashboardMessages, DashboardTasks } from "components/elements";
 
 //styled icons
-import { User } from "components/styled-icons";
-import { Clock } from "components/styled-icons";
-import { MessageCircleOutline } from "components/styled-icons";
-import { CheckDouble } from "components/styled-icons";
-import { LineGraph } from "components/styled-icons";
 import { Search } from "components/styled-icons";
 
 //react bootstrap
 import { Form, InputGroup } from "react-bootstrap";
+import CardSection from "components/elements/CardSection";
 
 const Dashboard = () => {
   const cards = [
@@ -48,63 +44,15 @@ const Dashboard = () => {
     },
   ];
 
-  const tasks = [
-    {
-      title: "Meeting with Doctor John",
-      status: "Online",
-      date: "29 Apr 2021",
-    },
-    {
-      title: "Client Bernard Stanley",
-      status: "Exam 04",
-      date: "31 Apr 2021",
-    },
-    {
-      title: "Meeting with the client",
-      status: "Exam 08",
-      date: "01 Oct 2021",
-    },
-    {
-      title: "Client Bernard Stanley",
-      status: "Exam 03",
-      date: "04 Oct 2021",
-    },
-  ];
   return (
     <>
       <Head>
         <title>Nurse Dashboard</title>
       </Head>
-      <PatientDashboardLayout>
+      <NurseDashboardLayout>
         <div className="container pt-2">
-          <h6 className="text-dark mb-3">Dashboard</h6>
-
           <div className="row g-3">
-            {cards.map((card, id) => (
-              <div key={id} className="col-lg-3 col-md-6 col-12">
-                <CommonCard>
-                  <div className="d-flex align-items-start">
-                    <div>
-                      <small className="m-0 text-muted mb-2">{card.title}</small>
-                      <h3 className="text-dark m-0">{card.number}</h3>
-                    </div>
-                    <div className="ms-auto">
-                      <div className={`border-0 p-3 rounded ${card.background}`}>
-                        {card.icon === "user" ? (
-                          <User className="text-primary" size="20" />
-                        ) : card.icon === "clock" ? (
-                          <Clock className=" text-warning" size="20" />
-                        ) : card.icon === "message" ? (
-                          <MessageCircleOutline className=" text-success" size="20" />
-                        ) : card.icon === "graph" ? (
-                          <LineGraph className=" text-info" size="20" />
-                        ) : null}
-                      </div>
-                    </div>
-                  </div>
-                </CommonCard>
-              </div>
-            ))}
+            <CardSection list={cards} />
           </div>
         </div>
 
@@ -145,7 +93,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </PatientDashboardLayout>
+      </NurseDashboardLayout>
     </>
   );
 };

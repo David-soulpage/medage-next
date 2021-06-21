@@ -113,13 +113,15 @@ const ReportsTable: FC = () => {
     },
     {
       name: "Status",
-      selector: "status",
+      cell: (row) => <div className="text-success">{row.status}</div>,
     },
     {
       name: "Report",
       cell: (row) => (
         <div>
-          <button className="btn btn-outline-dark btn-sm text-muted">View</button>{" "}
+          <button className="btn btn-sm text-primary bg-light-primary border border-primary">
+            View
+          </button>{" "}
         </div>
       ),
     },
@@ -129,6 +131,8 @@ const ReportsTable: FC = () => {
     headCells: {
       style: {
         background: "rgba(245, 245, 250, 0.4)",
+        borderBottom: "1px solid #ECECF2",
+        borderTop: "1px solid #ECECF2",
         color: "#1E2233",
         fontSize: "14px",
         border: "none",
@@ -137,11 +141,11 @@ const ReportsTable: FC = () => {
     },
     rows: {
       style: {
-        borderRadius: "10px",
-        border: "1px solid #ECECF2",
+        borderBottom: "1px solid #ECECF2",
         marginTop: "5px",
         height: "60px",
-        fontSize: "16px",
+        fontSize: "14px",
+        fontWeight: "normal",
       },
     },
   };

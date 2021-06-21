@@ -8,22 +8,34 @@ import { ArrowDropDown } from "components/styled-icons";
 interface IProps {
   optionsList: Array<any>;
   placeholder: string;
+  styles?: any;
 }
 
-const CustomDropDown: FC<IProps> = ({ optionsList, placeholder }) => {
+const CustomDropDown: FC<IProps> = ({
+  optionsList,
+  placeholder,
+  styles = { buttonStyles: "", textStyles: "" },
+}) => {
   const [selectedValue, setSelectedValue] = useState("");
   const handleSelect = (value) => {
     setSelectedValue(value);
   };
   return (
     <Dropdown onSelect={handleSelect}>
-      <Dropdown.Toggle className="w-100 bg-white border br-10" id="dropdown-basic">
+      <Dropdown.Toggle
+        className={`w-100 bg-white border br-10 ${styles.buttonStyles}`}
+        id="dropdown-basic"
+      >
         <div className="w-100 d-flex justify-content-between align-items-center">
           <div>
             {selectedValue === "" ? (
-              <small className="text-light-grey fw-normal">{placeholder}</small>
+              <small className={`text-light-grey fw-normal ${styles.textStyles}`}>
+                {placeholder}
+              </small>
             ) : (
-              <small className="text-dark-grey fw-normal">{selectedValue}</small>
+              <small className={`text-dark-grey fw-normal ${styles.textStyles}`}>
+                {selectedValue}
+              </small>
             )}
           </div>
 

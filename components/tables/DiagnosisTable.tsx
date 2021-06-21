@@ -67,7 +67,9 @@ const DiagnosisTable: FC = () => {
       name: "Doctor Comments",
       cell: (row) => (
         <div>
-          <button className="btn btn-sm btn-outline-dark text-muted">View</button>
+          <button className="btn btn-sm bg-light-primary border border-primary text-primary">
+            View
+          </button>
         </div>
       ),
     },
@@ -75,15 +77,19 @@ const DiagnosisTable: FC = () => {
       name: "Attachments",
       cell: (row) => (
         <div>
-          <button className="btn btn-sm btn-outline-dark text-muted">View</button>
+          <button className="btn btn-sm bg-light-primary border border-primary text-primary">
+            View
+          </button>
         </div>
       ),
     },
   ];
   const customStyles = {
-    headRow: {
+    headCells: {
       style: {
         background: "rgba(245, 245, 250, 0.4)",
+        borderBottom: "1px solid #ECECF2",
+        borderTop: "1px solid #ECECF2",
         color: "#1E2233",
         fontSize: "14px",
         border: "none",
@@ -92,16 +98,15 @@ const DiagnosisTable: FC = () => {
     },
     rows: {
       style: {
-        borderRadius: "10px",
-        border: "1px solid #ECECF2",
+        borderBottom: "1px solid #ECECF2",
         marginTop: "5px",
         height: "60px",
-        fontSize: "16px",
-        fontWeight: "bold",
+        fontSize: "14px",
+        fontWeight: "normal",
       },
     },
   };
-  return <DataTable columns={columns} data={tableData} customStyles={customStyles} />;
+  return <DataTable noHeader columns={columns} data={tableData} customStyles={customStyles} />;
 };
 
 export default DiagnosisTable;

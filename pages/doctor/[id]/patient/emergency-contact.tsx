@@ -26,7 +26,7 @@ const EmergencyContact = () => {
             </div>
             <div className="col-12">
               <CommonCard>
-                <h6 className="title m-0">Diagnosis</h6>
+                <h6 className="title m-0">Emergency Contacts</h6>
                 <EmergencyContactTable />
               </CommonCard>
             </div>

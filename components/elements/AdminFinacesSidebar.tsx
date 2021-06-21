@@ -2,107 +2,187 @@
 import React, { FC, useState, useEffect } from "react";
 // styled-icons
 import { Bill } from "components/styled-icons/";
+import ActiveLink from "./ActiveLink";
+// next
 import { useRouter } from "next/router";
+//icons
+import {
+  Stethoscope,
+  UserNurse,
+  SettingsApplications,
+  FlowTree,
+  Hr,
+  SlideSettings,
+  Support,
+  Bed,
+  ElectricalServices,
+  Monitor,
+  PageEdit,
+  Payments,
+  ExchangeDollar,
+  ChartLine,
+  Calendar,
+  LineChartDown,
+} from "components/styled-icons";
 
-interface IProps {
-  onPressItem: (name: string) => void;
-}
+interface IProps {}
 
-const AdminFinancesSidebar: FC<IProps> = (props) => {
-  const [selectedItemIndex, setSelectedItemIndex] = useState(0);
+const AdminSidebar: FC<IProps> = (props) => {
   const router = useRouter();
+
   const data = [
     {
       name: "Billing Summary",
       icon: Bill,
-      route: "",
+      route: "billing-summary",
     },
     {
       name: "Live Claims Feed",
-      icon: Bill,
-      route: "",
+      icon: PageEdit,
+      route: "live-claims-feed",
     },
     {
       name: "Patient Payments",
-      icon: Bill,
-      route: "",
+      icon: Payments,
+      route: "patient-payments",
     },
-    {
-      name: "Tasks",
-      icon: Bill,
-      route: "",
-    },
+
     {
       name: "Transactions",
-      icon: Bill,
-      route: "",
+      icon: ExchangeDollar,
+      route: "transactions",
     },
     {
       name: "Expenditures",
-      icon: Bill,
-      route: "",
+      icon: ChartLine,
+      route: "expenditures",
     },
     {
       name: "Fee Schedule",
-      icon: Bill,
-      route: "",
+      icon: Calendar,
+      route: "fee-schedule",
     },
     {
       name: "Underpaid Items",
-      icon: Bill,
-      route: "",
+      icon: LineChartDown,
+      route: "underpaid-items",
+    },
+  ];
+
+  const data2 = [
+    {
+      name: "Hospital Stretchers",
+      icon: Bed,
+      route: "hospital-stretchers",
     },
     {
-      name: "Human Resources",
-      icon: Bill,
-      route: "",
+      name: "Beds",
+      icon: Bed,
+      route: "beds",
     },
     {
-      name: "Calender",
+      name: "Defibrillators",
+      icon: ElectricalServices,
+      route: "defibrillators",
+    },
+    {
+      name: "Anesthesia Machines",
+      icon: Bill,
+      route: "anesthesia-machines",
+    },
+    {
+      name: "Patient Monitors",
+      icon: Monitor,
+      route: "patient-monitors",
+    },
+  ];
+
+  const data3 = [
+    {
+      name: "Doctors",
+      icon: Stethoscope,
+      route: "doctors",
+    },
+    {
+      name: "Nurses",
+      icon: UserNurse,
+      route: "nurse",
+    },
+    {
+      name: "Administration",
+      icon: SettingsApplications,
+      route: "administration",
+    },
+    {
+      name: "IT",
+      icon: SlideSettings,
+      route: "it",
+    },
+    {
+      name: "Billing",
+      icon: Bill,
+      route: "billing",
+    },
+    {
+      name: "Support",
+      icon: Support,
+      route: "support",
+    },
+    {
+      name: "Leadership",
+      icon: FlowTree,
+      route: "leadership",
+    },
+    {
+      name: "HR Team",
+      icon: Hr,
+      route: "team",
+    },
+  ];
+
+  const data4 = [
+    {
+      name: "Form Builder",
       icon: Bill,
       route: "",
     },
   ];
 
-  const onClickItem = (index) => {
-    setSelectedItemIndex(index);
-    props.onPressItem(data[index]["name"]);
-  };
   return (
     <div>
-      <ul className="list-group">
-        {data.map((item, index) => {
+      <ul className="list-group m-0">
+        {(router.pathname.includes("finances")
+          ? data
+          : router.pathname.includes("inventory")
+          ? data2
+          : router.pathname.includes("hr")
+          ? data3
+          : router.pathname.includes("form")
+          ? data4
+          : []
+        ).map((item, index) => {
           const Icon = item.icon;
           return (
-            <li
-              key={index}
-              onClick={() => {
-                router.push(`/admin/finances/${item.route}`);
-                onClickItem(index);
-              }}
-              className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 ${
-                index === selectedItemIndex ? "bg-light-primary" : "bg-white"
-              }`}
-            >
-              <div className="me-3">
-                <Icon
-                  size="20"
-                  className={` ${selectedItemIndex === index ? "text-primary" : "text-base-black"}`}
-                />
-              </div>
-              <div>
-                <span className={index === selectedItemIndex ? "text-primary" : "text-base-black"}>
-                  {item.name}
-                </span>
-              </div>
-              <div className="bg-light-grey" style={{ height: 2 }}>
-                {" "}
-              </div>
-            </li>
+            <ActiveLink href={item.route} key={index}>
+              <li
+                key={index}
+                className={` list-group-item cr-p d-flex justify-content-center justify-content-lg-start align-items-center py-3 `}
+              >
+                <div className="me-3">
+                  <Icon size="20" />
+                </div>
+                <div>
+                  <span>{item.name}</span>
+                </div>
+                <div className="bg-light-grey" style={{ height: 2 }}>
+                  {" "}
+                </div>
+              </li>
+            </ActiveLink>
           );
         })}
       </ul>
     </div>
   );
 };
-export default AdminFinancesSidebar;
+export default AdminSidebar;

@@ -7,6 +7,7 @@ import { Dropdown } from "react-bootstrap";
 import RadiologyMessage from "components/elements/RadiologyMessage";
 import RadiologyMessagesModal from "components/modal/RadiologyMessagesModal";
 import RadiologyLayout from "layouts/RadiologyLayout";
+import { CommonCard } from "components/card";
 
 const Messages: FC = () => {
   const [show, setShow] = useState(false);
@@ -75,16 +76,19 @@ const Messages: FC = () => {
   const Header = () => {
     return (
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <h6 className="title m-0">Messages</h6>
+        <h6 className="m-0">Messages</h6>
         <div className="d-flex">
-          <button className="btn btn-outline-primary px-4 me-4" onClick={() => setShow(true)}>
+          <button
+            className="btn btn-outline-primary btn-sm px-4 me-4"
+            onClick={() => setShow(true)}
+          >
             New Conversation
           </button>
           <Dropdown>
             <Dropdown.Toggle
               variant="white"
               id="dropdown-basic"
-              className="border ms-2 me-2 text-light-grey font-smaller"
+              className="border ms-2 me-2 text-light-grey font-smaller btn-sm"
             >
               Sort by: A-Z
             </Dropdown.Toggle>
@@ -102,14 +106,14 @@ const Messages: FC = () => {
   return (
     <RadiologyLayout>
       <div className="p-5">
-        <div className="card p-3 w-100">
+        <CommonCard>
           <Header />
           {/* Messages */}
           {messages.map((message: any, id) => {
             return <RadiologyMessage key={id} message={message} />;
           })}
           {show && <RadiologyMessagesModal show={show} handleClose={handleClose} />}
-        </div>
+        </CommonCard>
       </div>
     </RadiologyLayout>
   );

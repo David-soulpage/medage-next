@@ -2,9 +2,9 @@
 import React, { FC, useState } from "react";
 // styled icons
 import { CheckCircleFill } from "components/styled-icons/";
-import PatientDashboardLayout from "layouts/PatientDashboardLayout";
 import { ProblemListStepOne } from "components/elements";
 import CommonForm from "components/forms/CommonForm";
+import { NurseDashboardLayout } from "layouts";
 
 interface IProps {}
 
@@ -325,7 +325,7 @@ const ProblemStepper: FC<IProps> = (props) => {
   };
 
   return (
-    <PatientDashboardLayout>
+    <NurseDashboardLayout>
       <div className="mx-4">
         <small className="text-base-balck fw-bold mt-2">Active Problem</small>
         <div className="card border-0 shadow-sm p-4 mt-3">
@@ -338,12 +338,11 @@ const ProblemStepper: FC<IProps> = (props) => {
                   onClick={() => setSelectedItemIndex(index)}
                 >
                   <div className="d-flex flex-column justify-content-center align-items-center">
-                    <div className="bg-white">
+                    <div className="bg-white z-index">
                       <CheckCircleFill
                         size="20"
-                        className={
-                          index <= selectedItemIndex ? "text-primary" : "text-light-grey-two"
-                        }
+                        className={`
+                          ${index <= selectedItemIndex ? "text-primary" : "text-light-grey-two"}`}
                       />
                     </div>
                     <div>
@@ -360,7 +359,7 @@ const ProblemStepper: FC<IProps> = (props) => {
                   <div
                     className={`position-absolute top-30 w-100 ${
                       index <= selectedItemIndex ? "bg-primary" : "bg-light-grey-two"
-                    }`}
+                    } `}
                     style={{ height: 2 }}
                   ></div>
                 </div>
@@ -370,7 +369,7 @@ const ProblemStepper: FC<IProps> = (props) => {
           <RenderBasedOnStepIndex />
         </div>
       </div>
-    </PatientDashboardLayout>
+    </NurseDashboardLayout>
   );
 };
 export default ProblemStepper;

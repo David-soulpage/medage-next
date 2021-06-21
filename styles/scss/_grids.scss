@@ -19,12 +19,14 @@
   }
   grid-template-columns: 250px 1fr;
 
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 60px 60px 1fr;
   grid-template-areas:
     "dashboard-header dashboard-header"
+    "dashboard-navbar dashboard-navbar"
     "dashboard-left-sidebar dashboard-main";
   height: 100vh;
   overflow: hidden;
+  background-color: #f5f5fa;
 }
 
 .admin-dashboard-grid-wrapper {
@@ -40,29 +42,30 @@
   }
   grid-template-columns: 250px 1fr;
 
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 60px 60px 1fr;
   grid-template-areas:
     "dashboard-header dashboard-header"
+    "dashboard-navbar dashboard-navbar"
     "admin-left-sidebar dashboard-main";
   height: 100vh;
   overflow: hidden;
-  background-color: #eeeeee;
+  background-color: #f5f5fa;
+  gap: 20px;
 }
 .doctor-dashboard-grid-header {
   grid-area: dashboard-header;
   box-sizing: border-box;
 }
-
-.doctor-dashboard-left-sidebar {
-  grid-area: dashboard-left-sidebar;
+.doctor-dashboard-grid-navbar {
+  grid-area: dashboard-navbar;
   box-sizing: border-box;
-  background: #eeeeee;
 }
 
 .doctor-dashboard-left-sidebar {
   grid-area: dashboard-left-sidebar;
   box-sizing: border-box;
-  background: white;
+  background: #f5f5fa;
+  padding-top: 20px;
 }
 .doctor-dashboard-grid-main {
   grid-area: dashboard-main;
@@ -77,7 +80,12 @@
   box-sizing: border-box;
   background: #f5f5fa;
   overflow-y: scroll;
-  padding: 0px;
+}
+
+.admin-dashboard-left-sidebar {
+  grid-area: admin-left-sidebar;
+  box-sizing: border-box;
+  background: #fff;
 }
 
 .list-group {
@@ -104,3 +112,33 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px,
 );
+
+.nurse-dashboard-grid-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60px 60px 1fr;
+  grid-template-areas:
+    "dashboard-header"
+    "dashboard-navbar"
+    "dashboard-main";
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nurse-dashboard-grid-header {
+  grid-area: dashboard-header;
+  box-sizing: border-box;
+}
+
+.nurse-dashboard-grid-navbar {
+  grid-area: dashboard-navbar;
+  box-sizing: border-box;
+}
+
+.nurse-dashboard-grid-main {
+  grid-area: dashboard-main;
+  box-sizing: border-box;
+  background: #f5f5fa;
+  overflow-y: scroll;
+  padding: 20px 0;
+}

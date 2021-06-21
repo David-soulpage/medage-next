@@ -1,15 +1,21 @@
 // react
-import React from "react";
+import React, { useState } from "react";
 // next
 import Head from "next/head";
 //local components
 import { CommonCard } from "components/card";
 import { PatientDetailsSmall } from "components/elements";
-import { DiagnosisTable } from "components/tables";
+import { DiagnosisTable, SummaryTable } from "components/tables";
 // layouts
 import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
 
 const Diagnosis = () => {
+  const [view, setView] = useState(false);
+
+  const toggle = () => {
+    setView(!view);
+  };
+
   return (
     <>
       <Head>
@@ -25,14 +31,17 @@ const Diagnosis = () => {
             </div>
             <div className="col-12">
               <CommonCard>
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="d-flex">
-                    <h6 className="title m-0">Diagnosis</h6>
-                  </div>
+                <div className="d-flex border-bottom">
+                  <h6 className="m-0 border-primary border-bottom cr-p" onClick={toggle}>
+                    Diagnosis
+                  </h6>
+                  <h6 className="m-0 mx-4 cr-p" onClick={toggle}>
+                    Longitudinal View
+                  </h6>
                 </div>
-                <div className="border-top my-3"></div>
+
                 {/* Diagnosis Table */}
-                <DiagnosisTable />
+                <div className="mt-3">{view ? <DiagnosisTable /> : <SummaryTable />}</div>
               </CommonCard>
             </div>
           </div>

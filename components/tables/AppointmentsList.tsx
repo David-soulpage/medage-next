@@ -1,9 +1,12 @@
 import { FC } from "react";
-
+//next
+import Link from "next/link";
+import { useRouter } from "next/router";
+//react data table
 import DataTable from "react-data-table-component";
-import { EyeFill } from "components/styled-icons";
 
 const AppointmentsList: FC = () => {
+  const router = useRouter();
   // Sample Table Data
   const tableData = [
     {
@@ -69,10 +72,14 @@ const AppointmentsList: FC = () => {
       selector: "referrel",
     },
     {
-      name: "View",
+      name: "Actions",
       cell: (row) => (
         <div>
-          <EyeFill style={{ height: "20px" }} className="text-muted" />
+          <Link href="patient/summary">
+            <button className="btn btn-sm bg-light-primary text-primary border border-primary">
+              View
+            </button>
+          </Link>
         </div>
       ),
     },
@@ -85,7 +92,7 @@ const AppointmentsList: FC = () => {
         color: "#1E2233",
         fontSize: "14px",
         border: "none",
-        fontWeight: "700",
+        fontWeight: "bold",
       },
     },
     rows: {
@@ -94,13 +101,28 @@ const AppointmentsList: FC = () => {
         border: "1px solid #ECECF2",
         marginTop: "5px",
         height: "60px",
-        fontSize: "16px",
+        fontSize: "14px",
         color: "#44444f",
+        fontWeight: "normal",
+        cursor: "pointer",
       },
     },
   };
 
-  return <DataTable noHeader columns={columns} data={tableData} customStyles={customStyles} />;
+  const handleRowClicked = (row) => {
+    router.push("patient/summary");
+  };
+
+  return (
+    <DataTable
+      noHeader
+      columns={columns}
+      data={tableData}
+      customStyles={customStyles}
+      highlightOnHover
+      onRowClicked={handleRowClicked}
+    />
+  );
 };
 
 export default AppointmentsList;

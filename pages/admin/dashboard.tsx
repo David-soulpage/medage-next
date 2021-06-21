@@ -2,14 +2,15 @@ import React from "react";
 import Head from "next/head";
 //local components
 import {
+  AdminNavbar,
   BillingSummary,
   DashboardMessages,
   DashboardTasks,
+  Header,
   LiveClaims,
   PatientPayments,
 } from "components/elements";
 import CardSection from "components/elements/CardSection";
-import AdminLayout from "layouts/AdminLayout";
 
 const Dashboard = () => {
   const list = [
@@ -44,28 +45,31 @@ const Dashboard = () => {
       <Head>
         <title>Admin Dashboard</title>
       </Head>
-      <AdminLayout>
-        <div className="container-fluid mt-3 py-3 px-5">
-          <CardSection list={list} />
-          <div className="row mt-4 g-3">
-            <div className="col-md-6">
-              <BillingSummary />
-            </div>
-            <div className="col-md-3">
-              <LiveClaims />
-            </div>
-            <div className="col-md-3">
-              <PatientPayments />
-            </div>
-            <div className="col-md-6">
-              <DashboardTasks />
-            </div>
-            <div className="col-md-6">
-              <DashboardMessages />
-            </div>
+      <div className="sticky-top">
+        <Header />
+        <AdminNavbar />
+      </div>
+
+      <div className="container-fluid py-3 px-5 bg-light">
+        <CardSection list={list} />
+        <div className="row mt-4 g-3">
+          <div className="col-md-6">
+            <BillingSummary />
+          </div>
+          <div className="col-md-3">
+            <LiveClaims />
+          </div>
+          <div className="col-md-3">
+            <PatientPayments />
+          </div>
+          <div className="col-md-6">
+            <DashboardTasks />
+          </div>
+          <div className="col-md-6">
+            <DashboardMessages />
           </div>
         </div>
-      </AdminLayout>
+      </div>
     </>
   );
 };
