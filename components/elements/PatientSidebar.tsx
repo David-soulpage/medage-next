@@ -1,7 +1,7 @@
 // react
-import React from "react";
+import React, { FC } from "react";
 //next
-import Link from "next/link";
+import ActiveLink from "./ActiveLink";
 //icons
 import { Warning, Stethoscope } from "components/styled-icons";
 import { CalendarAlt } from "components/styled-icons";
@@ -11,9 +11,14 @@ import { Microgenetics } from "components/styled-icons";
 import { Doctor } from "components/styled-icons";
 import { Capsule } from "components/styled-icons";
 import { UserGroup } from "components/styled-icons";
-import { Contacts } from "components/styled-icons";
+import { Contacts, ToggleOff } from "components/styled-icons";
 
-const PatientSidebar = () => {
+interface ISidebarProps {
+  show: any;
+  toggle: any;
+}
+
+const PatientSidebar: FC<ISidebarProps> = ({ show, toggle }) => {
   const data = [
     {
       name: "Active Problems",
@@ -68,21 +73,20 @@ const PatientSidebar = () => {
   ];
   return (
     <ul className="list-group">
-      <li className="list-group-item bg-light-primary text-primary text-center fw-bold py-3 d-none d-lg-block">
-        Summary Visits
+      <li className="list-group-item fw-bold py-3 d-none d-lg-block border-bottom">
+        <ToggleOff size="20" className="text-primary" /> Summary Visits
       </li>
       {data.map((item, id) => {
         const Icon = item.icon;
         return (
-          <Link href={`${item.route}`}>
+          <ActiveLink key={id} href={`${item.route}`}>
             <li
-              key={id}
               className={`list-group-item cr-p border-bottom py-3 d-flex justify-content-center justify-content-lg-start align-items-center`}
             >
               <Icon size="20" className={`me-2 `} />
               <small className={`d-none d-lg-block mx-2 `}>{item.name}</small>
             </li>
-          </Link>
+          </ActiveLink>
         );
       })}
     </ul>

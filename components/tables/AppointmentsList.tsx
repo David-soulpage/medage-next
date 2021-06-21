@@ -1,7 +1,8 @@
 import { FC } from "react";
-
+//next
+import Link from "next/link";
+//react data table
 import DataTable from "react-data-table-component";
-import { EyeFill } from "components/styled-icons";
 
 const AppointmentsList: FC = () => {
   // Sample Table Data
@@ -69,10 +70,14 @@ const AppointmentsList: FC = () => {
       selector: "referrel",
     },
     {
-      name: "View",
+      name: "Actions",
       cell: (row) => (
         <div>
-          <EyeFill style={{ height: "20px" }} className="text-muted" />
+          <Link href="/doctor/1/patient/summary">
+            <button className="btn btn-sm bg-light-primary text-primary border border-primary">
+              View
+            </button>
+          </Link>
         </div>
       ),
     },
@@ -85,7 +90,7 @@ const AppointmentsList: FC = () => {
         color: "#1E2233",
         fontSize: "14px",
         border: "none",
-        fontWeight: "700",
+        fontWeight: "bold",
       },
     },
     rows: {
@@ -96,6 +101,7 @@ const AppointmentsList: FC = () => {
         height: "60px",
         fontSize: "16px",
         color: "#44444f",
+        fontWeight: "normal",
       },
     },
   };

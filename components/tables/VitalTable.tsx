@@ -54,6 +54,30 @@ const VitalTable = () => {
       diagnosis: "11/05/2021",
       heartRate: "70",
     },
+    {
+      code: "1000752",
+      description: "11031-2: Lymphocytes/100 leukocytes in Body fluid",
+      status: "Active",
+      severity: 3,
+      diagnosis: "11/05/2021",
+      heartRate: "70",
+    },
+    {
+      code: "1000752",
+      description: "11031-2: Lymphocytes/100 leukocytes in Body fluid",
+      status: "Active",
+      severity: 1,
+      diagnosis: "11/05/2021",
+      heartRate: "70",
+    },
+    {
+      code: "1000752",
+      description: "11031-2: Lymphocytes/100 leukocytes in Body fluid",
+      status: "Active",
+      severity: 5,
+      diagnosis: "11/05/2021",
+      heartRate: "70",
+    },
   ];
 
   const columns = [
@@ -91,20 +115,21 @@ const VitalTable = () => {
     headCells: {
       style: {
         background: "rgba(245, 245, 250, 0.4)",
+        borderBottom: "1px solid #ECECF2",
+        borderTop: "1px solid #ECECF2",
         color: "#1E2233",
         fontSize: "14px",
         border: "none",
-        fontWeight: "700",
+        fontWeight: "bold",
       },
     },
     rows: {
       style: {
-        borderRadius: "10px",
-        border: "1px solid #ECECF2",
+        borderBottom: "1px solid #ECECF2",
         marginTop: "5px",
         height: "60px",
-        fontSize: "16px",
-        color: "#44444f",
+        fontSize: "14px",
+        fontWeight: "normal",
       },
     },
   };

@@ -229,11 +229,14 @@ const PatientSummary: FC = () => {
           data={cardData.tableData}
           customStyles={customStyles}
         />
+        <div className="d-flex justify-content-end mt-2">
+          <small className="text-primary">View All</small>
+        </div>
       </CommonCard>
     );
   };
   return (
-    <div className="row g-3 mt-4">
+    <div className="row g-3">
       <div className="col-lg-4 col-md-6 col-12">
         <CommonCard>
           <div className="d-flex justify-content-between">
@@ -254,6 +257,9 @@ const PatientSummary: FC = () => {
             <p className="m-0">
               Fever from last 4 days and mild headache with regular joint pains.
             </p>
+          </div>
+          <div className="d-flex justify-content-end mt-2">
+            <small className="text-primary">View All</small>
           </div>
         </CommonCard>
       </div>

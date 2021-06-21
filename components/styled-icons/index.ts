@@ -18,6 +18,8 @@ export {
   PlusCircle,
   RightArrowAlt,
   MinusCircle,
+  ChevronUpCircle,
+  ChevronDownCircle,
 } from "@styled-icons/boxicons-regular";
 
 export {
@@ -87,7 +89,7 @@ export { CheckCircle } from "@styled-icons/feather";
 
 export { Open } from "@styled-icons/fluentui-system-filled";
 
-export { KeyboardArrowDown } from "@styled-icons/material";
+export { KeyboardArrowDown, ToggleOff } from "@styled-icons/material";
 
 //icons
 export { Location } from "@styled-icons/icomoon";

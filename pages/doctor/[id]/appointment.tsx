@@ -3,7 +3,7 @@ import React from "react";
 import Head from "next/head";
 //local components
 import { CommonCard } from "components/card";
-import DoctorDashboardLayout from "layouts/DoctorDashboardLayout";
+import DoctorLayout from "layouts/DoctorLayout";
 import { PatientDetails } from "components/elements";
 //icons
 import { Printer } from "components/styled-icons";
@@ -15,15 +15,10 @@ const Appointment = () => {
       <Head>
         <title>Doctor Appointment</title>
       </Head>
-      <DoctorDashboardLayout>
+      <DoctorLayout>
         <div className="container pt-2">
           <h6 className="text-dark mb-3">Appointments</h6>
           <div className="row g-3">
-            <div className="col-md-12">
-              <CommonCard>
-                <PatientDetails />
-              </CommonCard>
-            </div>
             <div className="col-md-12">
               <CommonCard>
                 <div className="d-flex border-bottom">
@@ -41,7 +36,7 @@ const Appointment = () => {
             </div>
           </div>
         </div>
-      </DoctorDashboardLayout>
+      </DoctorLayout>
     </>
   );
 };

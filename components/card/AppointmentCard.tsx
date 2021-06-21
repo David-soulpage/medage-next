@@ -11,11 +11,7 @@ const AppointmentCard = () => {
         <div>
           <h6 className="fw-bold m-0">Appointments</h6>
         </div>
-        <div className="ms-3">
-          <button className="btn btn-sm btn-outline-primary">
-            <small>Create Appiointment</small>{" "}
-          </button>
-        </div>
+
         <div className="ms-auto">
           <InputGroup className="d-flex align-items-center bg-light">
             <Form.Control placeholder="Search" className="border-0 bg-light" />
