@@ -16,6 +16,8 @@ export {
   PhoneCall,
   Square,
   PlusCircle,
+  RightArrowAlt,
+  MinusCircle,
   ChevronUpCircle,
   ChevronDownCircle,
   LineChartDown,
@@ -39,6 +41,7 @@ export {
   FilterSquare,
   ArrowsMove,
   Hr,
+  CheckSquareFill,
 } from "@styled-icons/bootstrap";
 
 export { MessageCircleOutline } from "@styled-icons/evaicons-outline";
@@ -49,6 +52,8 @@ export {
   Cross,
   ChevronWithCircleLeft,
   ChevronWithCircleRight,
+  Switch,
+  CircleWithCross,
 } from "@styled-icons/entypo";
 
 export { Copy, Circle, Bed } from "@styled-icons/boxicons-solid";
@@ -67,7 +72,9 @@ export {
   TextBulletListSquare,
   Doctor,
   SlideSettings,
+  RectangleLandscape,
 } from "@styled-icons/fluentui-system-regular";
+
 export { Google } from "@styled-icons/boxicons-logos/";
 export { Googleanalytics, Microgenetics, Americanexpress } from "@styled-icons/simple-icons";
 export { Close, Attach, MessageSquare } from "@styled-icons/evaicons-solid";

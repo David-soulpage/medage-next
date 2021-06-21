@@ -35,23 +35,23 @@ const AdminNavbar = () => {
   const data2 = [
     {
       name: "Dashboard",
-      route: "dashboard",
+      route: "/admin/dashboard",
     },
     {
       name: "Finance",
-      route: "finances",
+      route: "/admin/finances/billing-summary",
     },
     {
       name: "Forms",
-      route: "forms",
+      route: "/admin/forms",
     },
     {
       name: "Inventory",
-      route: "inventory",
+      route: "/admin/inventory/hospital-stretchers",
     },
     {
       name: "HR",
-      route: "hr",
+      route: "/admin/hr/doctors",
     },
   ];
 
@@ -78,7 +78,7 @@ const AdminNavbar = () => {
     },
   ];
   return (
-    <div className="d-flex py-2 px-2 flex-row-reverse  align-items-center mt-2 bg-white shadow-sm">
+    <div className="d-flex py-2 px-5 flex-row-reverse  align-items-center mt-2 bg-white shadow-sm">
       <InputGroup className="bg-light rounded px-2 d-flex align-items-center w-15 ">
         <InputGroup.Prepend>
           <Search size="20" />
