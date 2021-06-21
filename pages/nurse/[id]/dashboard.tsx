@@ -2,6 +2,7 @@
 import React from "react";
 // next
 import Head from "next/head";
+import Link from "next/link";
 // layouts
 import NurseDashboardLayout from "layouts/NurseDashboardLayout";
 // components
@@ -65,9 +66,11 @@ const Dashboard = () => {
                     <h6 className="fw-bold m-0">Patient List</h6>
                   </div>
                   <div className="ms-3">
-                    <button className="btn btn-sm btn-outline-primary">
-                      <small>Add new patient</small>{" "}
-                    </button>
+                    <Link href="patient-information">
+                      <button className="btn btn-sm btn-outline-primary">
+                        <small>Add new patient</small>{" "}
+                      </button>
+                    </Link>
                   </div>
                   <div className="ms-auto">
                     <InputGroup className="d-flex align-items-center bg-light">
