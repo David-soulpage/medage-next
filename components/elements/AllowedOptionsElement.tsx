@@ -13,7 +13,7 @@ const AllowedOptionsElement: FC<IProps> = (props) => {
     setInputText(e.target.value);
   };
   return (
-    <div className="row">
+    <div className="row my-3">
       <div className="col-12 col-md-6">
         <Form.Control
           name="fullName"

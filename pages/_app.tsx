@@ -1,4 +1,6 @@
+import { createContext } from "react";
 // next imports
+
 import App from "next/app";
 import Head from "next/head";
 // next seo
@@ -14,6 +16,7 @@ import ToastAlert from "components/alert";
 // context provider
 import { GlobalContextProvider } from "contexts/global";
 
+const ThemeContext = createContext(null);
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;

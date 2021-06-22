@@ -24,7 +24,7 @@ const FormBuilderModal: FC<IProps> = ({ label, optionsList, show, onClose }) => 
     setLabelText(e.target.value);
   };
   return (
-    <Modal centered show={show}>
+    <Modal centered show={show} className="w-75">
       <ModalHeader>
         <h6>Edit Field</h6>
       </ModalHeader>

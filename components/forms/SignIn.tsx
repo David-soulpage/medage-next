@@ -1,5 +1,7 @@
 // react
 import React, { FC, useState } from "react";
+// next
+import Link from "next/link";
 //router
 import { useRouter } from "next/router";
 // formik
@@ -12,9 +14,12 @@ import { Google } from "components/styled-icons/";
 import { CustomDropDown } from "components/dropdown";
 //signup
 import AuthService from "lib/services/auth.service";
+import { useAppContext } from "contexts/global";
 
 const SignIn: FC = () => {
   const [showPassword, setPassword] = useState(false);
+
+  const context = useAppContext();
   const authService = new AuthService();
   const router = useRouter();
   const formik = useFormik({
@@ -34,6 +39,7 @@ const SignIn: FC = () => {
             .userDetails()
             .then((res) => {
               console.log(res, "User_details");
+              context.globalDispatch({ type: "USER", payload: res });
               if (res.role === "Doctor") router.push(`/doctor/${res.id}/dashboard`);
               else if (res.role === "Nurse") router.push(`/nurse/${res.id}/dashboard`);
               else if (res.role === "Recptionist") router.push(`/receptionist/${res.id}/dashboard`);
@@ -131,7 +137,7 @@ const SignIn: FC = () => {
               textStyles: "text-dark-grey fw-normal",
             },
           ]}
-          placeholder="Choose Role"
+          placeholder="Choose Organisation"
           styles={{ buttonStyles: "py-3", textStyles: "" }}
           onSelectValue={(value) => getDropdownValue("tenant", value)}
         />
@@ -204,9 +210,12 @@ const SignIn: FC = () => {
           Sign Up With Google
         </button>
       </div> */}
-      <div className="my-2 d-flex align-self-center">
+      <div className="my-2 d-flex align-self-center ">
         <small className="text-light-grey text-center">
-          Already have an account? <small className="text-primary">Log in</small>
+          Already have an account?{" "}
+          <small className="text-primary cr-p">
+            <Link href="auth/login">Log in</Link>
+          </small>
         </small>
       </div>
     </Form>

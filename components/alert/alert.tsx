@@ -4,10 +4,10 @@ import { Toast } from "react-bootstrap";
 // material icons
 import { Close } from "components/styled-icons";
 // global context provider
-import { globalContext } from "contexts/global";
+import { useAppContext } from "contexts/global";
 
 const ToastAlert = (props: any) => {
-  const [globalState, globalDispatch] = React.useContext(globalContext);
+  const { globalState, globalDispatch } = useAppContext();
 
   const toggleShowAlert = (value: any) => {
     globalDispatch({ type: "REMOVE_TOAST_ALERT", payload: value });

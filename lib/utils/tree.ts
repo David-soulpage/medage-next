@@ -57,9 +57,7 @@ class Tree {
     if ((givenHeight === 0 || traversingHeight === givenHeight) && elementDetails["action"]) {
       return parentNode;
     } else if (traversingHeight === givenHeight) {
-      elementDetails.parentUid = parentNode.uid;
-      elementDetails.serverParentId = parentNode.serverId;
-      return parentNode.children.push(elementDetails);
+      return parentNode;
     } else if (parentNode.children.length > 0) {
       for (let i = 0; i < parentNode.children.length; i++) {
         const ele = this.traverseAtparticularHeight(
@@ -74,8 +72,14 @@ class Tree {
     return null;
   }
 
-  addNodeAtParticularLevel(level, ele) {
-    this.traverseAtparticularHeight(0, level, this.root, ele);
+  addNodeAtParticularLevel(level, pos, ele) {
+    const parentNode = this.traverseAtparticularHeight(0, level, this.root, ele);
+    ele.parentUid = parentNode.uid;
+    ele.serverParentId = parentNode.serverId;
+    console.log(parentNode, "before adding");
+    if (pos === 0) parentNode.children.splice(0, 0, ele);
+    else parentNode.children.splice(pos + 1, 0, ele);
+    console.log(parentNode, this.root, "after adding");
   }
 
   renderItemsOfTree() {

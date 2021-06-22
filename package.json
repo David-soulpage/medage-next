@@ -23,18 +23,22 @@
     "next-cookies": "^2.0.3",
     "next-seo": "^4.19.0",
     "react": "17.0.1",
+    "react-beautiful-dnd": "^13.1.0",
     "react-bootstrap": "^1.5.2",
     "react-chartjs-2": "^3.0.3",
     "react-circular-progressbar": "^2.0.4",
     "react-data-table-component": "^6.11.7",
     "react-datepicker": "^4.1.1",
+    "react-dnd": "^14.0.2",
+    "react-dnd-html5-backend": "^14.0.0",
     "react-dom": "17.0.1",
     "react-draggable": "^4.4.3",
     "react-rating": "^2.0.5",
     "sass": "1.32.13",
     "styled-components": "^5.3.0",
     "styled-icons": "^10.29.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^10.2.3",

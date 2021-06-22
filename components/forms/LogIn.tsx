@@ -10,9 +10,18 @@ import { Form, FormControl, FormGroup, FormLabel, InputGroup } from "react-boots
 import { EyeFill, EyeSlashFill } from "components/styled-icons/";
 //signup
 import AuthService from "lib/services/auth.service";
+//
+import * as Yup from "yup";
+// context
+import { useAppContext } from "contexts/global";
 
-const LogIn: FC = () => {
+interface ILogIn {
+  onAction: () => void;
+}
+
+const LogIn: FC<ILogIn> = ({ onAction }) => {
   const [showPassword, setPassword] = useState(false);
+  const context = useAppContext();
   const authService = new AuthService();
   const router = useRouter();
   const formik = useFormik({
@@ -20,7 +29,12 @@ const LogIn: FC = () => {
       username: "",
       password: "",
     },
+    validationSchema: Yup.object({
+      username: Yup.string().required("Required"),
+      password: Yup.string().required("Required"),
+    }),
     onSubmit: (values) => {
+      onAction();
       authService
         .logIn(values)
         .then((res) => {
@@ -28,15 +42,22 @@ const LogIn: FC = () => {
           authService
             .userDetails()
             .then((res) => {
-              console.log(res, "User_details");
-              if (res.role === "Doctor") router.push(`/doctor/${res.id}/dashboard`);
-              else if (res.role === "Nurse") router.push(`/nurse/${res.id}/dashboard`);
-              else if (res.role === "Recptionist") router.push(`/receptionist/${res.id}/dashboard`);
+              console.log(res, "user_details");
+
+              context.globalDispatch({ type: "USER", payload: res });
+              if (res.role.includes("Doctor")) router.push(`/doctor/${res.id}/dashboard`);
+              else if (res.role.includes("Nurse")) router.push(`/nurse/${res.id}/dashboard`);
+              else if (res.role.includes("Recptionist"))
+                router.push(`/receptionist/${res.id}/dashboard`);
             })
             .catch((err) => console.log(err));
         })
         .catch((err) => {
+          formik.resetForm();
           console.log(err);
+        })
+        .finally(() => {
+          onAction();
         });
     },
   });
