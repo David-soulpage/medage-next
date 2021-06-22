@@ -9,7 +9,7 @@ interface IProps {
   optionsList: Array<any>;
   placeholder: string;
   styles?: any;
-  onSelectValue: (value: any) => void;
+  onSelectValue?: (value: any) => void;
 }
 
 const CustomDropDown: FC<IProps> = ({
