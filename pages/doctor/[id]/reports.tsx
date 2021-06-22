@@ -20,7 +20,6 @@ const analytics = () => {
       </Head>
       <DoctorLayout>
         <div className="container pt-2">
-          <h6 className="text-dark mb-3">Reports</h6>
           <CommonCard>
             <div className="d-flex flex-column flex-md-row align-items-center mb-3">
               <h6 className="title m-0">Reports List</h6>

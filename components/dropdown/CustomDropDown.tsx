@@ -1,5 +1,5 @@
 // react
-import React, { FC, useState } from "react";
+import React, { FC, useState, VoidFunctionComponent } from "react";
 // boostrap
 import { Dropdown } from "react-bootstrap";
 // styled-icons
@@ -9,16 +9,19 @@ interface IProps {
   optionsList: Array<any>;
   placeholder: string;
   styles?: any;
+  onSelectValue: (value: any) => void;
 }
 
 const CustomDropDown: FC<IProps> = ({
   optionsList,
   placeholder,
   styles = { buttonStyles: "", textStyles: "" },
+  onSelectValue,
 }) => {
   const [selectedValue, setSelectedValue] = useState("");
   const handleSelect = (value) => {
     setSelectedValue(value);
+    onSelectValue(value);
   };
   return (
     <Dropdown onSelect={handleSelect}>
@@ -46,7 +49,7 @@ const CustomDropDown: FC<IProps> = ({
       <Dropdown.Menu className="w-100">
         {optionsList.map((ele, index) => {
           return (
-            <Dropdown.Item eventKey={ele.title} key={index}>
+            <Dropdown.Item eventKey={ele.label ? ele.label : ele.title} key={index}>
               <small className={`${ele.textStyles}`}>{ele.title}</small>
             </Dropdown.Item>
           );

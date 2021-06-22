@@ -1,21 +1,42 @@
-import axios from "axios";
-// api routes
-import { AUTH_LOGIN, AUTH_SIGNUP } from "constants/routes";
+import { SIGNUP, LOGIN, USER_DETAILS } from "lib/endpoints";
+import APIService from "./api.service";
 
-export const LogIn = async (data: any) => {
-  try {
-    const response = await axios.post(AUTH_LOGIN, data);
-    return response.data;
-  } catch (error) {
-    throw error.response.data;
+class AuthService extends APIService {
+  signUp(data: any): Promise<any> {
+    return this.post(SIGNUP, data)
+      .then((response: any) => {
+        this.setAccessToken(response.data.access);
+        this.setRefreshToken(response.data.refresh);
+        return response.data;
+      })
+      .catch((error: any) => {
+        throw error.response.data;
+      });
   }
-};
 
-export const SignUp = async (data: any) => {
-  try {
-    const response = await axios.post(AUTH_SIGNUP, data);
-    return response.data;
-  } catch (error) {
-    throw error.response.data;
+  logIn(data: any): Promise<any> {
+    return this.post(LOGIN, data)
+      .then((response: any) => {
+        this.setAccessToken(response.data.access);
+        this.setRefreshToken(response.data.refresh);
+        return response.data;
+      })
+      .catch((error: any) => {
+        throw error.response.data;
+      });
   }
-};
+
+  userDetails(): Promise<any> {
+    return this.get(USER_DETAILS)
+      .then((response: any) => {
+        console.log(response.data, "details");
+
+        return response.data;
+      })
+      .catch((error: any) => {
+        throw error.response.data;
+      });
+  }
+}
+
+export default AuthService;

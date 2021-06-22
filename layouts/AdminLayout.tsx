@@ -16,11 +16,11 @@ const AdminLayout: FC<IAdminProps> = ({ children }) => {
           <Header />
           <AdminNavbar />
         </div>
-        <div className="admin-dashboard-left-sidebar mt-5 bg-white h-100">
+        <div className="admin-dashboard-left-sidebar">
           <AdminSidebar />
         </div>
-        <div className="admin-dashboard-grid-main bg-grey-two">
-          <div className="container pt-5">{children}</div>
+        <div className="admin-dashboard-grid-main">
+          <div className="container">{children}</div>
         </div>
       </div>
     </>

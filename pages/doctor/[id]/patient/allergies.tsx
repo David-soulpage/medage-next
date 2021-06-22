@@ -30,7 +30,7 @@ const Allergies = () => {
               <CommonCard>
                 <div className="d-flex align-items-center border-bottom">
                   <div className="d-flex h-100">
-                    <h6 className="m-0 border-primary border-bottom cr-p">Lab Orders</h6>
+                    <h6 className="m-0 border-primary border-bottom cr-p">Active Allergies</h6>
                   </div>
                   <button
                     className="btn btn-outline-primary btn-sm ms-auto"
@@ -39,8 +39,9 @@ const Allergies = () => {
                     + Add Allergy
                   </button>
                 </div>
-
-                <AllergiesTable />
+                <div className="mt-3">
+                  <AllergiesTable />
+                </div>
               </CommonCard>
             </div>
           </div>

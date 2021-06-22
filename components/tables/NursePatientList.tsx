@@ -1,7 +1,11 @@
 import React from "react";
+//react data table
 import DataTable from "react-data-table-component";
+//router
+import { useRouter } from "next/router";
 
 const NursePatientList = () => {
+  const router = useRouter();
   const tableData = [
     {
       patientId: "1000752",
@@ -155,10 +159,25 @@ const NursePatientList = () => {
         height: "60px",
         fontSize: "14px",
         fontWeight: "normal",
+        cursor: "pointer",
       },
     },
   };
-  return <DataTable noHeader columns={columns} data={tableData} customStyles={customStyles} />;
+
+  const handleRowClicked = (row) => {
+    router.push("patient-overview");
+  };
+  return (
+    <DataTable
+      noHeader
+      onRowClicked={handleRowClicked}
+      columns={columns}
+      data={tableData}
+      customStyles={customStyles}
+      pointerOnHover
+      highlightOnHover
+    />
+  );
 };
 
 export default NursePatientList;

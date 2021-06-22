@@ -50,7 +50,7 @@ const Medications = () => {
                     + Add Medication
                   </button>
                 </div>
-                {view ? <SummaryTable /> : <MedicationTable />}
+                <div className="mt-3">{view ? <SummaryTable /> : <MedicationTable />}</div>
               </CommonCard>
             </div>
           </div>

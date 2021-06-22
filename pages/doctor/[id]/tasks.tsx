@@ -34,7 +34,6 @@ const Tasks = () => {
       </Head>
       <DoctorLayout>
         <div className="container pt-2">
-          <h6 className="text-dark mb-3">Tasks</h6>
           <CommonCard>
             {/* Header */}
             <div className="d-flex flex-column flex-md-row align-items-center">

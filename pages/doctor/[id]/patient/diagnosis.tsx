@@ -41,7 +41,7 @@ const Diagnosis = () => {
                 </div>
 
                 {/* Diagnosis Table */}
-                {view ? <DiagnosisTable /> : <SummaryTable />}
+                <div className="mt-3">{view ? <DiagnosisTable /> : <SummaryTable />}</div>
               </CommonCard>
             </div>
           </div>
