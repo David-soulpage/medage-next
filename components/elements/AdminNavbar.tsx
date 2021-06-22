@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { InputGroup, Form } from "react-bootstrap";
 //icons
 import { Search } from "components/styled-icons";
-import ActiveLink from "./ActiveLink";
+import ActiveLink2 from "./ActiveLink2";
 
 const AdminNavbar = () => {
   const router = useRouter();
@@ -27,31 +27,31 @@ const AdminNavbar = () => {
       route: "reports",
     },
     {
-      name: "Calendar",
-      route: "calendar",
+      name: "Analytics",
+      route: "analytics",
     },
   ];
 
   const data2 = [
     {
       name: "Dashboard",
-      route: "dashboard",
+      route: "/admin/dashboard",
     },
     {
       name: "Finance",
-      route: "finances",
+      route: "/admin/finances/billing-summary",
     },
     {
       name: "Forms",
-      route: "forms",
+      route: "/admin/forms",
     },
     {
       name: "Inventory",
-      route: "inventory",
+      route: "/admin/inventory/hospital-stretchers",
     },
     {
       name: "HR",
-      route: "hr",
+      route: "/admin/hr/doctors",
     },
   ];
 
@@ -78,7 +78,7 @@ const AdminNavbar = () => {
     },
   ];
   return (
-    <div className="d-flex py-2 px-2 flex-row-reverse  align-items-center mt-2 bg-white shadow-sm">
+    <div className="d-flex py-2 px-5 flex-row-reverse  align-items-center mt-2 bg-white shadow-sm">
       <InputGroup className="bg-light rounded px-2 d-flex align-items-center w-15 ">
         <InputGroup.Prepend>
           <Search size="20" />
@@ -87,19 +87,19 @@ const AdminNavbar = () => {
       </InputGroup>
 
       <div className="d-flex w-50 justify-content-between align-items-center me-5">
-        {(router.pathname.includes("doctor")
+        {(router.pathname.startsWith("/doctor")
           ? data
-          : router.pathname.includes("admin")
+          : router.pathname.startsWith("/admin")
           ? data2
-          : router.pathname.includes("nurse")
+          : router.pathname.startsWith("/nurse")
           ? data3
-          : router.pathname.includes("receptionist")
+          : router.pathname.startsWith("/receptionist")
           ? data3
           : []
         ).map((item, id) => (
-          <ActiveLink href={item.route} key={id}>
+          <ActiveLink2 href={item.route} key={id}>
             <h6 className="fw-normal m-0 cr-p">{item.name}</h6>
-          </ActiveLink>
+          </ActiveLink2>
         ))}
       </div>
     </div>

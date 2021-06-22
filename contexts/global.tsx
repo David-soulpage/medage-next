@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useContext } from "react";
 // uuid
 import { v4 as uuidV4 } from "uuid";
 
@@ -7,10 +7,13 @@ export const globalContext = createContext<any>(null);
 const initialState = {
   // toast alerts
   toastAlert: [],
+  userDetails: {},
 };
 
 const reducer = (state: any, action: any) => {
   switch (action.type) {
+    case "USER":
+      return { ...state, userDetails: action.payload };
     case "ADD_TOAST_ALERT":
       action.payload["id"] = uuidV4();
       return {
@@ -31,8 +34,13 @@ export const GlobalContextProvider = (props: any) => {
   const [globalState, globalDispatch] = useReducer(reducer, initialState);
 
   return (
-    <globalContext.Provider value={[globalState, globalDispatch]}>
+    <globalContext.Provider value={{ globalState, globalDispatch }}>
       {props.children}
     </globalContext.Provider>
   );
+};
+
+export const useAppContext = (): any => {
+  const contextValue = useContext(globalContext);
+  return contextValue;
 };

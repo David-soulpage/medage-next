@@ -1,5 +1,9 @@
 // react
 import React, { FC, useState } from "react";
+// next
+import Link from "next/link";
+//router
+import { useRouter } from "next/router";
 // formik
 import { useFormik } from "formik";
 // boostrap
@@ -7,35 +11,63 @@ import { Form, FormControl, FormGroup, FormLabel, InputGroup } from "react-boots
 // styled icons
 import { EyeFill, EyeSlashFill } from "components/styled-icons/";
 import { Google } from "components/styled-icons/";
+import { CustomDropDown } from "components/dropdown";
+//signup
+import AuthService from "lib/services/auth.service";
+import { useAppContext } from "contexts/global";
 
 const SignIn: FC = () => {
   const [showPassword, setPassword] = useState(false);
+
+  const context = useAppContext();
+  const authService = new AuthService();
+  const router = useRouter();
   const formik = useFormik({
     initialValues: {
-      fullName: "",
+      username: "",
       email: "",
+      role: "",
+      mobile_number: "",
       password: "",
-      userName: "",
-      referralCode: "",
+      tenant: null,
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      authService
+        .signUp(values)
+        .then((res) => {
+          authService
+            .userDetails()
+            .then((res) => {
+              console.log(res, "User_details");
+              context.globalDispatch({ type: "USER", payload: res });
+              if (res.role === "Doctor") router.push(`/doctor/${res.id}/dashboard`);
+              else if (res.role === "Nurse") router.push(`/nurse/${res.id}/dashboard`);
+              else if (res.role === "Recptionist") router.push(`/receptionist/${res.id}/dashboard`);
+            })
+            .catch((err) => console.log(err));
+        })
+        .catch((err) => console.log(err));
     },
   });
 
   const onPressEye = () => {
     setPassword(!showPassword);
   };
+
+  const getDropdownValue = (name, value) => {
+    formik.setFieldValue(name, value);
+  };
+
   return (
     <Form onSubmit={formik.handleSubmit}>
       <Form.Group controlId="formBasicEmail" className="mb-2">
         <Form.Label className="text-base-black fw-normal">Full Name</Form.Label>
         <Form.Control
-          name="fullName"
+          name="username"
           type="text"
           placeholder="Shane Warne"
           onChange={formik.handleChange}
-          value={formik.values.fullName}
+          value={formik.values.username}
           className="font-smaller py-3 br-10"
           size="sm"
         />
@@ -52,7 +84,7 @@ const SignIn: FC = () => {
           size="sm"
         />
       </Form.Group>
-      <Form.Group controlId="formBasicEmail" className="mb-2">
+      {/* <Form.Group controlId="formBasicEmail" className="mb-2">
         <Form.Label className="text-base-black fw-normal">User Name</Form.Label>
         <Form.Control
           type="text"
@@ -62,6 +94,52 @@ const SignIn: FC = () => {
           value={formik.values.userName}
           className="font-smaller py-3 br-10"
           size="sm"
+        />
+      </Form.Group> */}
+      <Form.Group controlId="formBasicEmail" className="mb-2">
+        <Form.Label className="text-base-black fw-normal">Role</Form.Label>
+        <CustomDropDown
+          optionsList={[
+            {
+              title: "Doctor",
+              textStyles: "text-dark-grey fw-normal",
+            },
+            {
+              title: "Nurse",
+              textStyles: "text-dark-grey fw-normal",
+            },
+            {
+              title: "Receptionist",
+              textStyles: "text-dark-grey fw-normal",
+            },
+            {
+              title: "Radiologist",
+              textStyles: "text-dark-grey fw-normal",
+            },
+          ]}
+          placeholder="Choose Role"
+          styles={{ buttonStyles: "py-3", textStyles: "" }}
+          onSelectValue={(value) => getDropdownValue("role", value)}
+        />
+      </Form.Group>
+      <Form.Group controlId="formBasicEmail" className="mb-2">
+        <Form.Label className="text-base-black fw-normal">Organisation</Form.Label>
+        <CustomDropDown
+          optionsList={[
+            {
+              title: "Sunshite",
+              label: 1,
+              textStyles: "text-dark-grey fw-normal",
+            },
+            {
+              title: "Max",
+              label: 2,
+              textStyles: "text-dark-grey fw-normal",
+            },
+          ]}
+          placeholder="Choose Organisation"
+          styles={{ buttonStyles: "py-3", textStyles: "" }}
+          onSelectValue={(value) => getDropdownValue("tenant", value)}
         />
       </Form.Group>
       <FormGroup className="mb-2 ">
@@ -87,7 +165,7 @@ const SignIn: FC = () => {
           </InputGroup.Append>
         </InputGroup>
       </FormGroup>
-      <Form.Group controlId="formBasicEmail" className="mb-2">
+      {/* <Form.Group controlId="formBasicEmail" className="mb-2">
         <Form.Label className="text-base-black fw-normal">Referral code</Form.Label>
         <Form.Control
           name="referralCode"
@@ -95,6 +173,18 @@ const SignIn: FC = () => {
           placeholder="0910991"
           onChange={formik.handleChange}
           value={formik.values.referralCode}
+          className="font-smaller py-3 br-10"
+          size="sm"
+        />
+      </Form.Group> */}
+      <Form.Group controlId="formBasicEmail" className="mb-2">
+        <Form.Label className="text-base-black fw-normal">Mobile Number</Form.Label>
+        <Form.Control
+          name="mobile_number"
+          type="text"
+          placeholder="0910991"
+          onChange={formik.handleChange}
+          value={formik.values.mobile_number}
           className="font-smaller py-3 br-10"
           size="sm"
         />
@@ -113,15 +203,19 @@ const SignIn: FC = () => {
           Create Account
         </button>
       </div>
-      <div className="my-3">
+      {/* Google Signup */}
+      {/* <div className="my-3">
         <button type="button" className="btn bg-white text-orange fw-bold w-100 rounded py-2">
           <Google size="20" className="text-orange me-3" />
           Sign Up With Google
         </button>
-      </div>
-      <div className="my-2 d-flex align-self-center">
+      </div> */}
+      <div className="my-2 d-flex align-self-center ">
         <small className="text-light-grey text-center">
-          Already have an account? <small className="text-primary">Log in</small>
+          Already have an account?{" "}
+          <small className="text-primary cr-p">
+            <Link href="auth/login">Log in</Link>
+          </small>
         </small>
       </div>
     </Form>
