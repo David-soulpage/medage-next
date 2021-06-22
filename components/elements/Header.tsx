@@ -1,6 +1,11 @@
+// react
 import React from "react";
+// context
+import { useAppContext } from "contexts/global";
 
 const Header = () => {
+  const { globalState } = useAppContext();
+  console.log(globalState, "globalState123");
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div className="container-fluid">

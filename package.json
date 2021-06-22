@@ -37,7 +37,8 @@
     "sass": "1.32.13",
     "styled-components": "^5.3.0",
     "styled-icons": "^10.29.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^10.2.3",

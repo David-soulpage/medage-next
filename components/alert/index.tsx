@@ -2,10 +2,10 @@ import React from "react";
 // components
 import ToastAlert from "./alert";
 // global context provider
-import { globalContext } from "contexts/global";
+import { useAppContext } from "contexts/global";
 
 const ToastAlertRoot = () => {
-  const [globalState, globalDispatch] = React.useContext(globalContext);
+  const { globalState, globalDispatch } = useAppContext();
 
   return (
     <div>
