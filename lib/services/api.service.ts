@@ -35,6 +35,8 @@ axios.interceptors.response.use(
 abstract class APIService {
   getAxiosHeaders(): any {
     const token = cookie.get("accessToken");
+    console.log(token, "Token");
+
     return {
       Authorization: token ? `Bearer ${token}` : "",
       "Content-Type": "application/json",
